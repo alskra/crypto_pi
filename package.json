@@ -21,6 +21,7 @@
     "gulp-filter": "^5.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
+    "gulp-inline-css": "^3.3.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
@@ -54,15 +55,30 @@
     "normalize.css": "^8.0.0",
     "popper.js": "^1.14.3"
   },
-  "browserslist": ["> 0.5%", "last 2 versions", "Firefox ESR", "not dead", "IE >= 11"],
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead",
+    "IE >= 11"
+  ],
   "babel": {
     "presets": [
-      ["env", {
-        "targets": {
-          "browsers": ["> 0.5%", "last 2 versions", "Firefox ESR", "not dead", "IE >= 11"]
-        },
-        "useBuiltIns": true
-      }]
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "> 0.5%",
+              "last 2 versions",
+              "Firefox ESR",
+              "not dead",
+              "IE >= 11"
+            ]
+          },
+          "useBuiltIns": true
+        }
+      ]
     ]
   }
 }

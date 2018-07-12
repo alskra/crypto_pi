@@ -13,7 +13,7 @@ const removeSvgProperties = require('remove-svg-properties');
 const gp = gulpLoadPlugins();
 const rsp = removeSvgProperties.stream;
 
-export default gulp.parallel(
+export default gulp.series(
   function imgCommon() {
     return combiner.obj([
       gulp.src(paths.img.src),
@@ -25,7 +25,25 @@ export default gulp.parallel(
         gp.imagemin.svgo({
           plugins: [
             {removeViewBox: false},
-            {cleanupIDs: true}
+            {
+              cleanupIDs: {
+                prefix: {
+                  toString() {
+                    this.counter = this.counter || 0;
+                    return `id-${this.counter++}`;
+                  }
+                }
+              }
+            },
+            {
+              inlineStyles: {
+                onlyMatchedOnce: false,
+                removeMatchedSelectors: true,
+                useMqs: ['', 'screen'],
+                usePseudos: ['']
+              }
+            },
+            {convertStyleToAttrs: true}
           ]
         })
       ], {
@@ -50,19 +68,6 @@ export default gulp.parallel(
         properties: [rsp.PROPS_FILL],
         namespaces: ['i', 'sketch', 'inkscape']
       })),
-      gp.svgmin(function getOptions(file) {
-        return {
-          plugins: [
-            {removeViewBox: false},
-            {
-              cleanupIDs: {
-                prefix: file.basename + '-',
-                minify: true
-              }
-            }
-          ]
-        }
-      }),
       gp.svgSymbols(
         {
           id: 'icon-svg-%f',
@@ -77,7 +82,7 @@ export default gulp.parallel(
       ),
       gp.debug({title: "Asset task 'imgSvgSymbols'"}),
       gulp.dest(function (file) {
-        return file.extname === '.svg' ? paths.img.dest : file.extname === '' ? (file.basename = 'svg-symbols.css', paths.img.destSVGSymbolsCSS) : paths.html.dest
+        return file.extname === '.svg' ? paths.img.dest : file.extname === '' ? (file.basename = 'svg-symbols.scss', paths.img.destSVGSymbolsCSS) : paths.html.dest
       }),
       bs.stream({once: true})
     ]).on('error', gp.notify.onError(function (err) {

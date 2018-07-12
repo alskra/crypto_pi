@@ -1,0 +1,10 @@
+.section-intro {
+  height: 100vh;
+  min-height: 600px;
+  background: url-img('sect-bg.jpg') no-repeat 50% 50%/cover;
+  margin-top: -130px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: -70px;
+  }
+}

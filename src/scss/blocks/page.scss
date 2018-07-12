@@ -11,11 +11,13 @@
     display: flex;
     flex-flow: column;
     min-width: 320px;
-    height: 2000px;
     min-height: 100vh;
     padding-top: 130px;
     overflow: hidden;
-    background: #444;
+  }
+
+  &__main {
+    flex-grow: 1;
   }
 
   @include media-breakpoint-down(md) {

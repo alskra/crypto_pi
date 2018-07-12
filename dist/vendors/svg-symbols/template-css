@@ -1,0 +1,18 @@
+[class*='icon-svg-'] {
+  fill: currentColor;
+}
+
+[class*='icon-svg-'] use {
+  pointer-events: none;
+}
+
+<% _.forEach( icons, function( icon ){ %><%= icon.class %> {
+  width: <%= icon.svg.width/icon.svg.height %>em;
+  height: 1em;
+}
+
+#<%= icon.id %> {
+  <%= icon.style %>
+}
+
+<% }); %>

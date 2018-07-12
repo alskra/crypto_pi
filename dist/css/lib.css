@@ -438,6 +438,16 @@ template {
   pointer-events: none;
 }
 
+.icon-svg-facebook {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-svg-investor-login-hover-2 {
+  width: 1em;
+  height: 1em;
+}
+
 .icon-svg-investor-login-hover {
   width: 1em;
   height: 1em;
@@ -449,35 +459,13 @@ template {
 }
 
 .icon-svg-logo {
-  width: 3.0931404199930888em;
+  width: 3.0931365626323966em;
   height: 1em;
 }
 
-#icon-svg-logo .st0, #icon-svg-logo .st1 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-}
-
-#icon-svg-logo .st0 {
-  display: none;
-  fill: none;
-}
-
-#icon-svg-logo .st1 {
-  fill: #f59900;
-}
-
-#icon-svg-logo .st2 {
-  fill: #ca8608;
-}
-
-#icon-svg-logo .st2, #icon-svg-logo .st3, #icon-svg-logo .st4 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-}
-
-#icon-svg-logo .st4 {
-  fill: #fff;
+.icon-svg-twitter {
+  width: 1em;
+  height: 1em;
 }
 
 .icon-svg-cancel {

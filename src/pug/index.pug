@@ -2,6 +2,11 @@ include lib/variables
 include lib/mixins
 include blocks/page
 include blocks/header
+include blocks/footer
 
 +page(pagesList.index.title)
   +header.--transparent(data-size='130' data-size-md='70' data-size-sm='70')
+  +e.__main
+    +b.SECTION.section-intro
+
+  +footer

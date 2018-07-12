@@ -63,7 +63,7 @@ src // исходники файлов проекта
 ## Дополнительно (при инициализации проекта с нуля)
 ### Установка dev-зависимостей:
 ```
-yarn add --dev babel-core babel-loader babel-preset-env bemto.pug browser-sync del emitty gulp@4.0.0 gulp-autoprefixer gulp-clean-css gulp-cssimport gulp-debug gulp-filter gulp-if gulp-imagemin gulp-load-plugins gulp-newer gulp-notify gulp-prettify gulp-pug gulp-pxtorem gulp-rename gulp-sass gulp-sass-glob gulp-sourcemaps gulp-svg-symbols gulp-svgmin gulp-typograf gulp-uglify imagemin-jpeg-recompress remove-svg-properties sass-inline-svg-utf8 stream-combiner2 vinyl-named webpack webpack-stream
+yarn add --dev babel-core babel-loader babel-preset-env bemto.pug browser-sync del emitty gulp@4.0.0 gulp-autoprefixer gulp-clean-css gulp-cssimport gulp-debug gulp-filter gulp-if gulp-imagemin gulp-inline-css gulp-load-plugins gulp-newer gulp-notify gulp-prettify gulp-pug gulp-pxtorem gulp-rename gulp-sass gulp-sass-glob gulp-sourcemaps gulp-svg-symbols gulp-svgmin gulp-typograf gulp-uglify imagemin-jpeg-recompress remove-svg-properties sass-inline-svg-utf8 stream-combiner2 vinyl-named webpack webpack-stream
 ```
 
 ### Polyfills

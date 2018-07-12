@@ -24,14 +24,14 @@ export default {
   img: {
     src: `${src}/img/**/*.*`,
     dest: `${dest}/img`,
-    srcSVGSymbolsIcons: `${src}/img/icons/**/*.svg`,
+    srcSVGSymbolsIcons: `${dest}/img/icons/**/*.svg`,
     srcSVGSymbolsCSS: `${src}/vendors/svg-symbols/template-css`,
-    destSVGSymbolsCSS: `${src}/vendors/svg-symbols`,
+    destSVGSymbolsCSS: `${src}/scss/lib`,
     watch: `${src}/img/**/*.*`
   },
   copy: {
-    src: [`${src}/favicon/**/*.*`, `${src}/fonts/**/*.*`, `${src}/vendors/**/*.*`, `${src}/data/**/*.*`],
+    src: [`${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/vendors/**/*`, `${src}/data/**/*`],
     dest,
-    watch: [`${src}/favicon/**/*.*`, `${src}/fonts/**/*.*`, `${src}/vendors/**/*.*`, `${src}/data/**/*.*`]
+    watch: [`${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/vendors/**/*`, `${src}/data/**/*`]
   }
 };

@@ -1,0 +1,18 @@
+// State
+@mixin focus-visible {
+  outline: 2px solid $color-link;
+  outline-offset: -1px;
+}
+
+@mixin not-disabled {
+  &:not(:disabled) {
+    @content;
+  }
+}
+
+// Pixel ratio
+@mixin media-pixel-ratio($dpr) {
+  @media (-webkit-min-device-pixel-ratio: $dpr), (min-resolution: $dpr*96dpi) {
+    @content;
+  }
+}

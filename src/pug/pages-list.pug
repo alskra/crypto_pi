@@ -1,0 +1,10 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+
++page('Pages List')
+  +b.MAIN(style="padding: 15px;")
+    h1 Pages List - #{pkg.description}
+    ol
+      each page in pagesList
+        li(style="margin-bottom: 5px;"): a(href=page.url) #{page.title} #[small (#{page.url})]

@@ -1,0 +1,34 @@
+// Colors
+$color-base: #4f4f4d;
+$color-link: #fb953b;
+
+// Type
+$font-family-base: 'Roboto', sans-serif;
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 900px,
+  lg: 1230px
+);
+$container-max-widths: (
+  xs: 300px,
+  sm: 600px,
+  md: 900px,
+  lg: 1230px
+);
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+// Transitions
+$transition-all: .15s ease-in-out;
+$transition-color: color $transition-all, background-color $transition-all, border-color $transition-all, box-shadow $transition-all;
+
+// Spacers
+$spacer: 5px;
+$spacers: ();
+
+@for $i from 0 through 100 {
+  $spacers: map-merge($spacers, ($i*$spacer/1px: $i*$spacer, #{$i*$spacer/1px}-inv: -$spacer*$i));
+}

@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --scale: 1;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: white;
+  background-color: $color-link;
+}
+
+p {
+  margin: 0;
+}
+
+.js-focus-visible {
+  :focus:not(.focus-visible) {
+    outline: none;
+  }
+
+  .focus-visible {
+
+  }
+}

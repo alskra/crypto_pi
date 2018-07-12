@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <title>Главная — CRYPTO Pi/Frontend</title>
+    <!-- Meta-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon-->
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/lib.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- JS-->
+    <script src="js/lib.js"></script>
+    <script>
+      // Load and insert svg-symbols.svg
+      (function()
+      {
+        'use strict';
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function()
+        {
+          if (xhr.status >= 200 && xhr.status < 400)
+          {
+            document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
+          }
+        };
+        xhr.open('GET', 'img/svg-symbols.svg', true);
+        xhr.send();
+      })();
+    </script>
+  </head>
+  <body class="page__body">
+    <div class="page__inner">
+      <header class="header header--transparent" data-size="130" data-size-md="70" data-size-sm="70">
+        <div class="container-fluid mw-lg">
+          <div class="row flex-nowrap align-items-center">
+            <div class="col-auto d-flex flex-column">
+              <a class="header__logo" href="" title="CRYPTO Pi">
+                <svg class="icon-svg-logo header__logo-img" role="img">
+                  <use xlink:href="#icon-svg-logo"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="col min-width-0">
+              <button class="header__toggle-panel d-md-none" data-toggle="panel">
+                <svg class="icon-svg-menu" role="img">
+                  <use xlink:href="#icon-svg-menu"></use>
+                </svg>
+                <svg class="icon-svg-cancel" role="img">
+                  <use xlink:href="#icon-svg-cancel"></use>
+                </svg>
+              </button>
+              <div class="header__panel">
+                <div class="header__panel-header d-none"></div>
+                <div class="header__panel-content">
+                  <div class="header__panel-row row align-items-md-center">
+                    <div class="header__panel-col col-12 min-width-0 col-md d-md-flex justify-content-md-center">
+                      <nav class="menu header__menu">
+                        <ul class="menu__inner">
+                          <li class="menu__item">
+                            <a class="menu__link" href="#analytics">Аналитика</a>
+                          </li>
+                          <li class="menu__item">
+                            <a class="menu__link" href="#faq">FAQ</a>
+                          </li>
+                          <li class="menu__item">
+                            <a class="menu__link" href="#contacts">Контакты</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    <div class="header__panel-col col-12 col-md-auto">
+                      <div class="header__lang">
+                        <div class="header__lang-inner">
+                          <a class="header__lang-item" href="">en</a>
+                          <a class="header__lang-item header__lang-item--current" href="">ru</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="header__panel-col col-12 col-md-auto">
+                      <a class="header__log-in" href="">
+                        <span class="header__log-in-icon"></span>
+                        <span class="header__log-in-title">Investor login</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- JS-->
+    <script src="js/app.js" async=""></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.min-width-0 {
+  min-width: 0.1Px;
+}
+
+.mw-none {
+  max-width: none;
+}
+
+@include media-breakpoint-up(sm) {
+  .mw-sm {
+    max-width: map-get($container-max-widths, sm);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .mw-md {
+    max-width: map-get($container-max-widths, md);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .mw-lg {
+    max-width: map-get($container-max-widths, lg);
+  }
+}
+
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+}

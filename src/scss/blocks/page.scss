@@ -1,0 +1,48 @@
+.page {
+  &__body {
+    color: $color-base;
+    font-size: 17px;
+    line-height: (26/17);
+    font-family: $font-family-base;
+    background-color: #ffffff;
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: column;
+    min-width: 320px;
+    height: 2000px;
+    min-height: 100vh;
+    padding-top: 130px;
+    overflow: hidden;
+    background: #444;
+  }
+
+  @include media-breakpoint-down(md) {
+    .page__inner {
+      padding-top: 70px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &--open-panel {
+      overflow: hidden;
+
+      .header__toggle-panel {
+        svg {
+          &:nth-child(1) {
+            display: none;
+          }
+
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
+
+      .header__panel {
+        transform: translateX(0);
+      }
+    }
+  }
+}

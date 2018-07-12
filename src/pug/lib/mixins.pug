@@ -1,0 +1,11 @@
+include ../../../node_modules/bemto.pug/bemto.pug
+-
+  set_bemto_settings({
+    prefix: '',
+    element: '__',
+    modifier: '--'
+  })
+
+mixin icon-svg(id)
+  +b.SVG(role="img" class=`icon-svg-${id}`)&attributes(attributes)
+    use(xlink:href=`#icon-svg-${id}`)

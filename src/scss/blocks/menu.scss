@@ -1,0 +1,61 @@
+.menu {
+  overflow: hidden;
+
+  &__inner {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 -35px;
+  }
+
+  &__item {
+    overflow: hidden;
+    margin: 0 35px;
+  }
+
+  &__link {
+    color: $color-base;
+    font-size: 20px;
+    line-height: 1.25;
+    font-family: "DIN Pro", sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    transition: $transition-color;
+
+    &:hover, &--current {
+      color: $color-link;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__inner {
+      margin: 0 -20px;
+    }
+
+    &__item {
+      margin: 0 20px;
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__inner {
+      flex-flow: column;
+      margin: 0;
+    }
+
+    &__item {
+      margin: 0;
+    }
+
+    &__link {
+      padding: 7.5px 25px;
+    }
+  }
+}

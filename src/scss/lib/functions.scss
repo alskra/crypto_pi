@@ -1,0 +1,40 @@
+// Sources
+@function url-img($path) {
+  @return url('../img/#{$path}');
+}
+
+@function embed-svg($path) {
+  @return inline-svg('dist/img/#{$path}');
+}
+
+@function url-font($path) {
+  @return url('../fonts/#{$path}');
+}
+
+// Units
+@function rem($number, $base: 16) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return #{$number/$base}rem;
+  }
+}
+
+@function em($number, $base: 16) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return #{$number/$base}em;
+  }
+}
+
+@function size-scale($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return calc(#{$number}px*var(--scale));
+  }
+}

@@ -7,9 +7,10 @@
   left: 0;
   z-index: $zindex-fixed;
   background-color: #ffffff;
+  transition: $transition-color;
 
   &__logo {
-    color: #181716;
+    color: $color-base;
     font-size: 70px;
     text-decoration: none;
     transition: $transition-color;

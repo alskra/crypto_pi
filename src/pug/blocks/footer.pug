@@ -1,2 +1,21 @@
 mixin footer
   +b.FOOTER.footer&attributes(attributes)
+    +e.__top
+      .container-fluid.mw-md.mw-lg
+        .row.my-15-inv
+          .col-12.py-15.d-flex.flex-column.align-items-center.col-sm-4.align-items-sm-start
+            +icon-svg('logo').__logo
+          .col-12.py-15.d-flex.flex-column.col-sm-8.align-items-sm-end
+            +e.__networks
+              +e.__networks-title follow us
+              +e.__networks-list
+                +e.A.__networks-item--facebook(href='' target='_blank' title='Facebook')
+                  +icon-svg('facebook')
+                +e.A.__networks-item--vk(href='' target='_blank' title='VK')
+                  +icon-svg('vk')
+                +e.A.__networks-item--twitter(href='' target='_blank' title='Twitter')
+                  +icon-svg('twitter')
+                +e.A.__networks-item--instagram(href='' target='_blank' title='Instagram')
+                  +icon-svg('instagram')
+                +e.A.__networks-item--youtube(href='' target='_blank' title='YouTube')
+                  +icon-svg('youtube')

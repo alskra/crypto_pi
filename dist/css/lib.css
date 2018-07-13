@@ -443,6 +443,11 @@ template {
   height: 1em;
 }
 
+.icon-svg-instagram {
+  width: 1em;
+  height: 1em;
+}
+
 .icon-svg-investor-login-hover {
   width: 1em;
   height: 1em;
@@ -460,6 +465,16 @@ template {
 
 .icon-svg-twitter {
   width: 1em;
+  height: 1em;
+}
+
+.icon-svg-vk {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-svg-youtube {
+  width: 4.47941532708522em;
   height: 1em;
 }
 

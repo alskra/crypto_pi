@@ -24,7 +24,7 @@ function onScroll() {
     vw = window.innerWidth;
 
   if (vw >= 900) {
-    if (pageYOffset > (vw >= 1230 ? header.dataset.size : header.dataset.sizeMd)) {
+    if (pageYOffset > (vw >= 1230 ? 300 : 0)) {
       header.classList.add('header--fixed');
     } else {
       header.classList.remove('header--fixed');

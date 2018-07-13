@@ -1,16 +1,17 @@
 .menu {
+  --scale: 1;
   overflow: hidden;
 
   &__inner {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0 -35px;
+    margin: 0 size-scale(-30);
   }
 
   &__item {
     overflow: hidden;
-    margin: 0 35px;
+    margin: 0 size-scale(30);
   }
 
   &__link {
@@ -31,13 +32,7 @@
   }
 
   @include media-breakpoint-down(md) {
-    &__inner {
-      margin: 0 -20px;
-    }
-
-    &__item {
-      margin: 0 20px;
-    }
+    --scale: 3/4;
 
     &__link {
       font-size: 16px;

@@ -1,6 +1,6 @@
 .header {
-  height: 130px;
-  padding: 30px 0;
+  --scale: 1;
+  padding: size-scale(30) 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -11,7 +11,7 @@
 
   &__logo {
     color: $color-base;
-    font-size: 70px;
+    font-size: size-scale(70);
     text-decoration: none;
     transition: $transition-color;
   }
@@ -58,8 +58,8 @@
   }
 
   &__log-in-icon {
-    width: 70px;
-    height: 70px;
+    width: size-scale(70);
+    height: size-scale(70);
     flex-shrink: 0;
     position: relative;
 
@@ -98,12 +98,12 @@
 
   &__toggle-panel {
     color: $color-base;
-    font-size: 24px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: size-scale(70);
+    height: size-scale(70);
     padding: 0;
     border: 0;
     margin-left: auto;
@@ -118,18 +118,24 @@
   }
 
   &--fixed {
-    height: 70px;
-    padding: 15px 0;
+    --scale: 2/4;
     position: fixed;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
 
-    .header__logo {
-      font-size: 40px;
+    .header {
+      &__lang-item {
+        font-size: 16px;
+      }
+
+      &__log-in-title {
+        font-size: 16px;
+      }
     }
 
-    .header__log-in-icon {
-      width: 40px;
-      height: 40px;
+    .menu {
+      &__link {
+        font-size: 16px;
+      }
     }
   }
 
@@ -180,44 +186,42 @@
   }
 
   @include media-breakpoint-down(md) {
-    height: 70px;
-    padding: 15px 0;
+    --scale: 3/4;
 
-    .header__logo {
-      font-size: 40px;
+    .header {
+      &__lang-item {
+        font-size: 16px;
+      }
+
+      &__log-in-title {
+        font-size: 16px;
+      }
     }
 
-    .header__lang-item {
-      font-size: 16px;
-    }
-
-    .header__log-in-icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .header__log-in-title {
-      font-size: 16px;
+    &--fixed {
+      --scale: 2/4;
     }
   }
 
   @include media-breakpoint-down(sm) {
+    --scale: 2/4;
+
     &__panel {
       display: flex;
       flex-flow: column;
       width: 280px;
       position: fixed;
-      top: 70px;
+      top: 65px;
       right: 0;
       bottom: 0;
       background-color: #ffffff;
-      box-shadow: -10px 0 8px -8px rgba(0, 0, 0, 0.1), inset 0 12px 8px -8px rgba(0, 0, 0, 0.1);
+      box-shadow: -6px 4px 8px -4px rgba(0, 0, 0, 0.1), inset 0 10px 8px -8px rgba(0, 0, 0, 0.1);
       transform: translateX(100%);
       transition: transform 0.15s ease-out;
     }
 
     &__panel-header {
-      height: 70px;
+      height: 65px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 

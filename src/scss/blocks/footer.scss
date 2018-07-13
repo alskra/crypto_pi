@@ -56,10 +56,6 @@
   }
 
   @include media-breakpoint-down(xs) {
-    &__logo {
-      --scale: 4/7;
-    }
-
     &__networks {
       &-title {
         text-align: center;

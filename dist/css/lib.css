@@ -35908,28 +35908,34 @@ a.text-dark:hover, a.text-dark:focus {
   white-space: nowrap;
 }
 
-.min-width-0 {
+.min-w-0 {
   min-width: 0.1Px;
 }
 
-.mw-none {
+.max-w-none {
   max-width: none;
 }
 
+@media (min-width: 18.75rem) {
+  .max-w-xs {
+    max-width: 18.75rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
-  .mw-sm {
+  .max-w-sm {
     max-width: 37.5rem;
   }
 }
 
 @media (min-width: 56.25rem) {
-  .mw-md {
+  .max-w-md {
     max-width: 56.25rem;
   }
 }
 
 @media (min-width: 76.875rem) {
-  .mw-lg {
+  .max-w-lg {
     max-width: 76.875rem;
   }
 }

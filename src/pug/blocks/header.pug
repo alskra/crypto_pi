@@ -1,33 +1,31 @@
 mixin header
   +b.HEADER.header&attributes(attributes)
-    .container-fluid.mw-md.mw-lg
+    .container-fluid.max-w-md.max-w-lg
       .row.flex-nowrap.align-items-center
-        .col-auto.d-flex.flex-column
+        .col-auto
           +e.A.__logo(href='' title='CRYPTO Pi')
-            +icon-svg('logo').__logo-img
-        .col.min-width-0
-          +e.BUTTON.__toggle-panel.d-md-none(data-toggle='panel')
+            +icon-svg('logo')
+        .col.min-w-0
+          +e.BUTTON.__toggle-panel.d-md-none(data-toggle='header__panel')
             +icon-svg('menu')
             +icon-svg('cancel')
           +e.__panel
-            +e.__panel-header.d-none
-            +e.__panel-content
-              +e.__panel-row.row.align-items-md-center
-                +e.__panel-col.col-12.min-width-0.col-md.d-md-flex.justify-content-md-center
-                  +b.NAV.menu.__menu
-                    +e.UL.__inner
-                      +e.LI.__item
-                        +e.A.__link(href='#analytics') Аналитика
-                      +e.LI.__item
-                        +e.A.__link(href='#faq') FAQ
-                      +e.LI.__item
-                        +e.A.__link(href='#contacts') Контакты
-                +e.__panel-col.col-12.col-md-auto
-                  +e.__lang
-                    +e.__lang-inner
-                      +e.A.__lang-item(href='') en
-                      +e.A.__lang-item--current(href='') ru
-                +e.__panel-col.col-12.col-md-auto
-                  +e.A.__log-in(href='')
-                    +e.__log-in-icon
-                    +e.__log-in-title Investor login
+            +e.__panel-row.row.flex-md-nowrap.align-items-md-center
+              +e.__panel-col.col-12.min-w-0.col-md.d-md-flex.justify-content-md-center
+                +b.NAV.menu.__menu
+                  +e.UL.__inner
+                    +e.LI.__item
+                      +e.A.__link--current(href='analytics.html') Аналитика
+                    +e.LI.__item
+                      +e.A.__link(href='faq.html') FAQ
+                    +e.LI.__item
+                      +e.A.__link(href='contacts.html') Контакты
+              +e.__panel-col.col-12.col-md-auto
+                +e.__lang
+                  +e.__lang-inner
+                    +e.A.__lang-item(href='') en
+                    +e.A.__lang-item--current(href='') ru
+              +e.__panel-col.col-12.col-md-auto
+                +e.A.__log-in(href='')
+                  +e.__log-in-title Investor login
+                  +e.__log-in-icon

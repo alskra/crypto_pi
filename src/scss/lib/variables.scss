@@ -22,8 +22,8 @@ $grid-columns: 12;
 $grid-gutter-width: 30px;
 
 // Transitions
-$transition-all: .15s ease-in-out;
-$transition-color: color $transition-all, background-color $transition-all, border-color $transition-all, box-shadow $transition-all;
+$transition-base: .15s ease-in-out;
+$transition-color: color $transition-base, background-color $transition-base, border-color $transition-base, box-shadow $transition-base;
 
 // Spacers
 $spacer: 5px;

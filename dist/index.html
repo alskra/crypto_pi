@@ -35,17 +35,17 @@
   <body class="page__body">
     <div class="page__inner">
       <header class="header header--transparent">
-        <div class="container-fluid mw-md mw-lg">
+        <div class="container-fluid max-w-md max-w-lg">
           <div class="row flex-nowrap align-items-center">
-            <div class="col-auto d-flex flex-column">
+            <div class="col-auto">
               <a class="header__logo" href="" title="CRYPTO Pi">
-                <svg class="icon-svg-logo header__logo-img" role="img">
+                <svg class="icon-svg-logo" role="img">
                   <use xlink:href="#icon-svg-logo"></use>
                 </svg>
               </a>
             </div>
-            <div class="col min-width-0">
-              <button class="header__toggle-panel d-md-none" data-toggle="panel">
+            <div class="col min-w-0">
+              <button class="header__toggle-panel d-md-none" data-toggle="header__panel">
                 <svg class="icon-svg-menu" role="img">
                   <use xlink:href="#icon-svg-menu"></use>
                 </svg>
@@ -54,38 +54,35 @@
                 </svg>
               </button>
               <div class="header__panel">
-                <div class="header__panel-header d-none"></div>
-                <div class="header__panel-content">
-                  <div class="header__panel-row row align-items-md-center">
-                    <div class="header__panel-col col-12 min-width-0 col-md d-md-flex justify-content-md-center">
-                      <nav class="menu header__menu">
-                        <ul class="menu__inner">
-                          <li class="menu__item">
-                            <a class="menu__link" href="#analytics">Аналитика</a>
-                          </li>
-                          <li class="menu__item">
-                            <a class="menu__link" href="#faq">FAQ</a>
-                          </li>
-                          <li class="menu__item">
-                            <a class="menu__link" href="#contacts">Контакты</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                    <div class="header__panel-col col-12 col-md-auto">
-                      <div class="header__lang">
-                        <div class="header__lang-inner">
-                          <a class="header__lang-item" href="">en</a>
-                          <a class="header__lang-item header__lang-item--current" href="">ru</a>
-                        </div>
+                <div class="header__panel-row row flex-md-nowrap align-items-md-center">
+                  <div class="header__panel-col col-12 min-w-0 col-md d-md-flex justify-content-md-center">
+                    <nav class="menu header__menu">
+                      <ul class="menu__inner">
+                        <li class="menu__item">
+                          <a class="menu__link menu__link--current" href="analytics.html">Аналитика</a>
+                        </li>
+                        <li class="menu__item">
+                          <a class="menu__link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="menu__item">
+                          <a class="menu__link" href="contacts.html">Контакты</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="header__panel-col col-12 col-md-auto">
+                    <div class="header__lang">
+                      <div class="header__lang-inner">
+                        <a class="header__lang-item" href="">en</a>
+                        <a class="header__lang-item header__lang-item--current" href="">ru</a>
                       </div>
                     </div>
-                    <div class="header__panel-col col-12 col-md-auto">
-                      <a class="header__log-in" href="">
-                        <span class="header__log-in-icon"></span>
-                        <span class="header__log-in-title">Investor login</span>
-                      </a>
-                    </div>
+                  </div>
+                  <div class="header__panel-col col-12 col-md-auto">
+                    <a class="header__log-in" href="">
+                      <span class="header__log-in-title">Investor login</span>
+                      <span class="header__log-in-icon"></span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -97,8 +94,8 @@
         <section class="section-intro"></section>
       </div>
       <footer class="footer">
-        <div class="footer__top">
-          <div class="container-fluid mw-md mw-lg">
+        <div class="footer__row-1">
+          <div class="container-fluid max-w-md max-w-lg">
             <div class="row my-15-inv">
               <div class="col-12 py-15 d-flex flex-column align-items-center col-sm-4 align-items-sm-start">
                 <svg class="icon-svg-logo footer__logo" role="img">
@@ -138,6 +135,86 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="footer__row-2">
+          <div class="container-fluid max-w-md max-w-lg">
+            <div class="row my-15-inv mx-lg-35">
+              <div class="col-12 py-15 col-sm-6 col-md-3">
+                <div class="footer__title">Документы</div>
+                <ul class="footer__nav">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Privacy Policy</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Term of Use</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Refund and Return policy</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 py-15 col-sm-6 col-md-3">
+                <div class="footer__title">Помощь</div>
+                <ul class="footer__nav">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Контакты</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Задать вопрос</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 py-15 col-sm-6 col-md-3">
+                <div class="footer__title">Личный кабинет</div>
+                <ul class="footer__nav">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Регистрация</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Авторизация</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">Купить токен</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-12 py-15 col-sm-6 col-md-3">
+                <div class="footer__title">Партнеры</div>
+                <ul class="footer__nav">
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">CAPITAL Pi</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">EX Pi</a>
+                  </li>
+                  <li class="footer__nav-item">
+                    <a class="footer__nav-link" href="">RICH GATE</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row-3">
+          <div class="container-fluid max-w-md max-w-lg">
+            <div class="row my-15-inv">
+              <div class="col-12 py-15 text-center col-md text-md-left">
+                <p>* Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.</p>
+                <p>** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.</p>
+              </div>
+              <div class="col-12 py-15 text-center col-md-auto text-md-right">
+                <img class="footer__pay" src="img/pay.png" alt="" role="presentation" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__row-4">
+          <div class="container-fluid max-w-md max-w-lg">
+            <p class="text-center text-sm-left">© 2018 CRYPTO Pi. All Rights Reserved.</p>
           </div>
         </div>
       </footer>

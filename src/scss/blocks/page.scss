@@ -11,7 +11,7 @@
     display: flex;
     flex-flow: column;
     min-width: 320px;
-    min-height: 200vh;
+    min-height: 100vh;
     overflow: hidden;
   }
 
@@ -19,28 +19,26 @@
     flex-grow: 1;
   }
 
-  @include media-breakpoint-down(md) {
-
-  }
-
   @include media-breakpoint-down(sm) {
     &--open-panel {
       overflow: hidden;
 
-      .header__toggle-panel {
-        svg {
-          &:nth-child(1) {
-            display: none;
-          }
+      .header {
+        &__toggle-panel {
+          svg {
+            &:nth-child(1) {
+              display: none;
+            }
 
-          &:nth-child(2) {
-            display: block;
+            &:nth-child(2) {
+              display: block;
+            }
           }
         }
-      }
 
-      .header__panel {
-        transform: translateX(0);
+        &__panel {
+          transform: translateX(0);
+        }
       }
     }
   }

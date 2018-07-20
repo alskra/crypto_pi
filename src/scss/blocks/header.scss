@@ -1,7 +1,7 @@
 .header {
   --scale: 1;
   padding: size-scale(30) 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -13,11 +13,8 @@
     color: $color-base;
     font-size: size-scale(70);
     text-decoration: none;
+    display: flex;
     transition: $transition-color;
-  }
-
-  &__logo-img {
-    display: block;
   }
 
   &__lang-inner {
@@ -55,50 +52,49 @@
         }
       }
     }
-  }
 
-  &__log-in-icon {
-    width: size-scale(70);
-    height: size-scale(70);
-    flex-shrink: 0;
-    position: relative;
-
-    &::before, &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transition: opacity 0.15s linear;
+    &-title {
+      color: $color-base;
+      font-size: 20px;
+      line-height: 1.25;
+      font-family: "DIN Pro", sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+      margin-right: 15px;
     }
 
-    &::before {
-      background: embed-svg('icons/investor-login.svg') no-repeat 50% 50%/contain;
-    }
+    &-icon {
+      width: size-scale(70);
+      height: size-scale(70);
+      flex-shrink: 0;
+      position: relative;
 
-    &::after {
-      background: embed-svg('icons/investor-login-hover.svg') no-repeat 50% 50%/contain;
-      opacity: 0;
-    }
-  }
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: opacity 0.15s linear;
+      }
 
-  &__log-in-title {
-    color: $color-base;
-    font-size: 20px;
-    line-height: 1.25;
-    font-family: "DIN Pro", sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 150px;
-    order: -1;
-    margin-right: 15px;
+      &::before {
+        background: embed-svg('icons/investor-login.svg') no-repeat 50% 50%/contain;
+      }
+
+      &::after {
+        background: embed-svg('icons/investor-login-hover.svg') no-repeat 50% 50%/contain;
+        opacity: 0;
+      }
+    }
   }
 
   &__toggle-panel {
     color: $color-base;
-    font-size: 25px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,85 +113,70 @@
     }
   }
 
-  &--fixed {
-    --scale: 2/4;
-    position: fixed;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-
-    .header {
-      &__lang-item {
-        font-size: 16px;
-      }
-
-      &__log-in-title {
-        font-size: 16px;
-      }
-    }
-
-    .menu {
-      &__link {
-        font-size: 16px;
-      }
-    }
-  }
-
-  @mixin header--transparent {
-    background-color: transparent;
-
-    .header__logo {
-      color: white;
-    }
-
-    .header__toggle-panel {
-      color: white;
-    }
-
-    .menu__link {
-      color: white;
-
-      &:hover, &--current {
-        color: $color-link;
-      }
-    }
-
-    .header__lang-item {
-      color: white;
-
-      &:hover, &--current {
-        color: $color-link;
-      }
-    }
-
-    .header__log-in-title {
-      color: white;
-    }
-  }
-
   &--transparent {
-    @include media-breakpoint-up(md) {
-      &:not(.header--fixed) {
-        @include header--transparent;
+    @mixin header-transparent {
+      background-color: transparent;
+
+      .header {
+        &__logo {
+          color: white;
+        }
+
+        &__toggle-panel {
+          color: white;
+        }
+
+        &__lang-item {
+          color: white;
+
+          &:hover, &--current {
+            color: $color-link;
+          }
+        }
+
+        &__log-in-title {
+          color: white;
+        }
+      }
+
+      .menu {
+        &__link {
+          color: white;
+
+          &:hover, &--current {
+            color: $color-link;
+          }
+        }
       }
     }
 
     @include media-breakpoint-down(sm) {
       .page:not(.page--open-panel) &:not(.header--fixed) {
-        @include header--transparent;
+        @include header-transparent;
       }
     }
+
+    @include media-breakpoint-up(md) {
+      &:not(.header--fixed) {
+        @include header-transparent;
+      }
+    }
+  }
+
+  &--fixed {
+    --scale: 2/4;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   }
 
   @include media-breakpoint-down(md) {
     --scale: 3/4;
 
-    .header {
-      &__lang-item {
-        font-size: 16px;
-      }
+    &__lang-item {
+      font-size: 16px;
+    }
 
-      &__log-in-title {
-        font-size: 16px;
-      }
+    &__log-in-title {
+      font-size: 16px;
     }
 
     &--fixed {
@@ -207,27 +188,16 @@
     --scale: 2/4;
 
     &__panel {
-      display: flex;
-      flex-flow: column;
       width: 280px;
       position: fixed;
       top: 65px;
       right: 0;
       bottom: 0;
+      overflow-y: auto;
       background-color: #ffffff;
       box-shadow: -6px 4px 8px -4px rgba(0, 0, 0, 0.1), inset 0 10px 8px -8px rgba(0, 0, 0, 0.1);
-      transform: translateX(100%);
+      transform: translateX(300px);
       transition: transform 0.15s ease-out;
-    }
-
-    &__panel-header {
-      height: 65px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    &__panel-content {
-      flex-grow: 1;
-      overflow-y: auto;
     }
 
     &__panel-row {
@@ -247,7 +217,7 @@
     }
 
     &__log-in-title {
-      order: 0;
+      order: 1;
       max-width: none;
       margin: 0 0 0 15px;
     }

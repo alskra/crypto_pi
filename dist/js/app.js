@@ -149,22 +149,16 @@ function onScroll() {
   var header = document.querySelector('.header'),
       vw = window.innerWidth;
 
-  if (vw >= 900) {
-    if (pageYOffset > (vw >= 1230 ? 250 : 0)) {
-      header.classList.add('header--fixed');
-    } else {
-      header.classList.remove('header--fixed');
-    }
+  if (pageYOffset > 0) {
+    header.classList.add('header--fixed');
   } else {
-    if (pageYOffset > scrollTopCurrent) {
-      header.classList.remove('header--fixed');
-    } else {
-      if (pageYOffset > 0) {
-        header.classList.add('header--fixed');
-      } else {
-        header.classList.remove('header--fixed');
-      }
-    }
+    header.classList.remove('header--fixed');
+  }
+
+  if (vw < 900 && pageYOffset > scrollTopCurrent) {
+    header.style.opacity = 0;
+  } else {
+    header.style.opacity = '';
   }
 
   scrollTopCurrent = pageYOffset <= 0 ? 0 : pageYOffset;
@@ -172,7 +166,7 @@ function onScroll() {
 
 function togglePanel(event) {
   event.preventDefault();
-  if (event.target.closest('[data-toggle=panel]')) {
+  if (event.target.closest('[data-toggle=header__panel]')) {
     document.documentElement.classList.toggle('page--open-panel');
   }
 }

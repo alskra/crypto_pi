@@ -10,29 +10,19 @@
   white-space: nowrap;
 }
 
-.min-width-0 {
+.min-w-0 {
   min-width: 0.1Px;
 }
 
-.mw-none {
+.max-w-none {
   max-width: none;
 }
 
-@include media-breakpoint-up(sm) {
-  .mw-sm {
-    max-width: map-get($container-max-widths, sm);
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .mw-md {
-    max-width: map-get($container-max-widths, md);
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .mw-lg {
-    max-width: map-get($container-max-widths, lg);
+@each $key, $value in $container-max-widths {
+  @media (min-width: $value) {
+    .max-w-#{$key} {
+      max-width: $value;
+    }
   }
 }
 

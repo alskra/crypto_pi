@@ -1,9 +1,30 @@
 .section-intro {
-  height: 100vh;
-  min-height: 500px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  min-height: 100vh;
+  //min-height: 500px;
+  padding: 65px 0;
   background: url-img('sect-bg.jpg') no-repeat 50% 50%/cover;
+  overflow: hidden;
 
-  @include media-breakpoint-down(md) {
+  &__title {
+    color: #ffffff;
+    font-size: size-scale(48);
+    line-height: 1.25;
+    font-weight: 700;
+    font-family: "DIN Pro", sans-serif;
+    text-align: center;
+    margin: 0;
 
+    small {
+      font-size: size-scale(36);
+      display: block;
+      margin-bottom: size-scale(20);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    --scale: 3/4;
   }
 }

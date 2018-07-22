@@ -18,7 +18,7 @@
   flex-grow: 1;
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .page--open-panel {
     overflow: hidden;
   }
@@ -144,7 +144,7 @@
   display: none;
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .page:not(.page--open-panel) .header--transparent:not(.header--fixed) {
     background-color: transparent;
   }
@@ -171,7 +171,7 @@
   }
 }
 
-@media (min-width: 56.25rem) {
+@media (min-width: 60rem) {
   .header--transparent:not(.header--fixed) {
     background-color: transparent;
   }
@@ -203,7 +203,7 @@
   box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 76.87375rem) {
+@media (max-width: 79.99875rem) {
   .header {
     --scale: 3/4;
   }
@@ -218,7 +218,7 @@
   }
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .header {
     --scale: 2/4;
   }
@@ -290,7 +290,7 @@
   color: #fb953b;
 }
 
-@media (max-width: 76.87375rem) {
+@media (max-width: 79.99875rem) {
   .menu {
     --scale: 3/4;
   }
@@ -299,7 +299,7 @@
   }
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .menu__inner {
     flex-flow: column;
     margin: 0;
@@ -448,7 +448,7 @@
   mix-blend-mode: darken;
 }
 
-@media (max-width: 76.87375rem) {
+@media (max-width: 79.99875rem) {
   .footer {
     --scale: 3/4;
   }
@@ -460,7 +460,7 @@
   }
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .footer__title {
     --scale: 14/17;
   }
@@ -471,7 +471,7 @@
   }
 }
 
-@media (max-width: 37.49875rem) {
+@media (max-width: 39.99875rem) {
   .footer__networks-title {
     text-align: center;
   }
@@ -491,8 +491,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  min-height: 100vh;
-  padding: 4.0625rem 0;
+  min-height: calc(100vh*2/3);
+  padding: 11.25rem 0;
   background: url("../img/sect-bg.jpg") no-repeat 50% 50%/cover;
   overflow: hidden;
 }
@@ -513,7 +513,7 @@
   margin-bottom: calc(1.25rem*var(--scale));
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .section-intro {
     --scale: 3/4;
   }
@@ -616,13 +616,13 @@
   vertical-align: top;
 }
 
-@media (max-width: 76.87375rem) {
+@media (max-width: 79.99875rem) {
   .intro__footer {
     padding: 0;
   }
 }
 
-@media (max-width: 56.24875rem) {
+@media (max-width: 59.99875rem) {
   .intro {
     --scale: 3/4;
   }

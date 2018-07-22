@@ -2,9 +2,8 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-  min-height: 100vh;
-  //min-height: 500px;
-  padding: 65px 0;
+  min-height: calc(100vh*2/3);
+  padding: 180px 0;
   background: url-img('sect-bg.jpg') no-repeat 50% 50%/cover;
   overflow: hidden;
 

@@ -8,15 +8,15 @@ $font-family-base: 'Roboto', sans-serif;
 // Grid
 $grid-breakpoints: (
   xs: 0,
-  sm: 600px,
-  md: 900px,
-  lg: 1230px
+  sm: 640px,
+  md: 960px,
+  lg: 1280px
 );
 $container-max-widths: (
-  xs: 300px,
-  sm: 600px,
-  md: 900px,
-  lg: 1230px
+  xs: 320px,
+  sm: 640px,
+  md: 960px,
+  lg: 1280px
 );
 $grid-columns: 12;
 $grid-gutter-width: 30px;

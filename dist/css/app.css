@@ -675,11 +675,24 @@
   margin-bottom: calc(1.59375rem*var(--scale));
 }
 
+.section-about__footer {
+  color: #4b4b4b;
+  font: 500 calc(1.0625rem*var(--scale))/1.5 "DIN Pro", sans-serif;
+  margin-top: calc(1.59375rem*var(--scale));
+}
+
+.section-about__footer p:not(:last-child) {
+  margin-bottom: calc(1.59375rem*var(--scale));
+}
+
 @media (max-width: 59.99875rem) {
   .section-about {
     --scale: 3/4;
   }
   .section-about__content {
+    --scale: 15/17;
+  }
+  .section-about__footer {
     --scale: 15/17;
   }
 }

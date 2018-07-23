@@ -34,10 +34,26 @@
     }
   }
 
+  &__footer {
+    color: #4b4b4b;
+    font: 500 size-scale(17)/1.5 'DIN Pro', sans-serif;
+    margin-top: size-scale(17*1.5);
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: size-scale(17*1.5);
+      }
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     --scale: 3/4;
 
     &__content {
+      --scale: 15/17;
+    }
+
+    &__footer {
       --scale: 15/17;
     }
   }

@@ -103,4 +103,15 @@
   @include media-breakpoint-down(sm) {
     --scale: 3/4;
   }
+
+  @include media-breakpoint-down(xs) {
+    flex-flow: column;
+    align-items: stretch;
+
+    &__img {
+      width: 150px;
+      margin: size-scale(25) auto size-scale(-10);
+      align-self: stretch;
+    }
+  }
 }

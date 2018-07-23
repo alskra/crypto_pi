@@ -1,0 +1,25 @@
+.user-log-in {
+  --scale: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background: url-img('key.png') no-repeat 50% 50%/contain;
+
+  &__btn {
+    width: 210px;
+  }
+
+  &__content {
+    color: #4f4f4d;
+    font: 300 size-scale(17)/1.5 'DIN Pro', sans-serif;
+    margin-top: size-scale(25);
+  }
+
+  @include media-breakpoint-down(sm) {
+    --scale: 3/4;
+
+    &__content {
+      --scale: 15/17;
+    }
+  }
+}

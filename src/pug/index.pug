@@ -12,18 +12,103 @@ include blocks/footer
         +e.H1.__title
           small.wow.fadeInRight(data-wow-duration='0.5s') «CRYPTO Pi» –
           span.d-block.wow.fadeInRight Криптовалютый холдинг
-    .container-fluid.max-w-md.max-w-lg.px-25
-      +b.BLOCKQUOTE.intro.mx-auto.mt-115-inv.mb-50.wow.fadeInUp(data-wow-duration='0.5s')
-        +e.IMG.__img.d-none.d-sm-block(src='img/content/kevin.png' alt='Кевин Р. Смит')
-        +e.__body
-          +e.__content
-            p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
-          +e.__footer
-            .row.align-items-end
-              .col-6
-                +e.CITE.__cite Кевин Р.&nbsp;Смит
-                +e.__position Chief Executive Officer
-              .col-6.text-center
-                +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
-
+    .py-35.px-10.mt-165-inv.py-md-50
+      .container-fluid.max-w-md.max-w-lg
+        +b.BLOCKQUOTE.intro.my-0.mx-auto.wow.fadeIn(data-wow-duration='0.5s')
+          +e.IMG.__img(src='img/content/kevin.png' alt='Кевин Р. Смит')
+          +e.__body
+            +e.__content
+              p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
+            +e.__footer
+              .row.align-items-end
+                .col-6
+                  +e.CITE.__cite Кевин Р.&nbsp;Смит
+                  +e.__position Chief Executive Officer
+                .col-6.text-center
+                  +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
+    +b.SECTION.section-about
+      .container-fluid.max-w-md.max-w-lg
+        .row.m-15-inv
+          .col-12.col-sm-6.p-15.wow.fadeInLeft
+            +e.HEADER.__header
+              +e.H2.__title «CRYPTO Pi» —
+              .d-flex.align-items-start
+                +icon-svg('sequre').__icon
+                +e.__desc
+                  p.
+                    международный специализированный
+                    криптовалютный центр, созданный
+                    крупными мировыми инвесторами.
+            +e.__content
+              p.
+                Клиенты и партнеры центра получают доступ к экспертным знаниям и
+                опыту в области криптовалют и могут пользоваться передовыми
+                финансово-техническими сервисами, легко адаптируемыми под любые задачи и требования.
+              p.
+                Уникальность предложения «CRYPTO Pi» заключается
+                в соединении современной технологии блокчейн и классических
+                финансовых институтов.
+          .col-12.col-sm-6.p-15.wow.fadeInRight
+            +b.user-log-in.h-100
+              .row.m-10-inv.justify-content-center
+                .col-auto.mw-100.p-10
+                  +b.A.btn-primary.__btn(href='') Регистрация
+                .col-auto.mw-100.p-10
+                  +b.A.btn-secondary.__btn(href='') Авторизация
+              +e.__content.text-center.
+                У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+                в личном кабинете сегодня!
+    +b.SECTION.section--service
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-45 Основные направления деятельности холдинга
+      .container-fluid.max-w-md.max-w-lg
+        .row.justify-content-center.mb-45-inv.mb-md-60-inv
+          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title FUND
+              +e.__content
+                p.
+                  CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
+          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title MINING
+              +e.__content
+                p.
+                  Готовые комплексные решения
+                  по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
+                  нам дата-центрах.
+          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title ICO & CO FUND
+              +e.__content
+                p.
+                  Помощь в технических,
+                  финансовых и юридических
+                  вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
+          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title SALES & LEGALIZE
+              +e.__content
+                p.
+                  Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
+          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title CONSULTING
+              +e.__content
+                p.
+                  Консультации ведущих специалистов
+                  по вопросам правового регулирования, финансового взаимодействия, технических аспектов и маркетинговых технологий в финтехе.
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-45 CRYPTO Pi Fund
+      .container-fluid.max-w-md.max-w-lg
+        +b.chart.mx-auto
+          include ../img/content/chart-0.svg
   +footer

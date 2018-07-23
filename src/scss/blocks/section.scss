@@ -1,0 +1,22 @@
+.section {
+  --scale: 1;
+  padding: size-scale(60) 0;
+
+  &__header {
+    margin-bottom: size-scale(60);
+  }
+
+  &__title {
+    color: #fb953b;
+    font: 700 size-scale(28)/1.25 "DIN Pro", sans-serif;
+    margin: 0 0 size-scale(30);
+  }
+
+  &--service {
+    background: url-img('bg.jpg') no-repeat 50% 50%/cover;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --scale: 3/4;
+  }
+}

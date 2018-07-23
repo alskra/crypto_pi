@@ -1,0 +1,44 @@
+.section-about {
+  --scale: 1;
+  padding: size-scale(60) 0;
+
+  &__header {
+    color: #cf8f2c;
+    margin: 0 0 size-scale(35);
+  }
+
+  &__title {
+    font: 700 size-scale(28)/1.25 'DIN Pro', sans-serif;
+    margin: 0 0 size-scale(35);
+  }
+
+  &__icon {
+    font-size: size-scale(98);
+    flex-shrink: 0;
+    margin-right: size-scale(30);
+  }
+
+  &__desc {
+    font: 500 size-scale(24)/1.25 'DIN Pro', sans-serif;
+    flex-grow: 1;
+  }
+
+  &__content {
+    color: $color-base;
+    font: size-scale(17)/1.5 $font-family-base;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: size-scale(17*1.5);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    --scale: 3/4;
+
+    &__content {
+      --scale: 15/17;
+    }
+  }
+}

@@ -68,6 +68,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Me5Q.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'DINPro-Medium';
+  src: local("DIN Pro Medium"), local("DINPro-Medium"), url("../fonts/DINPro/subset-DINPro-Medium.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro-Medium.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -460,6 +474,11 @@ template {
 
 .icon-svg-logo {
   width: 3.0931365626323966em;
+  height: 1em;
+}
+
+.icon-svg-sequre {
+  width: 0.6904373072037743em;
   height: 1em;
 }
 

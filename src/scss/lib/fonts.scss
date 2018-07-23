@@ -33,3 +33,20 @@
     font-weight: bold;
     font-style: normal;
 }
+
+// For SVG
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"), local("Roboto-Regular"), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Me5Q.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'DINPro-Medium';
+    src: local('DIN Pro Medium'), local('DINPro-Medium'),
+    url-font('DINPro/subset-DINPro-Medium.woff2') format('woff2'),
+    url-font('DINPro/subset-DINPro-Medium.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}

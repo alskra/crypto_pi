@@ -1,0 +1,37 @@
+.service {
+  --scale: 1;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+
+    &::before {
+      content: '';
+      display: block;
+      border-width: size-scale(9);
+      border-style: solid;
+      border-color: #d9dada #d9dada #ca8510 #ca8510;
+      flex-shrink: 0;
+      margin-right: size-scale(15);
+      margin-top: size-scale(24*1.25/2);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    color: #757575;
+    font: 500 size-scale(24)/1.25 "DIN Pro", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 size-scale(15);
+  }
+
+  &__content {
+    color: #757575;
+    font: size-scale(17)/1.5 $font-family-base;
+    padding-left: size-scale(33);
+  }
+
+  @include media-breakpoint-down(sm) {
+    --scale: 15/17;
+  }
+}

@@ -8,7 +8,6 @@ import $ from 'jquery';
 
 const WOW = wowjs.WOW;
 
-console.log(wowjs);
 cssVars();
 new WOW().init();
 window.jQuery = window.$ = $;

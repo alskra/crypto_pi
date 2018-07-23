@@ -118,7 +118,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var WOW = _wowjs2.default.WOW;
 
-console.log(_wowjs2.default);
 (0, _cssVarsPonyfill2.default)();
 new WOW().init();
 window.jQuery = window.$ = _jquery2.default;

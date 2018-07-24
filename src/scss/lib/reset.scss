@@ -5,6 +5,8 @@
 }
 
 :root {
+  --size: 1;
+  --font-size: 1;
   --scale: 1;
   scroll-behavior: smooth;
 }
@@ -24,6 +26,5 @@ p {
   }
 
   .focus-visible {
-
   }
 }

@@ -1,0 +1,36 @@
+.invest-go {
+  --size: 1;
+  --font-size: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background: url-img('currency.jpg') no-repeat 100% 0/contain;
+
+  &__title {
+    color: #f7943d;
+    font-size: font-size(24);
+    line-height: 1.25;
+    font-family: $font-family-heading;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 size(30);
+  }
+
+  &__btn {
+    align-self: center;
+    margin-bottom: size(30);
+  }
+
+  &__content {
+    color: #535454;
+    font-size: font-size(17);
+    line-height: 1.25;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

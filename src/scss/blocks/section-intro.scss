@@ -1,29 +1,31 @@
 .section-intro {
+  --scale: 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
   min-height: calc(100vh*2/3);
   padding: 130px 0 180px;
   background: url-img('sect-bg.jpg') no-repeat 50% 50%/cover;
-  overflow: hidden;
 
   &__title {
     color: #ffffff;
-    font-size: size-scale(48);
+    font-size: 48px;
     line-height: 1.25;
+    font-family: $font-family-heading;
     font-weight: 700;
-    font-family: "DIN Pro", sans-serif;
     text-align: center;
     margin: 0;
 
     small {
-      font-size: size-scale(36);
+      font-size: em(36, 48);
       display: block;
-      margin-bottom: size-scale(20);
+      margin-bottom: em(20, 36);
     }
   }
 
   @include media-breakpoint-down(sm) {
-    --scale: 3/4;
+    &__title {
+      font-size: 34px;
+    }
   }
 }

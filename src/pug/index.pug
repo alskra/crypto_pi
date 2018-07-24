@@ -12,28 +12,30 @@ include blocks/footer
         +e.H1.__title
           small.wow.fadeInRight(data-wow-duration='0.5s') «CRYPTO Pi» –
           span.d-block.wow.fadeInRight Криптовалютый холдинг
-    .py-35.px-10.mt-165-inv.py-md-50
+    +b.SECTION.px-1.mt-8-inv.mb-3.mb-md-4
       .container-fluid.max-w-md.max-w-lg
-        +b.BLOCKQUOTE.intro.my-0.mx-auto.wow.fadeIn(data-wow-duration='0.5s')
-          +e.IMG.__img(src='img/content/kevin.png' alt='Кевин Р. Смит')
-          +e.__body
-            +e.__content
-              p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
-            +e.__footer
-              .row.align-items-end
-                .col-6
-                  +e.CITE.__cite Кевин Р.&nbsp;Смит
-                  +e.__position Chief Executive Officer
-                .col-6.text-center
-                  +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
+        .row.justify-content-center
+          .col-12.col-lg-10
+            +b.BLOCKQUOTE.intro-letter.m-0.wow.fadeIn
+              +e.IMG.__img(src='img/content/kevin.png' alt='Кевин Р. Смит')
+              +e.__body
+                +e.__content
+                  p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
+                +e.__footer
+                  .row.align-items-end
+                    .col-6
+                      +e.CITE.__cite Кевин Р.&nbsp;Смит
+                      +e.__position Chief Executive Officer
+                    .col-6.text-center
+                      +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
     +b.SECTION.section-about
       .container-fluid.max-w-md.max-w-lg
-        .row.m-15-inv
-          .col-12.col-sm-6.p-15.wow.fadeInLeft
+        .row.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
             +e.HEADER.__header
               +e.H2.__title «CRYPTO Pi» —
               .d-flex.align-items-start
-                +icon-svg('sequre').__icon
+                +icon-svg('sequre').__icon.d-none.d-sm-block
                 +e.__desc
                   p.
                     международный специализированный
@@ -49,30 +51,31 @@ include blocks/footer
                 Уникальность предложения «CRYPTO Pi» заключается
                 в соединении современной технологии блокчейн и классических
                 финансовых институтов.
-          .col-12.col-sm-6.p-15.wow.fadeInRight
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
             +b.user-log-in.h-100
-              .row.m-10-inv.justify-content-center
-                .col-auto.mw-100.p-10
+              .row.m-1-inv.justify-content-center
+                .col-auto.mw-100.p-1
                   +b.A.btn-primary.__btn(href='') Регистрация
-                .col-auto.mw-100.p-10
+                .col-auto.mw-100.p-1
                   +b.A.btn-secondary.__btn(href='') Авторизация
-              +e.__content.text-center.
-                У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
-                в личном кабинете сегодня!
+              +e.__content
+                p.
+                  У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+                  в личном кабинете сегодня!
     +b.SECTION.section--service
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-45 Основные направления деятельности холдинга
+          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
       .container-fluid.max-w-md.max-w-lg
-        .row.justify-content-center.mb-45-inv.mb-md-60-inv
-          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+        .row.justify-content-center.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title FUND
               +e.__content
                 p.
                   CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
-          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title MINING
@@ -81,7 +84,7 @@ include blocks/footer
                   Готовые комплексные решения
                   по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
                   нам дата-центрах.
-          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title ICO & CO FUND
@@ -90,14 +93,14 @@ include blocks/footer
                   Помощь в технических,
                   финансовых и юридических
                   вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
-          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title SALES & LEGALIZE
               +e.__content
                 p.
                   Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
-          .col-12.mb-45.col-sm-6.col-md-4.mb-md-60.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title CONSULTING
@@ -108,8 +111,48 @@ include blocks/footer
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-45 CRYPTO Pi Fund
-      .container-fluid.max-w-md.max-w-lg
-        +b.chart.mx-auto
-          include ../img/content/chart-0.svg
+          +e.H2.__title.px-md-3 CRYPTO Pi Fund
+      .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
+        .row.justify-content-center
+          .col-12.col-lg-10
+            +b.chart
+              +e.IMG.__grid(src='img/content/chart-0-grid.svg' alt='')
+              +e.IMG.__lines.wow(src='img/content/chart-0-lines.svg' alt='')
+      .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
+        .row.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
+            +b.SECTION.section-sm
+              +e.HEADER.__header
+                +e.H3.__title Фонд занимается инвестированием в криптовалюты.
+              +e.__content
+                p.
+                  В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает «CRYPTO Pi Fund» весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
+                p.
+                  Фонд проводит сбалансированную политику риск-менеджмента с приоритетным фокусом на сохранении вложенных инвесторами средств.
+              +e.FOOTER.__footer
+                p.
+                  Для достижения наилучших инвестиционных результатов мы используем четыре торговые стратегии. В основе каждой из них лежит принцип минимизации рисков и сохранения инвестиционного капитала.
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
+            +b.ARTICLE.invest-go.h-100
+              +e.H3.__title Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+              +b.A.btn-primary(href='').__btn Инвестировать сейчас
+              +e.__content
+                p.
+                  У нас нет ограничений по количеству паев – <br>
+                  стать нашим клиентом может каждый!
+      +b.SECTION.section-sm
+        +e.HEADER.__header
+          .container-fluid.max-w-md.max-w-lg
+            .row
+              .col-12.col-md-6
+                +e.H3.__title Фонд предоставляет своим клиентам возможность приобретать паи трех видов инвестиционных портфелей:
+        .container-fluid.max-w-md.max-w-lg
+          .row.mb-2-inv
+            .col-12.mb-2.col-md-4
+              +b.FIGURE.invest-item
+                +e.__img
+                +e.FIGCAPTION.__body
+                  +e.__title Краткосрочный
+                  +e.__desc 3 месяца
+                  +e.__value 70<small>%</small>
   +footer

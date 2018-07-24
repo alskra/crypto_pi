@@ -1,5 +1,6 @@
 .user-log-in {
-  --scale: 1;
+  --size: 1;
+  --font-size: 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -10,16 +11,17 @@
   }
 
   &__content {
-    color: #4f4f4d;
-    font: 300 size-scale(17)/1.5 'DIN Pro', sans-serif;
-    margin-top: size-scale(25);
+    color: $color-base;
+    font-size: font-size(17);
+    line-height: 1.5;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    text-align: center;
+    margin-top: size(30);
   }
 
   @include media-breakpoint-down(sm) {
     --scale: 3/4;
-
-    &__content {
-      --scale: 15/17;
-    }
+    --font-size: 15/17;
   }
 }

@@ -25,8 +25,7 @@ export default function js() {
           {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader',
-            //query: {}
+            use: 'babel-loader'
           }
         ]
       },
@@ -44,8 +43,7 @@ export default function js() {
           {
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader',
-            //query: {}
+            use: 'babel-loader'
           }
         ]
       },

@@ -102,15 +102,10 @@ var _header = __webpack_require__(3);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _chart = __webpack_require__(4);
-
-var _chart2 = _interopRequireDefault(_chart);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   (0, _header2.default)();
-  (0, _chart2.default)();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
@@ -173,40 +168,6 @@ function togglePanel(event) {
   event.preventDefault();
   if (event.target.closest('[data-toggle=header__panel]')) {
     document.documentElement.classList.toggle('page--open-panel');
-  }
-}
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = chart;
-
-
-chart.init = function () {
-  onScroll();
-};
-
-chart.bindUIActions = function () {
-  window.addEventListener('scroll', onScroll);
-};
-
-function chart() {
-  chart.init();
-  chart.bindUIActions();
-}
-
-function onScroll() {
-  var chart = document.querySelector('.chart');
-
-  if (window.innerHeight > chart.getBoundingClientRect().top) {
-    chart.classList.add('chart--animated');
   }
 }
 

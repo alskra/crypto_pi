@@ -30,6 +30,24 @@
   }
 }
 
+@function size($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return calc(#{$number}px*var(--size));
+  }
+}
+
+@function font-size($number) {
+  @if $number == 0 {
+    @return 0;
+  }
+  @else {
+    @return calc(#{$number}px*var(--font-size));
+  }
+}
+
 @function size-scale($number) {
   @if $number == 0 {
     @return 0;

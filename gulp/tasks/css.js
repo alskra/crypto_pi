@@ -9,7 +9,10 @@ import sassInlineSVG from 'sass-inline-svg-utf8';
 import {bs} from './server';
 
 const gp = gulpLoadPlugins();
-const emittySCSS = emitty.setup(paths.src, 'scss');
+const emittySCSS = emitty.setup(paths.src, {
+  extends: 'scss',
+  matcher: /@import[\t ]*['"](?!http)([^'"]+)['"]\s*/
+});
 
 export default function css() {
   const development = process.env.NODE_ENV !== 'production';
@@ -17,7 +20,7 @@ export default function css() {
     gulp.src(paths.css.src),
     gp.if(global.watch && global.scssChangedFile !== undefined, emittySCSS.stream(global.scssChangedFile)),
     gp.sourcemaps.init(),
-    gp.cssimport({matchPattern: "*.{css,scss}"}),
+    gp.cssimport({matchPattern: '*.css'}),
     gp.sass({
       includePaths: [],
       outputStyle: 'expanded',

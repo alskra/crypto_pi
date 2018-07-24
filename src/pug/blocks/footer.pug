@@ -2,10 +2,10 @@ mixin footer
   +b.FOOTER.footer&attributes(attributes)
     +e.__row-1
       .container-fluid.max-w-md.max-w-lg
-        .row.my-15-inv
-          .col-12.py-15.d-flex.flex-column.align-items-center.col-sm-4.align-items-sm-start
+        .row.my-1-inv
+          .col-12.py-1.d-flex.flex-column.align-items-center.col-sm-4.align-items-sm-start
             +icon-svg('logo').__logo
-          .col-12.py-15.d-flex.flex-column.col-sm-8.align-items-sm-end
+          .col-12.py-1.d-flex.flex-column.col-sm-8.align-items-sm-end
             +e.__networks
               +e.__networks-title follow us
               +e.__networks-list
@@ -21,8 +21,8 @@ mixin footer
                   +icon-svg('youtube')
     +e.__row-2
       .container-fluid.max-w-md.max-w-lg
-        .row.my-15-inv.mx-lg-35
-          .col-12.py-15.col-sm-6.col-md-3
+        .row.my-1-inv.mx-lg-2
+          .col-12.py-1.col-sm-6.col-md-3
             +e.__title Документы
             +e.UL.__nav
               +e.LI.__nav-item
@@ -31,7 +31,7 @@ mixin footer
                 +e.A.__nav-link(href='') Term of Use
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Refund and Return policy
-          .col-12.py-15.col-sm-6.col-md-3
+          .col-12.py-1.col-sm-6.col-md-3
             +e.__title Помощь
             +e.UL.__nav
               +e.LI.__nav-item
@@ -40,7 +40,7 @@ mixin footer
                 +e.A.__nav-link(href='') Задать вопрос
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') FAQ
-          .col-12.py-15.col-sm-6.col-md-3
+          .col-12.py-1.col-sm-6.col-md-3
             +e.__title Личный кабинет
             +e.UL.__nav
               +e.LI.__nav-item
@@ -49,7 +49,7 @@ mixin footer
                 +e.A.__nav-link(href='') Авторизация
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Купить токен
-          .col-12.py-15.col-sm-6.col-md-3
+          .col-12.py-1.col-sm-6.col-md-3
             +e.__title Партнеры
             +e.UL.__nav
               +e.LI.__nav-item
@@ -60,11 +60,11 @@ mixin footer
                 +e.A.__nav-link(href='') RICH GATE
     +e.__row-3
       .container-fluid.max-w-md.max-w-lg
-        .row.my-15-inv
-          .col-12.py-15.text-center.col-md.text-md-left
+        .row.my-1-inv
+          .col-12.py-1.text-center.col-md.text-md-left
             p * Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.
             p ** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.
-          .col-12.py-15.text-center.col-md-auto.text-md-right
+          .col-12.py-1.text-center.col-md-auto.text-md-right
             +e.IMG.__pay(src='img/pay.png' alt='')
     +e.__row-4
       .container-fluid.max-w-md.max-w-lg

@@ -4,6 +4,7 @@ $color-link: #fb953b;
 
 // Type
 $font-family-base: 'Roboto', sans-serif;
+$font-family-heading: 'DIN Pro', sans-serif;
 
 // Grid
 $grid-breakpoints: (
@@ -26,9 +27,9 @@ $transition-base: .15s ease-in-out;
 $transition-color: color $transition-base, background-color $transition-base, border-color $transition-base, box-shadow $transition-base;
 
 // Spacers
-$spacer: 5px;
+$spacer: $grid-gutter-width/2;
 $spacers: ();
 
-@for $i from 0 through 100 {
-  $spacers: map-merge($spacers, ($i*$spacer/1px: $i*$spacer, #{$i*$spacer/1px}-inv: -$spacer*$i));
+@for $i from 1 through 10 {
+  $spacers: map-merge($spacers, ($i: $i*$spacer, #{$i}-inv: -$i*$spacer));
 }

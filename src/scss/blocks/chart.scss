@@ -1,58 +1,30 @@
-@keyframes chart__line {
+@keyframes show-chart-lines {
   from {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   }
+
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
 
-@keyframes chart__label {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .chart {
-  display: block;
-  max-width: 1000px;
+  --size: 1;
+  --font-size: 1;
+  position: relative;
 
-  &--animated {
-    .chart__line {
-      animation: chart__line 2.5s cubic-bezier(.32,.89,.57,1.01);
-      animation-fill-mode: both;
+  &__grid {
+    display: block;
+    max-width: 100%;
+  }
 
-      &--1 {
-        animation-delay: 0.5s;
-      }
-    }
-
-    .chart__label {
-      animation: chart__label 2.5s cubic-bezier(.32,.89,.57,1.01);
-      animation-fill-mode: both;
-
-      &--1 {
-        animation-delay: 0.2s;
-      }
-
-      &--2 {
-        animation-delay: 0.4s;
-      }
-
-      &--3 {
-        animation-delay: 0.6s;
-      }
-
-      &--4 {
-        animation-delay: 0.8s;
-      }
-
-      &--5 {
-        animation-delay: 1s;
-      }
-    }
+  &__lines {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: show-chart-lines;
+    animation-timing-function: ease-out;
   }
 }

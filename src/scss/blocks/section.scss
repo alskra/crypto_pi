@@ -1,15 +1,19 @@
 .section {
-  --scale: 1;
-  padding: size-scale(60) 0;
+  --size: 1;
+  --font-size: 1;
+  padding: size(60) 0;
 
   &__header {
-    margin-bottom: size-scale(60);
+    margin-bottom: size(60);
   }
 
   &__title {
     color: #fb953b;
-    font: 700 size-scale(28)/1.25 "DIN Pro", sans-serif;
-    margin: 0 0 size-scale(30);
+    font-size: font-size(28);
+    line-height: 1.25;
+    font-family: $font-family-heading;
+    font-weight: 700;
+    margin: 0 0 size(30);
   }
 
   &--service {
@@ -17,6 +21,7 @@
   }
 
   @include media-breakpoint-down(sm) {
-    --scale: 3/4;
+    --size: 3/4;
+    --font-size: 15/17;
   }
 }

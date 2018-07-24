@@ -1,40 +1,25 @@
-.section-about {
+.section-sm {
   --size: 1;
   --font-size: 1;
-  padding: size(60) 0;
 
   &__header {
     margin-bottom: size(30);
   }
 
   &__title {
-    color: #cf8f2c;
-    font-size: font-size(28);
-    line-height: 1.25;
-    font-family: $font-family-heading;
-    font-weight: 700;
-    margin: 0 0 size(30);
-  }
-
-  &__icon {
-    font-size: size(98);
-    flex-shrink: 0;
-    margin-right: size(30);
-  }
-
-  &__desc {
-    color: #cf8f2c;
+    color: #535454;
     font-size: font-size(24);
     line-height: 1.25;
     font-family: $font-family-heading;
     font-weight: 500;
-    flex-grow: 1;
+    margin: 0 0 size(15);
   }
 
   &__content {
-    color: $color-base;
+    color: #535454;
     font-size: font-size(17);
     line-height: 1.5;
+    font-family: $font-family-heading;
 
     p {
       &:not(:last-child) {
@@ -44,7 +29,7 @@
   }
 
   &__footer {
-    color: #4b4b4b;
+    color: #535454;
     font-size: font-size(17);
     line-height: 1.5;
     font-family: $font-family-heading;

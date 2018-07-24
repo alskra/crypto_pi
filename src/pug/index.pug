@@ -186,4 +186,68 @@ include blocks/footer
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3 Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi
+      +b.SECTION.section-chart.mb-6.mb-md-8
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 Global cryptocarrency market
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Долгосрочные вложения, как правило, составляют 45% от общей стоимости портфеля.
+                    p
+                      strong Инвестиции делаются в топ-10 криптовалют в соответствии с рейтингом их капитализации.
+                    p.
+                      Длительные инвестиции в ведущие криптовалюты с большой рыночной капитализацией и ликвидностью нивелируют
+                      риски резких колебаний стоимости, а защищенные холодные кошельки делают
+                      долгосрочное хранение безопасным.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-0.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0 4
+                        +e.SPAN.__value-text-0 5
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - долгосрочные вложения
+            .col-12.px-0.col-md-6.px-md-1.wow.slideInRight
+              +e.__chart--0
+                +e.IMG.__chart-img(src='img/content/chart-1.svg' alt='')
+      +b.SECTION.section-chart.mb-6.mb-md-8
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0.order-1
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 HARD FORK & NEW CARRENCY
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Среднесрочные инвестиции обычно составляют 30% от общей стоимости портфеля.
+                    p.
+                      <strong>Это инвестиции в валюты, сформировавшиеся в результате хардфорка высокорейтинговых валют</strong>, а также в новые валюты, капитализация которых превысила 1 млрд долларов США, с последующей корректировкой позиций валют в зависимости от их относительной волатильности и ликвидности в любой момент времени.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-1.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0 3
+                        +e.SPAN.__value-text-0 0
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - среднесрочные вложения
+            .col-12.px-0.col-md-6.px-md-1.wow.slideInLeft
+              +e.__chart--1.--left
+                +e.IMG.__chart-img(src='img/content/chart-2.svg' alt='')
   +footer

@@ -75,7 +75,7 @@ include blocks/footer
               +e.__content
                 p.
                   CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
-          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title MINING
@@ -84,7 +84,7 @@ include blocks/footer
                   Готовые комплексные решения
                   по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
                   нам дата-центрах.
-          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title ICO & CO FUND
@@ -93,14 +93,14 @@ include blocks/footer
                   Помощь в технических,
                   финансовых и юридических
                   вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
-          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.6s')
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title SALES & LEGALIZE
               +e.__content
                 p.
                   Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
-          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.8s')
             +b.ARTICLE.service
               +e.HEADER.__header
                 +e.H3.__title CONSULTING
@@ -117,7 +117,7 @@ include blocks/footer
           .col-12.col-lg-10
             +b.chart
               +e.IMG.__grid(src='img/content/chart-0-grid.svg' alt='')
-              +e.IMG.__lines.wow(src='img/content/chart-0-lines.svg' alt='')
+              +e.IMG.__lines.wow(src='img/content/chart-0-lines.svg' alt='' data-wow-duration='1.5s')
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
@@ -149,7 +149,7 @@ include blocks/footer
         .container
           .row.mb-2-inv.justify-content-center
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item
+              +b.FIGURE.invest-item.wow.flipInX
                 +e.__img
                   +icon-svg('sand-watch').__img-svg
                 +e.FIGCAPTION.__body
@@ -160,7 +160,7 @@ include blocks/footer
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-1 %
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item
+              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.2s')
                 +e.__img
                   +icon-svg('watch').__img-svg
                 +e.FIGCAPTION.__body
@@ -171,7 +171,7 @@ include blocks/footer
                     +e.SPAN.__value-text-0 5
                     +e.SPAN.__value-text-1 %
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item
+              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.4s')
                 +e.__img
                   +icon-svg('calendar').__img-svg
                 +e.FIGCAPTION.__body
@@ -182,4 +182,8 @@ include blocks/footer
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-1 %
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi
   +footer

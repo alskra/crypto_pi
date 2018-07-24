@@ -144,15 +144,42 @@ include blocks/footer
         +e.HEADER.__header
           .container-fluid.max-w-md.max-w-lg
             .row
-              .col-12.col-md-6
+              .col-12.col-md-8
                 +e.H3.__title Фонд предоставляет своим клиентам возможность приобретать паи трех видов инвестиционных портфелей:
-        .container-fluid.max-w-md.max-w-lg
-          .row.mb-2-inv
-            .col-12.mb-2.col-md-4
+        .container
+          .row.mb-2-inv.justify-content-center
+            .col-12.mb-2.col-sm-6.col-md-4
               +b.FIGURE.invest-item
                 +e.__img
+                  +icon-svg('sand-watch').__img-svg
                 +e.FIGCAPTION.__body
                   +e.__title Краткосрочный
                   +e.__desc 3 месяца
-                  +e.__value 70<small>%</small>
+                  +e.__value
+                    +e.SPAN.__value-text-0 7
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-1 %
+            .col-12.mb-2.col-sm-6.col-md-4
+              +b.FIGURE.invest-item
+                +e.__img
+                  +icon-svg('watch').__img-svg
+                +e.FIGCAPTION.__body
+                  +e.__title Среднесрочный
+                  +e.__desc 6 месяцев
+                  +e.__value
+                    +e.SPAN.__value-text-0 8
+                    +e.SPAN.__value-text-0 5
+                    +e.SPAN.__value-text-1 %
+            .col-12.mb-2.col-sm-6.col-md-4
+              +b.FIGURE.invest-item
+                +e.__img
+                  +icon-svg('calendar').__img-svg
+                +e.FIGCAPTION.__body
+                  +e.__title Долгосрочный
+                  +e.__desc 12 месяцев
+                  +e.__value
+                    +e.SPAN.__value-text-0--one 1
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-1 %
   +footer

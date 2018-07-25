@@ -127,9 +127,27 @@
   }
 
   &__pay {
+    display: inline-flex;
     vertical-align: top;
     max-width: 100%;
-    mix-blend-mode: darken;
+
+    &-col {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      fill: rgb(35, 31, 32);
+      font-size: 35px;
+      margin: 5px;
+      vertical-align: middle;
+    }
   }
 
   @include media-breakpoint-down(md) {

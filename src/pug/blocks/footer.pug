@@ -65,7 +65,15 @@ mixin footer
             p * Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.
             p ** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.
           .col-12.py-1.text-center.col-md-auto.text-md-right
-            +e.IMG.__pay(src='img/pay.png' alt='')
+            +e.__pay
+              +e.__pay-col
+                +icon-svg('vbm_blu').__pay-item
+                +icon-svg('vbyvisa_blu').__pay-item
+              +e.__pay-col
+                +e.__pay-row
+                  +icon-svg('mc').__pay-item
+                  +icon-svg('ms').__pay-item
+                +icon-svg('mc-sc').__pay-item
     +e.__row-4
       .container-fluid.max-w-md.max-w-lg
         p.text-center.text-sm-left © 2018 CRYPTO Pi. All Rights Reserved.

@@ -1088,7 +1088,7 @@
   line-height: 1;
   font-family: "DIN Pro", sans-serif;
   font-weight: 700;
-  margin-left: calc(-0.9375rem*var(--font-size));
+  margin-left: calc(-0.875rem*var(--font-size));
 }
 
 @media (max-width: 79.99875rem) {

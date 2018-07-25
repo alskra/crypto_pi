@@ -1136,7 +1136,7 @@
 }
 
 .section-chart__content p:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .section-chart__content b, .section-chart__content strong {
@@ -1193,7 +1193,7 @@
 }
 
 .section-chart__chart {
-  padding: calc(1.25rem*var(--size));
+  padding: calc(1.25rem*var(--size)) calc(1.875rem*var(--size));
   position: relative;
   margin-top: calc(13.125rem*var(--size));
 }
@@ -1211,6 +1211,18 @@
 
 .section-chart__chart--0::before {
   background-image: url("../img/bg-1.jpg");
+}
+
+.section-chart__chart--1::before {
+  background-image: url("../img/bg-2.jpg");
+}
+
+.section-chart__chart--2::before {
+  background-image: url("../img/bg-3.jpg");
+}
+
+.section-chart__chart--3::before {
+  background-image: url("../img/bg-4.jpg");
 }
 
 .section-chart__chart--left {

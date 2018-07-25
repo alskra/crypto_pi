@@ -35,7 +35,7 @@
 
     p {
       &:not(:last-child) {
-        margin-bottom: 1em;
+        margin-bottom: em(17*1.5, 17);
       }
     }
 
@@ -96,7 +96,7 @@
   }
 
   &__chart {
-    padding: size(20);
+    padding: size(20) size(30);
     position: relative;
     margin-top: size(210);
 
@@ -114,6 +114,24 @@
     &--0 {
       &::before {
         background-image: url-img('bg-1.jpg');
+      }
+    }
+
+    &--1 {
+      &::before {
+        background-image: url-img('bg-2.jpg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url-img('bg-3.jpg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-image: url-img('bg-4.jpg');
       }
     }
 

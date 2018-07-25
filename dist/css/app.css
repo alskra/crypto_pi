@@ -1412,6 +1412,13 @@
   margin-right: calc(3.75rem*var(--size));
 }
 
+@media (max-width: 79.99875rem) {
+  .write__img, .write__body {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
 @media (max-width: 59.99875rem) {
   .write {
     --size: 3/4;

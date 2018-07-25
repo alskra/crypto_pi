@@ -149,7 +149,10 @@
   }
 
   @include media-breakpoint-down(md) {
-
+    &__img, &__body {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
   }
 
   @include media-breakpoint-down(sm) {

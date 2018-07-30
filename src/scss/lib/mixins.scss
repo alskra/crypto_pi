@@ -1,3 +1,17 @@
+// BEM
+@mixin init-block {
+  --size: 1;
+  --font-size: 1;
+  color: $color-base;
+  font: 16px/1.25 $font-family-base;
+  text-align: initial;
+  text-decoration: none;
+  letter-spacing: normal;
+  list-style: none;
+  padding: 0;
+  border: none;
+}
+
 // State
 @mixin focus-visible {
   outline: 2px solid $color-link;

@@ -91,7 +91,31 @@
   background-color: #fb953b;
 }
 
-p, ul, ol, figure {
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
+p, ol, ul, blockquote, figure {
   margin: 0;
 }
 
@@ -101,6 +125,7 @@ p, ul, ol, figure {
 
 .js-focus-visible .focus-visible {
   outline: 0.125rem solid #fb953b;
+  outline-offset: -0.0625rem;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */

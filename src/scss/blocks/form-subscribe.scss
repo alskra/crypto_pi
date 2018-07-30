@@ -1,0 +1,15 @@
+.form-subscribe {
+  &__row {
+    justify-content: center;
+    margin: -10px;
+  }
+
+  &__col {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  &__field {
+    width: 320px;
+  }
+}

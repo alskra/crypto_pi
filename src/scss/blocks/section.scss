@@ -16,15 +16,48 @@
     margin: 0 0 size(30);
   }
 
+  &__link-goto {
+    color: $color-link;
+    font-size: font-size(20);
+    line-height: 1.25;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+      color: darken($color-link, 15%);
+    }
+  }
+
+  &__footer {
+    color: #fb953b;
+    font-size: font-size(24);
+    line-height: 1.25;
+    font-family: $font-family-heading;
+    font-weight: 700;
+    margin-top: size(60);
+  }
+
   &--service {
     background: url-img('bg.jpg') no-repeat 50% 50%/cover;
   }
 
   &--analytics {
+    background: url-img('analytics.jpg') no-repeat right 10% top;
+
     .section__title {
       color: #757575;
     }
   }
+
+  &--risks {
+    background: url-img('bg-5.jpg') no-repeat 50% 50%/cover;
+
+    .section__title {
+      color: #757575;
+    }
+  }
+
+
 
   @include media-breakpoint-down(sm) {
     --size: 3/4;

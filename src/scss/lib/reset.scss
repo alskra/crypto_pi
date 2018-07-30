@@ -26,5 +26,6 @@ p, ul, ol, figure {
   }
 
   .focus-visible {
+    outline: 2px solid $color-link;
   }
 }

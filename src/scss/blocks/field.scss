@@ -1,0 +1,28 @@
+.field {
+  --size: 1;
+  --font-size: 1;
+  color: $color-base;
+  font-size: font-size(17);
+  line-height: 1.25;
+  font-family: $font-family-heading;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  padding: font-size((45 - 17*1.25)/2) font-size(15);
+  border: font-size(1) solid #c9c9c9;
+  background: #f5f6f6;
+
+  &::placeholder {
+    color: $color-base;
+    font-weight: 300;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

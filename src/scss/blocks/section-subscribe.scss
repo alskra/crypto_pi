@@ -1,0 +1,52 @@
+.section-subscribe {
+  --size: 1;
+  --font-size: 1;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: size(293);
+    height: size(288);
+    max-width: calc(50% - 35px);
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 20px;
+    background: url-img('pen.png') no-repeat 0 0/contain;
+    z-index: -1;
+  }
+
+  &__header {
+    padding-bottom: size(30);
+  }
+
+  &__title {
+    color: #f5f6f6;
+    font-size: font-size(72);
+    line-height: 1.25;
+    font-weight: 500;
+    padding: 0 size(90);
+    margin: 0;
+  }
+
+  &__desc {
+    font-size: font-size(21);
+    line-height: 1.25;
+    text-align: center;
+    margin-top: size(15);
+  }
+
+  &__content {
+    padding-bottom: size(60);
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+
+    &__title {
+      padding: 0;
+    }
+  }
+}

@@ -5,8 +5,8 @@ include blocks/header
 include blocks/footer
 
 +page(pagesList.index.title)
-  +header.--transparent
-  +e.__main
+  +header.--transparent.__header
+  +e.__content
     +b.SECTION.section-intro
       .container-fluid.max-w-md.max-w-lg
         +e.H1.__title
@@ -319,55 +319,160 @@ include blocks/footer
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3 Аналитика
       .container
-        .row.mb-2-inv.mx-lg-0
-          .col-12.mb-2.col-sm-6.col-md-4.px-lg-0
-            +b.ARTICLE.write.h-100
-              +e.A.__inner(href='')
-                +e.DIV.__img
-                  +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
-                +e.DIV.__body
-                  +e.HEADER.__header
-                    +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
-                      span 25
-                      span jul
-                    +e.H3.__title Заголовок основной крипто
-                  +e.__content
-                    p.
-                      И меньше страдают от информационного шума», накрывшего в последние годы этот перспективный рынок последние годы этот перспективный рынок шума».
-                      Накрывшего в последние годы этот перспективный рынок последние годы этот перспективный рынок...
-                  +e.FOOTER.__footer
-                    +e.SPAN.__read-more Читать далее >
-          .col-12.mb-2.col-sm-6.col-md-4.px-lg-0
-            +b.ARTICLE.write.h-100
-              +e.A.__inner(href='')
-                +e.DIV.__img
-                  +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
-                +e.DIV.__body
-                  +e.HEADER.__header
-                    +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
-                      span 23
-                      span jul
-                    +e.H3.__title Заголовок основной крипто
-                  +e.__content
-                    p.
-                      И меньше страдают от информационного шума», накрывшего в последние годы...
-                  +e.FOOTER.__footer
-                    +e.SPAN.__read-more Читать далее >
-          .col-12.mb-2.col-sm-6.col-md-4.px-lg-0
-            +b.ARTICLE.write.h-100
-              +e.A.__inner(href='')
-                +e.DIV.__img
-                  +e.IMG.__img-inner(src='img/content/pic-2.jpg' alt='')
-                +e.DIV.__body
-                  +e.HEADER.__header
-                    +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
-                      span 21
-                      span jul
-                    +e.H3.__title Заголовок основной крипто
-                  +e.__content
-                    p.
-                      И меньше страдают от информационного шума», накрывшего в последние годы этот перспективный рынок последние годы этот перспективный рынок шума».
-                      Накрывшего в последние годы этот перспективный рынок последние годы этот перспективный рынок...
-                  +e.FOOTER.__footer
-                    +e.SPAN.__read-more Читать далее >
-  +footer
+        +b.carousel
+          +e.__inner.row
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 25
+                        span jul
+                      +e.H3.__title Лишь элементы политического процесса неоднозначны и будут своевременно верифицированы
+                    +e.__content
+                      p Имеется спорная точка зрения, гласящая примерно следующее: базовые сценарии поведения пользователей и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 23
+                        span jul
+                      +e.H3.__title Также как укрепление
+                    +e.__content
+                      p Учитывая ключевые сценарии поведения, синтетическое тестирование не оставляет шанса для модели развития
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-2.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 21
+                        span jul
+                      +e.H3.__title Но разбавленное изрядной долей эмпатии, рациональное мышление создает предпосылки для инновационных методов управления процессами
+                    +e.__content
+                      p В своем стремлении улучшить пользовательский опыт мы упускаем, что представители современных социальных резервов обнародованы
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 19
+                        span jul
+                      +e.H3.__title Прежде всего, существующая теория не оставляет шанса для укрепления моральных ценностей
+                    +e.__content
+                      p В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для экономической целесообразности принимаемых решений
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 17
+                        span jul
+                      +e.H3.__title Таким образом, базовый вектор развития позволяет оценить значение распределения внутренних резервов и ресурсов
+                    +e.__content
+                      p Но акционеры крупнейших компаний являются только методом политического участия и призваны к ответу
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+          +e.__arrows
+      .container-fluid.max-w-md.max-w-lg.text-right.mt-2
+        +e.A.__link-goto(href='') В раздел Аналитики
+      +b.SECTION.section-subscribe.mt-3.mt-md-4
+        +e.HEADER.__header
+          .container-fluid.max-w-md.max-w-lg
+            +e.H2.__title Subscribe
+            +e.P.__desc Подпишись на рассылку аналитики, прогнозов и новостей CRYPTO Pi
+        +e.__content
+          .container-fluid.max-w-md.max-w-lg
+            +b.FORM.form-subscribe(action='')
+              +e.__row.row
+                +e.__col.col-auto
+                  +b.INPUT.field.__field(type='email' placeholder='Введите свой email адрес')
+                +e.__col.col-auto
+                  +b.BUTTON.btn-primary.__btn Подписаться
+    +b.SECTION.section--risks
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
+      .container-fluid.max-w-md.max-w-lg
+        .row.justify-content-center.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Время
+              +e.__content
+                p.
+                  Инвестор, пришедший на рынок криптовалюты из другой сферы деятельности и занятый большую часть времени на основной работе,
+                  не сможет уделять торговле достаточно времени.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Знание трейдинга
+              +e.__content
+                p.
+                  Отсутствие профессиональных знаний в трейдинге приводит к непоправимым ошибкам и большим убыткам.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Аналитика
+              +e.__content
+                p.
+                  Процесс инвестирования связан с обработкой большого объема информации на разных языках.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.6s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Риск менеджмент
+              +e.__content
+                p.
+                  Для поддержания дисциплины при реализации торговой стратегии необходим внешний контроль.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.8s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Проработка стратегии
+              +e.__content
+                p.
+                  Тестирование стратегий требует значительных ресурсов – от времени и специальных знаний до вычислительных мощностей.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Технологии
+              +e.__content
+                p.
+                  Серьезный трейдинг предполагает наличие специализированных торговых программ и дополнительного оборудовании.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1.2s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Опыт
+              +e.__content
+                p.
+                  Для того, чтобы знания конвертировались в опыт, должно пройти время. С первого раза всё получается далеко не у каждого.
+      +e.FOOTER.__footer
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.col-md-7
+              p.
+                Опытный трейдер, с которым у вас выстроены доверительные
+                отношения, сведет перечисленные выше риски к нулю.
++footer.__footer

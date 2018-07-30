@@ -20,7 +20,7 @@ mixin page(title)
       script
         include ../../vendors/svg-symbols/svg-symbols.js
     +e.BODY.__body
-      +e.__inner
+      +e.__body-inner
         block
       // JS
       script(src=`js/app${development ? '' : '.min'}.js` async='')

@@ -102,10 +102,15 @@ var _header = __webpack_require__(3);
 
 var _header2 = _interopRequireDefault(_header);
 
+var _carousel = __webpack_require__(4);
+
+var _carousel2 = _interopRequireDefault(_carousel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   (0, _header2.default)();
+  (0, _carousel2.default)();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
@@ -170,6 +175,52 @@ function togglePanel(event) {
     document.documentElement.classList.toggle('page--open-panel');
   }
 }
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = carousel;
+
+
+carousel.options = {
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  infinite: false,
+  prevArrow: '<button type="button" class="slick-prev carousel__arrow carousel__arrow--prev"><svg role="img" class="icon-svg-angle-l">\n' + '  <use xlink:href="#icon-svg-angle-l"></use>\n' + '</svg></button>',
+  nextArrow: '<button type="button" class="slick-next carousel__arrow carousel__arrow--next"><svg role="img" class="icon-svg-angle-l">\n' + '  <use xlink:href="#icon-svg-angle-l"></use>\n' + '</svg></button>',
+  responsive: [{
+    breakpoint: 960,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2
+    }
+  }, {
+    breakpoint: 640,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1
+    }
+  }]
+};
+
+carousel.init = function () {
+  document.querySelectorAll('.carousel').forEach(function (item) {
+    carousel.options.appendArrows = item.querySelector('.carousel__arrows');
+    $(item.querySelector('.carousel__inner')).slick(carousel.options);
+  });
+};
+
+function carousel() {
+  carousel.init();
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
 /***/ })
 /******/ ]);

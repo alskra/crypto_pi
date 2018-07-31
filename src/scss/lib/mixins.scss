@@ -2,39 +2,13 @@
 @mixin init-block {
   --size: 1;
   --font-size: 1;
-  color: $color-base;
-  font: {
-    style: normal;
-    variant: normal;
-    weight: $font-weight-base;
-    stretch: normal;
-    size: $font-size-base;
-    family: $font-family-base;
-  }
-  line-height: $line-height-base;
   text-align: left;
   text-align: start;
-  text-decoration: none;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  word-break: normal;
-  word-spacing: normal;
-  white-space: normal;
-  line-break: auto;
-  list-style: none;
-  padding: 0;
-  border: 0;
-}
-
-%init-block {
-  @include init-block;
 }
 
 // State
 @mixin focus-visible {
-  outline: 2px solid $color-primary;
+  outline: 2px solid rgba($color-primary, 0.5);
   outline-offset: -1px;
 }
 

@@ -1,10 +1,3 @@
-// Sources
-@import "sass-image";
-
-@function font-url($path) {
-  @return url('../fonts/#{$path}');
-}
-
 // Units
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
@@ -14,24 +7,24 @@
   @return $number;
 }
 
-@function rem($number, $base: 16) {
+@function rem($number, $base: 16px) {
   $number: strip-unit($number);
+  $base: strip-unit($base);
 
   @if $number == 0 {
     @return 0;
-  }
-  @else {
+  } @else {
     @return #{$number/$base}rem;
   }
 }
 
-@function em($number, $base: 16) {
+@function em($number, $base: 16px) {
   $number: strip-unit($number);
+  $base: strip-unit($base);
 
   @if $number == 0 {
     @return 0;
-  }
-  @else {
+  } @else {
     @return #{$number/$base}em;
   }
 }
@@ -41,9 +34,8 @@
 
   @if $number == 0 {
     @return 0;
-  }
-  @else {
-    @return calc(#{$number}px*var(--size));
+  } @else {
+    @return calc(#{$number}px * var(--size));
   }
 }
 
@@ -52,10 +44,16 @@
 
   @if $number == 0 {
     @return 0;
+  } @else {
+    @return calc(#{$number}px * var(--font-size));
   }
-  @else {
-    @return calc(#{$number}px*var(--font-size));
-  }
+}
+
+// Sources
+@import "sass-image";
+
+@function font-url($path) {
+  @return url('../fonts/#{$path}');
 }
 
 // Deprecated
@@ -72,8 +70,7 @@
 
   @if $number == 0 {
     @return 0;
-  }
-  @else {
-    @return calc(#{$number}px*var(--scale));
+  } @else {
+    @return calc(#{$number}px * var(--scale));
   }
 }

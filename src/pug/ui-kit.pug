@@ -4,16 +4,17 @@ include blocks/page
 
 +page(pagesList.uiKit.title)
   +b.MAIN(style="padding: 15px;")
-    h1 #{pagesList.uiKit.title} - #{pkg.description}
-
-    h2 Colors
+    +b.wysiwyg
+      h1 #{pagesList.uiKit.title} - #{pkg.description}
+    +b.wysiwyg
+      h2 Colors
     table(style="border-collapse: collapse; width: 100%; max-width: 1000px;")
       each color, i in ['#4f4f4d', '#d28600', '#ffffff', '#757575', '#f5f6f6', '#d08f2c', '#fb953b', '#f59a00', '#f19800', '#f8f9fa', '#000000', '#444242', '#4b4b4b', '#d9dbda', '#286d44', '#535454', '#3faf6c', '#985a1a', '#cf8f2c', '#c9c9c9', '#3e3e3e', '#464645', '#fefefe', '#353534', '#f7943d', '#e9e9ea']
         tr(title=`Color ${i + 1}`)
           td(style="padding: 5px; border: 1px solid #ccc;"): div(style=`width: 20px; height: 20px; border-radius: 4px; border: 1px solid #ccc; background: ${color};`)
           td(style="padding: 5px; border: 1px solid #ccc;"): code= color
-
-    h2 Fonts
+    +b.wysiwyg
+      h2 Fonts
     table(style="border-collapse: collapse; width: 100%; max-width: 1000px;")
       each font, i in ['Roboto:400:normal', 'Roboto:400:italic', 'Roboto:700:normal', 'Roboto:700:italic', 'Roboto:500:normal', 'Roboto:900:normal', 'DIN Pro:400:normal', 'DIN Pro:300:normal', 'DIN Pro:500:normal', 'DIN Pro:700:normal']
         - font = font.split(':');
@@ -21,24 +22,29 @@ include blocks/page
           td(style="padding: 5px; border: 1px solid #ccc;"): div(style=`font-family: ${font[0]}; font-weight: ${font[1]}; font-style: ${font[2]};`)= font[0]
           td(style="padding: 5px; border: 1px solid #ccc;"): code= font[1]
           td(style="padding: 5px; border: 1px solid #ccc;"): code= font[2]
-
-    h2 Content
-    +b.content
-      h1 Heading h1
-      h2 Heading h2
-      h3 Heading h3
-      h4 Heading h4
-      h5 Heading h5
-      h6 Heading h6
-
+    +b.wysiwyg
+      h2 Content
+      h1 Heading H1
       p.
         Клиенты и партнеры центра получают <strong>доступ</strong> к <em>экспертным знаниям</em> и
         опыту в области <a href=''>криптовалют</a> и могут пользоваться передовыми
         финансово-техническими сервисами, легко адаптируемыми под любые задачи и требования.
-
       p.
         Уникальность предложения «CRYPTO Pi» заключается
         в соединении современной технологии блокчейн и классических
         финансовых институтов.
-
-    h2 Form elements
+      h2 Heading H2
+      h3 Heading H3
+      h4 Heading H4
+      h5 Heading H5
+      h6 Heading H6
+      ol
+        li В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.
+        li Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.
+        li Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+      ul
+        li В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.
+        li Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.
+        li Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+    +b.wysiwyg
+      h2 Form elements

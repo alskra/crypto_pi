@@ -19,6 +19,9 @@ export default function html() {
     pkg,
     development
   };
+  const changedFile = global.pugChangedFile;
+
+  global.pugChangedFile = undefined;
 
   fs.readdirSync(`${paths.src}/data`).forEach((item) => {
     let filepath = path.resolve(`${paths.src}/data`, item),
@@ -30,7 +33,7 @@ export default function html() {
 
   return combiner.obj([
     gulp.src(paths.html.src),
-    gp.if(global.watch && global.pugChangedFile !== undefined && path.extname(global.pugChangedFile) !== '.json', emittyPug.stream(global.pugChangedFile)),
+    gp.if(global.watch && changedFile !== undefined && path.extname(changedFile) !== '.json', emittyPug.stream(changedFile)),
     gp.pug({
       locals
     }),

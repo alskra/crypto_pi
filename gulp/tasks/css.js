@@ -15,9 +15,13 @@ const emittySCSS = emitty.setup(paths.src, {
 
 export default function css() {
   const development = process.env.NODE_ENV !== 'production';
+  const changedFile = global.scssChangedFile;
+
+  global.scssChangedFile = undefined;
+
   return combiner.obj([
     gulp.src(paths.css.src),
-    gp.if(global.watch && global.scssChangedFile !== undefined, emittySCSS.stream(global.scssChangedFile)),
+    gp.if(global.watch && changedFile !== undefined, emittySCSS.stream(changedFile)),
     gp.sourcemaps.init(),
     gp.cssimport({matchPattern: '*.css'}),
     gp.sass({

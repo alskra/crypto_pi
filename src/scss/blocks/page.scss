@@ -1,5 +1,5 @@
 .page {
-  @extend %init-block;
+  @include init-block;
 
   &__body {
     background-color: #ffffff;

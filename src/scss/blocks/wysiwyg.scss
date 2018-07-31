@@ -1,0 +1,71 @@
+.wysiwyg {
+  $font-size: 17px;
+  $line-height: 1.5;
+  @include init-block;
+  color: $color-base;
+  font-weight: $font-weight-base;
+  font-size: font-size($font-size);
+  line-height: $line-height;
+  font-family: $font-family-base;
+
+  @for $i from 1 through 6 {
+    h#{$i}, .h#{$i} {
+      font-weight: 700;
+      line-height: 1.25;
+      font-family: $font-family-heading;
+      margin: {
+        top: 1em;
+        bottom: 1em;
+      };
+    }
+  }
+
+  h1, .h1 {
+    font-size: em(28, $font-size);
+  }
+
+  h2, .h2 {
+    font-size: em(24, $font-size);
+  }
+
+  h3, .h3 {
+    font-size: em(20, $font-size);
+  }
+
+  h4, .h4 {
+    font-size: em(16, $font-size);
+  }
+
+  h5, .h5 {
+    font-size: em(14, $font-size);
+  }
+
+  h6, .h6 {
+    font-size: em(12, $font-size);
+  }
+
+  p, ol, ul, dl {
+    margin: {
+      top: 0;
+      bottom: 1em*$line-height;
+    };
+  }
+
+  li, dt, dd {
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

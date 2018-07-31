@@ -23,11 +23,17 @@ export default function html() {
 
   global.pugChangedFile = undefined;
 
+  function camelize(str) {
+    return str.replace(/\W+(.)/g, function (match, chr) {
+      return chr.toUpperCase();
+    });
+  }
+
   fs.readdirSync(`${paths.src}/data`).forEach((item) => {
     let filepath = path.resolve(`${paths.src}/data`, item),
       extname = path.extname(filepath);
     if (fs.lstatSync(filepath).isFile() && extname === '.json') {
-      locals[path.basename(filepath, extname)] = JSON.parse(fs.readFileSync(filepath));
+      locals[camelize(path.basename(filepath, extname))] = JSON.parse(fs.readFileSync(filepath));
     }
   });
 

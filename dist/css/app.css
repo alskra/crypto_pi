@@ -88,7 +88,7 @@
 
 .wysiwyg p, .wysiwyg ol, .wysiwyg ul, .wysiwyg dl {
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .wysiwyg li, .wysiwyg dt, .wysiwyg dd {
@@ -101,7 +101,19 @@
 }
 
 .wysiwyg a:hover {
+  color: #e56e05;
   text-decoration: none;
+}
+
+.wysiwyg table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wysiwyg table th, .wysiwyg table td {
+  vertical-align: baseline;
+  padding: 0.58824em;
+  border: 0.0625rem solid rgba(79, 79, 77, 0.3);
 }
 
 @media (max-width: 59.99875rem) {

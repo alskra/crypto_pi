@@ -13,7 +13,7 @@ export default function server() {
   bs.init({
     server: {
       baseDir: paths.dest,
-      index: 'pages-list.html'
+      index: 'ui-kit.html'
     }
   });
 };

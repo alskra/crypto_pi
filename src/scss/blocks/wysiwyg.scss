@@ -47,7 +47,7 @@
   p, ol, ul, dl {
     margin: {
       top: 0;
-      bottom: 1em*$line-height;
+      bottom: 1em;
     };
   }
 
@@ -60,7 +60,19 @@
     text-decoration: underline;
 
     &:hover {
+      color: darken($color-link, 15%);
       text-decoration: none;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th, td {
+      vertical-align: baseline;
+      padding: em(10, $font-size);
+      border: 1px solid rgba($color-base, 0.3);
     }
   }
 

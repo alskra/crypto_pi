@@ -8,6 +8,7 @@
     variant: normal;
     weight: $font-weight-base;
     stretch: normal;
+    size: $font-size-base;
     family: $font-family-base;
   }
   line-height: $line-height-base;
@@ -17,6 +18,7 @@
   text-shadow: none;
   text-transform: none;
   letter-spacing: normal;
+  word-wrap: normal;
   word-break: normal;
   word-spacing: normal;
   white-space: normal;
@@ -24,6 +26,10 @@
   list-style: none;
   padding: 0;
   border: 0;
+}
+
+%init-block {
+  @include init-block;
 }
 
 // State

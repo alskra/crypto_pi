@@ -30,7 +30,7 @@ export default function css() {
       rootValue: 16,
       unitPrecision: 5,
       propList: ['*'],
-      selectorBlackList: [],
+      selectorBlackList: ['.visuallyhidden', '.min-w-0'],
       replace: true,
       mediaQuery: true,
       minPixelValue: 0

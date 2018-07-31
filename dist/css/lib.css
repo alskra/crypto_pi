@@ -68,9 +68,12 @@
   font-style: normal;
 }
 
-*,
-*::before,
-*::after {
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*::before, *::after {
   box-sizing: border-box;
 }
 
@@ -91,36 +94,13 @@
   background-color: #fb953b;
 }
 
-h1 {
-  margin: 0;
-}
-
-h2 {
-  margin: 0;
-}
-
-h3 {
-  margin: 0;
-}
-
-h4 {
-  margin: 0;
-}
-
-h5 {
-  margin: 0;
-}
-
-h6 {
-  margin: 0;
-}
-
-p, ol, ul, blockquote, figure {
-  margin: 0;
+a {
+  color: #4f4f4d;
+  text-decoration: none;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
+  outline: 0;
 }
 
 .js-focus-visible .focus-visible {

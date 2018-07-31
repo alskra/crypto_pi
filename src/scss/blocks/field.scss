@@ -1,9 +1,6 @@
 .field {
-  --size: 1;
-  --font-size: 1;
-  color: $color-base;
+  @include init-block;
   font-size: font-size(17);
-  line-height: 1.25;
   font-family: $font-family-heading;
   display: inline-block;
   vertical-align: top;
@@ -11,6 +8,7 @@
   padding: font-size((45 - 17*1.25)/2) font-size(15);
   border: font-size(1) solid #c9c9c9;
   background: #f5f6f6;
+  transition: $transition-color;
 
   &::placeholder {
     color: $color-base;

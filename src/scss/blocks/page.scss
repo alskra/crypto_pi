@@ -1,9 +1,7 @@
 .page {
+  @include init-block;
+
   &__body {
-    color: $color-base;
-    font-size: 17px;
-    line-height: 1.5;
-    font-family: $font-family-base;
     background-color: #ffffff;
   }
 

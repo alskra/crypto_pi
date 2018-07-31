@@ -1,8 +1,12 @@
 // Colors
 $color-base: #4f4f4d;
-$color-link: #fb953b;
+$color-primary: #fb953b;
+$color-link: $color-primary;
 
 // Type
+$font-weight-base: 400;
+$font-size-base: 1rem;
+$line-height-base: 1.25;
 $font-family-base: 'Roboto', sans-serif;
 $font-family-heading: 'DIN Pro', sans-serif;
 

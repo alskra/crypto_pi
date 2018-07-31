@@ -59,7 +59,26 @@ export default gulp.series(
       }
     }));
   },
-  function imgSvgSymbols() {
+  function imgSASSImage() {
+    return combiner.obj([
+      gulp.src(paths.img.srcSASSImage),
+      gp.sassImage({
+        targetFile: 'sass-image.scss',
+        images_path: paths.img.dest,
+        css_path: paths.css.dest,
+        prefix: ''
+      }),
+      gp.debug({title: "Asset task 'imgSASSImage'"}),
+      gulp.dest(paths.img.destSASSImage),
+      bs.stream({once: true})
+    ]).on('error', gp.notify.onError(function (err) {
+      return {
+        title: "Error task 'imgSASSImage'",
+        message: err.message
+      }
+    }));
+  },
+  function imgSVGSymbols() {
     return combiner.obj([
       gulp.src(paths.img.srcSVGSymbolsIcons),
       gp.if(function (file) {
@@ -80,14 +99,14 @@ export default gulp.series(
           templates: ['default-svg', paths.img.srcSVGSymbolsCSS, 'default-demo']
         }
       ),
-      gp.debug({title: "Asset task 'imgSvgSymbols'"}),
+      gp.debug({title: "Asset task 'imgSVGSymbols'"}),
       gulp.dest(function (file) {
         return file.extname === '.svg' ? paths.img.dest : file.extname === '' ? (file.basename = 'svg-symbols.scss', paths.img.destSVGSymbolsCSS) : paths.html.dest
       }),
       bs.stream({once: true})
     ]).on('error', gp.notify.onError(function (err) {
       return {
-        title: "Error task 'imgSvgSymbols'",
+        title: "Error task 'imgSVGSymbols'",
         message: err.message
       }
     }));

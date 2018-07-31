@@ -3,18 +3,32 @@
   --size: 1;
   --font-size: 1;
   color: $color-base;
-  font: 16px/1.25 $font-family-base;
-  text-align: initial;
+  font: {
+    style: normal;
+    variant: normal;
+    weight: $font-weight-base;
+    stretch: normal;
+    family: $font-family-base;
+  }
+  line-height: $line-height-base;
+  text-align: left;
+  text-align: start;
   text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
   letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
   list-style: none;
   padding: 0;
-  border: none;
+  border: 0;
 }
 
 // State
 @mixin focus-visible {
-  outline: 2px solid $color-link;
+  outline: 2px solid $color-primary;
   outline-offset: -1px;
 }
 

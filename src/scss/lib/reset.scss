@@ -1,7 +1,10 @@
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  margin: 0;
+
+  &::before, &::after {
+    box-sizing: border-box;
+  }
 }
 
 :root {
@@ -13,22 +16,17 @@
 
 ::selection {
   color: white;
-  background-color: $color-link;
+  background-color: $color-primary;
 }
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    margin: 0;
-  }
-}
-
-p, ol, ul, blockquote, figure {
-  margin: 0;
+a {
+  color: $color-base;
+  text-decoration: none;
 }
 
 .js-focus-visible {
   :focus:not(.focus-visible) {
-    outline: none;
+    outline: 0;
   }
 
   .focus-visible {

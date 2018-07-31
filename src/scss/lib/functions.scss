@@ -1,18 +1,22 @@
 // Sources
-@function url-img($path) {
-  @return url('../img/#{$path}');
-}
+@import "sass-image";
 
-@function embed-svg($path) {
-  @return inline-svg('dist/img/#{$path}');
-}
-
-@function url-font($path) {
+@function font-url($path) {
   @return url('../fonts/#{$path}');
 }
 
 // Units
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number/($number*0 + 1);
+  }
+
+  @return $number;
+}
+
 @function rem($number, $base: 16) {
+  $number: strip-unit($number);
+
   @if $number == 0 {
     @return 0;
   }
@@ -22,6 +26,8 @@
 }
 
 @function em($number, $base: 16) {
+  $number: strip-unit($number);
+
   @if $number == 0 {
     @return 0;
   }
@@ -31,6 +37,8 @@
 }
 
 @function size($number) {
+  $number: strip-unit($number);
+
   @if $number == 0 {
     @return 0;
   }
@@ -40,6 +48,8 @@
 }
 
 @function font-size($number) {
+  $number: strip-unit($number);
+
   @if $number == 0 {
     @return 0;
   }
@@ -48,7 +58,18 @@
   }
 }
 
+// Deprecated
+@function url-img($path) {
+  @return image-url($path);
+}
+
+@function url-font($path) {
+  @return font-url($path);
+}
+
 @function size-scale($number) {
+  $number: strip-unit($number);
+
   @if $number == 0 {
     @return 0;
   }

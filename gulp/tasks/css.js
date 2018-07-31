@@ -5,7 +5,6 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import combiner from 'stream-combiner2';
 import * as emitty from 'emitty';
-import sassInlineSVG from 'sass-inline-svg-utf8';
 import {bs} from './server';
 
 const gp = gulpLoadPlugins();
@@ -22,9 +21,7 @@ export default function css() {
     gp.sourcemaps.init(),
     gp.cssimport({matchPattern: '*.css'}),
     gp.sass({
-      includePaths: [],
-      outputStyle: 'expanded',
-      functions: sassInlineSVG()
+      outputStyle: 'expanded'
     }),
     gp.autoprefixer({
       cascade: false
@@ -38,24 +35,14 @@ export default function css() {
       mediaQuery: true,
       minPixelValue: 0
     }),
-    // gp.cleanCss({
-    //   format: 'beautify',
-    //   level: {
-    //     1: {
-    //       all: false,
-    //       cleanupCharsets: true
-    //     }
-    //   },
-    //   debug: true
-    // }),
     gp.sourcemaps.write('.'),
     gp.debug({title: "Asset task 'css'"}),
     gulp.dest(paths.css.dest),
     gp.if(!development, combiner.obj([
       gp.filter(['**', '!**/*.min.*', '!**/*.map']),
       gp.rename({suffix: '.min'}),
-      gp.cleanCss({
-        level: 1,
+      gp.csso({
+        sourceMap: false,
         debug: true
       }),
       gp.debug({title: "Asset task 'css'"}),

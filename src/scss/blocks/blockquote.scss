@@ -3,16 +3,48 @@
   color: #444242;
   font-size: font-size(20);
   font-family: $font-family-heading;
+  padding: 0 size(60);
+
+  q {
+    quotes: none;
+    display: block;
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      width: size(image-width('icons/quote-open.png'));
+      height: size(image-height('icons/quote-open.png'));
+      position: absolute;
+      @extend %icons-quote-open-png;
+      background: {
+        repeat: no-repeat;
+        position: 50% 50%;
+        size: contain;
+      }
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 0;
+      left: size(-60);
+    }
+
+    &::after {
+      right: size(-60);
+      bottom: 0;
+      transform: rotate(180deg);
+    }
+  }
 
   cite {
-    font-size: em(28, 20);
+    font-size: font-size(28);
     line-height: 1.15;
     display: block;
-    margin-top: em(30, 28);
+    margin-top: font-size(30);
 
     small {
       font-style: normal;
-      font-size: em(18, 28);
+      font-size: font-size(18);
     }
   }
 

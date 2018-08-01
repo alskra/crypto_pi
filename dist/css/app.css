@@ -63,27 +63,27 @@
 }
 
 .wysiwyg h1, .wysiwyg .h1 {
-  font-size: 1.64706em;
+  font-size: 1.88235em;
 }
 
 .wysiwyg h2, .wysiwyg .h2 {
-  font-size: 1.41176em;
+  font-size: 1.64706em;
 }
 
 .wysiwyg h3, .wysiwyg .h3 {
-  font-size: 1.17647em;
+  font-size: 1.41176em;
 }
 
 .wysiwyg h4, .wysiwyg .h4 {
-  font-size: 0.94118em;
+  font-size: 1.17647em;
 }
 
 .wysiwyg h5, .wysiwyg .h5 {
-  font-size: 0.82353em;
+  font-size: 1.05882em;
 }
 
 .wysiwyg h6, .wysiwyg .h6 {
-  font-size: 0.70588em;
+  font-size: 0.94118em;
 }
 
 .wysiwyg p, .wysiwyg ol, .wysiwyg ul, .wysiwyg dl {
@@ -91,13 +91,37 @@
   margin-bottom: 1em;
 }
 
-.wysiwyg li, .wysiwyg dt, .wysiwyg dd {
+.wysiwyg li, .wysiwyg dd {
+  margin-bottom: 1em;
+}
+
+.wysiwyg dt {
   margin-bottom: 0.5em;
+}
+
+.wysiwyg ol ol, .wysiwyg ol ul, .wysiwyg ul ol, .wysiwyg ul ul {
+  margin-top: 1em;
+}
+
+.wysiwyg ul {
+  list-style: none;
+}
+
+.wysiwyg ul > li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0.47059em;
+  height: 0.47059em;
+  margin-left: -1.05882em;
+  margin-right: 0.58824em;
+  background-color: #d28600;
 }
 
 .wysiwyg a {
   color: #fb953b;
   text-decoration: underline;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .wysiwyg a:hover {
@@ -106,11 +130,15 @@
 }
 
 .wysiwyg table {
+  display: block;
+  overflow-x: auto;
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 .wysiwyg table th, .wysiwyg table td {
+  width: 100%;
+  width: 100vw;
   vertical-align: baseline;
   padding: 0.58824em;
   border: 0.0625rem solid rgba(79, 79, 77, 0.3);

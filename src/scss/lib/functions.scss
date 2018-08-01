@@ -13,9 +13,9 @@
 
   @if $number == 0 {
     @return 0;
-  } @else {
-    @return #{$number/$base}rem;
   }
+
+  @return $number/$base*1rem;
 }
 
 @function em($number, $base: 16px) {
@@ -24,9 +24,9 @@
 
   @if $number == 0 {
     @return 0;
-  } @else {
-    @return #{$number/$base}em;
   }
+
+  @return $number/$base*1em;
 }
 
 @function size($number) {
@@ -34,9 +34,9 @@
 
   @if $number == 0 {
     @return 0;
-  } @else {
-    @return calc(#{$number}px * var(--size));
   }
+
+  @return calc(#{$number}px * var(--size));
 }
 
 @function font-size($number) {
@@ -44,9 +44,9 @@
 
   @if $number == 0 {
     @return 0;
-  } @else {
-    @return calc(#{$number}px * var(--font-size));
   }
+
+  @return calc(#{$number}px * var(--font-size));
 }
 
 // Sources

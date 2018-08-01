@@ -1,7 +1,13 @@
 // Colors
 $color-base: #4f4f4d;
 $color-primary: #fb953b;
+$color-primary-dark: #d08f2c;
 $color-link: $color-primary;
+$colors: (
+  color-base: $color-base,
+  color-primary: $color-primary,
+  color-primary-dark: $color-primary-dark
+);
 
 // Type
 $font-weight-base: 400;

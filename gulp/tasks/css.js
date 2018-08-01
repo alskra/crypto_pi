@@ -10,7 +10,7 @@ import {bs} from './server';
 const gp = gulpLoadPlugins();
 const emittySCSS = emitty.setup(paths.src, {
   extends: 'scss',
-  matcher: /@import[\t ]*['"](?!http)([^'"]+)['"]\s*/
+  matcher: /@import[\t ]+['"](?!http)([^'"]+)['"]\s*/
 });
 
 export default function css() {

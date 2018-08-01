@@ -5993,6 +5993,134 @@ a.text-dark:hover, a.text-dark:focus {
   visibility: hidden !important;
 }
 
+.blue {
+  color: #007bff !important;
+}
+
+.blue-bg {
+  background: #007bff !important;
+}
+
+.indigo {
+  color: #6610f2 !important;
+}
+
+.indigo-bg {
+  background: #6610f2 !important;
+}
+
+.purple {
+  color: #6f42c1 !important;
+}
+
+.purple-bg {
+  background: #6f42c1 !important;
+}
+
+.pink {
+  color: #e83e8c !important;
+}
+
+.pink-bg {
+  background: #e83e8c !important;
+}
+
+.red {
+  color: #dc3545 !important;
+}
+
+.red-bg {
+  background: #dc3545 !important;
+}
+
+.orange {
+  color: #fd7e14 !important;
+}
+
+.orange-bg {
+  background: #fd7e14 !important;
+}
+
+.yellow {
+  color: #ffc107 !important;
+}
+
+.yellow-bg {
+  background: #ffc107 !important;
+}
+
+.green {
+  color: #28a745 !important;
+}
+
+.green-bg {
+  background: #28a745 !important;
+}
+
+.teal {
+  color: #20c997 !important;
+}
+
+.teal-bg {
+  background: #20c997 !important;
+}
+
+.cyan {
+  color: #17a2b8 !important;
+}
+
+.cyan-bg {
+  background: #17a2b8 !important;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.white-bg {
+  background: #fff !important;
+}
+
+.gray {
+  color: #6c757d !important;
+}
+
+.gray-bg {
+  background: #6c757d !important;
+}
+
+.gray-dark {
+  color: #343a40 !important;
+}
+
+.gray-dark-bg {
+  background: #343a40 !important;
+}
+
+.color-base {
+  color: #4f4f4d !important;
+}
+
+.color-base-bg {
+  background: #4f4f4d !important;
+}
+
+.color-primary {
+  color: #fb953b !important;
+}
+
+.color-primary-bg {
+  background: #fb953b !important;
+}
+
+.color-primary-dark {
+  color: #d08f2c !important;
+}
+
+.color-primary-dark-bg {
+  background: #d08f2c !important;
+}
+
 .visuallyhidden {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;

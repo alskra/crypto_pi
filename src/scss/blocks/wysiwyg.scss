@@ -21,27 +21,27 @@
   }
 
   h1, .h1 {
-    font-size: em(28, $font-size);
+    font-size: em(32px, $font-size);
   }
 
   h2, .h2 {
-    font-size: em(24, $font-size);
+    font-size: em(28px, $font-size);
   }
 
   h3, .h3 {
-    font-size: em(20, $font-size);
+    font-size: em(24px, $font-size);
   }
 
   h4, .h4 {
-    font-size: em(16, $font-size);
+    font-size: em(20px, $font-size);
   }
 
   h5, .h5 {
-    font-size: em(14, $font-size);
+    font-size: em(18px, $font-size);
   }
 
   h6, .h6 {
-    font-size: em(12, $font-size);
+    font-size: em(16px, $font-size);
   }
 
   p, ol, ul, dl {
@@ -51,13 +51,43 @@
     };
   }
 
-  li, dt, dd {
+  li, dd {
+    margin-bottom: 1em;
+  }
+
+  dt {
     margin-bottom: 0.5em;
+  }
+
+  ol, ul {
+    ol, ul {
+      margin-top: 1em;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: em(8px, $font-size);
+        height: em(8px, $font-size);
+        margin: {
+          left: em(-18px, $font-size);
+          right: em(10px, $font-size);
+        };
+        background-color: #d28600;
+      }
+    }
   }
 
   a {
     color: $color-link;
     text-decoration: underline;
+    transition: $transition-color;
 
     &:hover {
       color: darken($color-link, 15%);
@@ -66,10 +96,18 @@
   }
 
   table {
+    display: block;
+    overflow-x: auto;
     border-collapse: collapse;
     border-spacing: 0;
 
+    thead, tbody {
+
+    }
+
     th, td {
+      width: 100%;
+      width: 100vw;
       vertical-align: baseline;
       padding: em(10, $font-size);
       border: 1px solid rgba($color-base, 0.3);
@@ -79,5 +117,10 @@
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;
+
+    table {
+
+
+    }
   }
 }

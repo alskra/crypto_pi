@@ -2,38 +2,55 @@ include lib/variables
 include lib/mixins
 include blocks/page
 
-+page(pagesList.uiKit.title)
++page('UI-kit')
   +b.MAIN
-    .container
+    +b.container-fluid.max-w-md.max-w-lg
       +b.wysiwyg
-        h1 #{pagesList.uiKit.title} - #{pkg.description}
+        h1 #{pkg.description}
         h2 Pages list
         ol
+          if pkg.repository
+            li
+              a(href=pkg.repository target='_blank') Repository #[small (#{pkg.repository})]
+          li
+            a(href='ui-kit.html') UI-kit #[small (ui-kit.html)]
+            ol
+              li
+                a(href='svg-symbols-demo-page.html') SVG-symbols #[small (svg-symbols-demo-page.html)]
           each page in pagesList
-            li(style="margin-bottom: 5px;"): a(href=page.url) #{page.title} #[small (#{page.url})]
-        h2 Colors
-        table.w-100
-          each color, i in ['#4f4f4d', '#d28600', '#ffffff', '#757575', '#f5f6f6', '#d08f2c', '#fb953b', '#f59a00', '#f19800', '#f8f9fa', '#000000', '#444242', '#4b4b4b', '#d9dbda', '#286d44', '#535454', '#3faf6c', '#985a1a', '#cf8f2c', '#c9c9c9', '#3e3e3e', '#464645', '#fefefe', '#353534', '#f7943d', '#e9e9ea']
-            tr
-              td: span.d-inline-block.align-middle(style=`width: 20px; height: 20px; border-radius: 4px; border: 1px solid #ccc; background: ${color};`)
-              td: code.align-middle= color
+            li
+              a(href=page.url) #{page.title} #[small (#{page.url})]
         h2 Fonts
         table.w-100
-          each font, i in ['Roboto:400:normal', 'Roboto:400:italic', 'Roboto:700:normal', 'Roboto:700:italic', 'Roboto:500:normal', 'Roboto:900:normal', 'DIN Pro:400:normal', 'DIN Pro:300:normal', 'DIN Pro:500:normal', 'DIN Pro:700:normal']
-            - font = font.split(':');
+          thead
             tr
-              td: div(style=`font-family: ${font[0]}; font-weight: ${font[1]}; font-style: ${font[2]};`)= font[0]
-              td: code= font[1]
-              td: code= font[2]
+              th Family
+              th Weigth
+              th Style
+              th Example
+          tbody
+            each value in ['Roboto:400:normal', 'Roboto:400:italic', 'Roboto:700:normal', 'Roboto:700:italic', 'Roboto:500:normal', 'Roboto:900:normal', 'DIN Pro:400:normal', 'DIN Pro:300:normal', 'DIN Pro:500:normal', 'DIN Pro:700:normal']
+              - value = value.split(':');
+              tr
+                td
+                  code= value[0]
+                td
+                  code= value[1]
+                td
+                  code= value[2]
+                td(style=`font-family: ${value[0]}; font-weight: ${value[1]}; font-style: ${value[2]};`).
+                  абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+                  <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                  <br>0123456789.:,;()*!?'@#<>$%&^+-=~
         h2 Content
-        h1 Heading H1
-        h2 Heading H2
-        h3 Heading H3
-        h4 Heading H4
-        h5 Heading H5
-        h6 Heading H6
+        h1 Heading h1
+        h2 Heading h2
+        h3 Heading h3
+        h4 Heading h4
+        h5 Heading h5
+        h6 Heading h6
         h2 Таким образом, граница обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании первоочередных требований!
-        p Мы <strong>вынуждены</strong> <em>отталкиваться</em> от того, что повышение уровня <a href=''>гражданского сознания</a> создает необходимость включения в производственный план целого ряда внеочередных мероприятий с учетом комплекса анализа существующих паттернов поведения.
+        p Мы <strong>вынуждены</strong> <em>отталкиваться</em> от того, что повышение уровня <a href=''>гражданского сознания</a> создает <strong><em>необходимость включения</em></strong> в производственный план целого ряда внеочередных мероприятий с учетом комплекса анализа существующих паттернов поведения.
         p Для современного мира высокотехнологичная концепция общественного уклада не оставляет шанса для существующих финансовых и административных условий.
         ol
           li В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.
@@ -42,5 +59,10 @@ include blocks/page
         ul
           li В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.
           li Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.
-          li Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+          li
+            | Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+            ol
+              li В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.
+              li Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.
+        p Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом - призваны к ответу.
         h2 Form elements

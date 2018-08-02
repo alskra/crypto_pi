@@ -43,13 +43,25 @@ export default function html() {
     gp.pug({
       locals
     }),
-    gp.prettify({indent_inner_html: true, indent_size: 2, unformatted: ['pre', 'code']}),
+    //gp.htmlmin({collapseWhitespace: true}),
+    gp.prettyHtml({
+      indent_size: 2,
+      indent_char: ' ',
+      preserve_newlines: false,
+      brace_style: 'collapse',
+      indent_scripts: 'normal',
+      unformatted: ['b', 'strong', 'i', 'em', 'mark', 'small', 'del', 'ins', 'sub', 'sup', 'code', 'br', 'span'],
+      content_unformatted: ['pre', 'no-html-formatted']
+    }),
     gp.typograf({
       locale: ['ru', 'en-US'],
       htmlEntity: {type: 'default'},
       safeTags: [
         ['<\\?php', '\\?>'],
-        ['<textarea>', '</textarea>']
+        ['<pre', '/pre>'],
+        ['<code', '/code>'],
+        ['<textarea', '/textarea>'],
+        ['<no-typography', '/no-typography>']
       ]
     }),
     gp.debug({title: "Asset task 'html'"}),

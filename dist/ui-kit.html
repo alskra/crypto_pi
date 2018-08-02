@@ -1,209 +1,260 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <title>UI-kit — CRYPTO Pi/Frontend</title>
-    <!-- Meta-->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <!-- Favicon-->
-    <!-- CSS-->
-    <link rel="stylesheet" href="css/lib.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <!-- JS-->
-    <script src="js/lib.js"></script>
-    <script>
-      // Load and insert svg-symbols.svg
-      (function()
-      {
-        'use strict';
-        var xhr = new XMLHttpRequest();
-        xhr.onload = function()
-        {
-          if (xhr.status >= 200 && xhr.status < 400)
-          {
-            document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
-          }
-        };
-        xhr.open('GET', 'img/svg-symbols.svg', true);
-        xhr.send();
-      })();
-    </script>
-  </head>
-  <body class="page__body">
-    <div class="page__body-inner">
-      <main role="main">
-        <div class="container-fluid max-w-md max-w-lg">
-          <div class="wysiwyg">
-            <h1>CRYPTO Pi/Frontend</h1>
-            <h2>Pages list</h2>
-            <ol>
-              <li>
-                <a href="https://github.com/alskra/crypto_pi.git" target="_blank">Repository
-                  <small>(https://github.com/alskra/crypto_pi.git)</small>
-                </a>
-              </li>
-              <li>
-                <a href="ui-kit.html">UI-kit
-                  <small>(ui-kit.html)</small>
-                </a>
-                <ol>
-                  <li>
-                    <a href="svg-symbols-demo-page.html">SVG-symbols
-                      <small>(svg-symbols-demo-page.html)</small>
-                    </a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="index.html">Главная
-                  <small>(index.html)</small>
-                </a>
-              </li>
-            </ol>
-            <h2>Fonts</h2>
-            <table class="w-100">
-              <thead>
-                <tr>
-                  <th>Family</th>
-                  <th>Weigth</th>
-                  <th>Style</th>
-                  <th>Example</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>400</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: Roboto; font-weight: 400; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>400</code></td>
-                  <td><code>italic</code></td>
-                  <td style="font-family: Roboto; font-weight: 400; font-style: italic;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>700</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: Roboto; font-weight: 700; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>700</code></td>
-                  <td><code>italic</code></td>
-                  <td style="font-family: Roboto; font-weight: 700; font-style: italic;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>500</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: Roboto; font-weight: 500; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>Roboto</code></td>
-                  <td><code>900</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: Roboto; font-weight: 900; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>DIN Pro</code></td>
-                  <td><code>400</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: DIN Pro; font-weight: 400; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>DIN Pro</code></td>
-                  <td><code>300</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: DIN Pro; font-weight: 300; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>DIN Pro</code></td>
-                  <td><code>500</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: DIN Pro; font-weight: 500; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-                <tr>
-                  <td><code>DIN Pro</code></td>
-                  <td><code>700</code></td>
-                  <td><code>normal</code></td>
-                  <td style="font-family: DIN Pro; font-weight: 700; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
-                    <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                    <br>0123456789.:, ; ()*?! '@#
-                    <>$%&^±=~</td>
-                </tr>
-              </tbody>
-            </table>
-            <h2>Content</h2>
-            <h1>Heading h1</h1>
-            <h2>Heading h2</h2>
-            <h3>Heading h3</h3>
-            <h4>Heading h4</h4>
-            <h5>Heading h5</h5>
-            <h6>Heading h6</h6>
-            <h2>Таким образом, граница обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании первоочередных требований!</h2>
-            <p>Мы
-              <strong>вынуждены</strong>
-              <em>отталкиваться</em> от того, что повышение уровня
-              <a href=''>гражданского сознания</a> создает
-              <strong>
-                <em>необходимость включения</em>
-              </strong> в производственный план целого ряда внеочередных мероприятий с учетом комплекса анализа существующих паттернов поведения.</p>
-            <p>Для современного мира высокотехнологичная концепция общественного уклада не оставляет шанса для существующих финансовых и административных условий.</p>
-            <ol>
-              <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
-              <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
-              <li>Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.</li>
-            </ol>
-            <ul>
-              <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
-              <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
-              <li>Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
-                <ol>
-                  <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
-                  <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
-                </ol>
-              </li>
-            </ul>
-            <p>Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом — призваны к ответу.</p>
-            <h2>Form elements</h2>
-          </div>
+
+<head>
+  <title>UI-kit — CRYPTO Pi/Frontend</title>
+  <!-- Meta-->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <!-- Favicon-->
+  <!-- CSS-->
+  <link rel="stylesheet" href="css/lib.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <!-- JS-->
+  <script src="js/lib.js"></script>
+  <script>
+    // Load and insert svg-symbols.svg
+    (function() {
+      'use strict';
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 400) {
+          document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
+        }
+      };
+      xhr.open('GET', 'img/svg-symbols.svg', true);
+      xhr.send();
+    })();
+  </script>
+</head>
+
+<body class="page__body">
+  <div class="page__body-inner">
+    <main role="main">
+      <div class="container-fluid max-w-md max-w-lg">
+        <div class="wysiwyg">
+          <h1>CRYPTO Pi/Frontend</h1>
+          <h2>Pages list</h2>
+          <ol>
+            <li>
+              <a href="https://github.com/alskra/crypto_pi.git" target="_blank">Repository <small>(https://github.com/alskra/crypto_pi.git)</small></a>
+            </li>
+            <li>
+              <a href="ui-kit.html">UI-kit <small>(ui-kit.html)</small></a>
+              <ol>
+                <li>
+                  <a href="svg-symbols-demo-page.html">SVG-symbols <small>(svg-symbols-demo-page.html)</small></a>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a href="index.html">Главная <small>(index.html)</small></a>
+            </li>
+          </ol>
+          <h2>Fonts</h2>
+          <table class="w-100">
+            <thead>
+              <tr>
+                <th>Family</th>
+                <th>Weigth</th>
+                <th>Style</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>400</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 400; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>400</code></td>
+                <td><code>italic</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 400; font-style: italic;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>700</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 700; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>700</code></td>
+                <td><code>italic</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 700; font-style: italic;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>500</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 500; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>Roboto</code></td>
+                <td><code>900</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: Roboto; font-weight: 900; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>DIN Pro</code></td>
+                <td><code>400</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: DIN Pro; font-weight: 400; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>DIN Pro</code></td>
+                <td><code>300</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: DIN Pro; font-weight: 300; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>DIN Pro</code></td>
+                <td><code>500</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: DIN Pro; font-weight: 500; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+              <tr>
+                <td><code>DIN Pro</code></td>
+                <td><code>700</code></td>
+                <td><code>normal</code></td>
+                <td>
+                  <no-typography style="font-family: DIN Pro; font-weight: 700; font-style: normal;">абвгдеёжзийклмнопрстуфхцчшщъыьэюя АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ <br>abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ <br>0123456789.:,;()*!?\'@#&lt;&gt;$%&amp;^+-=~</no-typography>
+                  <!-- .:,;()*!?\'@#<>$%&^+-=~-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>Content</h2>
+          <h1>Heading h1</h1>
+          <h2>Heading h2</h2>
+          <h3>Heading h3</h3>
+          <h4>Heading h4</h4>
+          <h5>Heading h5</h5>
+          <h6>Heading h6</h6>
+          <h2>Таким образом, граница обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании первоочередных требований!</h2>
+          <p>Мы <strong>вынуждены отталкиваться</strong> от того, <br>что <em>повышение уровня</em>
+            <a href=''>гражданского сознания</a> создает <strong><em>необходимость включения</em></strong> в производственный план <small><a href=''>целого ряда</a></small> внеочередных мероприятий с учетом комплекса
+            <a href=''><span>анализа</span></a> существующих паттернов поведения.</p>
+          <p>Для современного мира высокотехнологичная концепция общественного уклада не оставляет шанса для существующих финансовых и административных условий.</p>
+          <ol>
+            <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
+            <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
+            <li>Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.</li>
+          </ol>
+          <ul>
+            <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
+            <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
+            <li>Также как сложившаяся структура организации представляет собой интересный эксперимент проверки как самодостаточных, так и внешне зависимых концептуальных решений.
+              <ol>
+                <li>В целом, конечно, разбавленное изрядной долей эмпатии, рациональное мышление способствует повышению качества своевременного выполнения сверхзадачи.</li>
+                <li>Банальные, но неопровержимые выводы, а также интерактивные прототипы заблокированы в рамках своих собственных рациональных ограничений.</li>
+              </ol>
+            </li>
+          </ul>
+          <p>Как уже неоднократно упомянуто, непосредственные участники технического прогресса формируют глобальную экономическую сеть и при этом — призваны к ответу.</p>
+          <h2>Form elements</h2>
         </div>
-      </main>
-    </div>
-    <!-- JS-->
-    <script src="js/app.js" async=""></script>
-  </body>
+        <my-tag>My tag</my-tag>
+        <my-tag>My tag</my-tag>
+        <my-tag>My tag</my-tag><span>Span</span>
+        <div>
+          <svg class="icon-svg-menu" role="img">
+            <use xlink:href="#icon-svg-menu"></use>
+          </svg><span>Text</span></div>
+        <!---->
+        <div><span>Text</span>
+          <svg class="icon-svg-menu" role="img">
+            <use xlink:href="#icon-svg-menu"></use>
+          </svg>
+        </div>
+        <!---->
+        <div><small>Text</small>
+          <svg class="icon-svg-menu" role="img">
+            <use xlink:href="#icon-svg-menu"></use>
+          </svg>
+        </div>
+        <!-- SVG-->
+        <svg class="icon-svg-menu" role="img">
+          <use xlink:href="#icon-svg-menu"></use>
+        </svg>
+        <!--JS-->
+        <script>
+          ! function() {
+            "use strict";
+            var t = new XMLHttpRequest;
+            t.onload = function() {
+              200 <= t.status && t.status < 400 && document.body.insertAdjacentHTML("afterbegin", t.responseText)
+            }, t.open("GET", "img/svg-symbols.svg", !0), t.send()
+          }();
+        </script>
+        <!-- JS-->
+        <no-formatted>
+          <script>
+            function x() {
+              console.log(34);
+            }
+          </script>
+        </no-formatted>
+        <pre><code>// Load and insert svg-symbols.svg
+(function () {
+  'use strict';
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 400) {
+      document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
+    }
+  };
+  xhr.open('GET', 'img/svg-symbols.svg', true);
+  xhr.send();
+})();</code></pre><code>// Load and insert svg-symbols.svg
+(function () {
+  'use strict';
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function () {
+    if (xhr.status >= 200 && xhr.status < 400) {
+      document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
+    }
+  };
+  xhr.open('GET', 'img/svg-symbols.svg', true);
+  xhr.send();
+})();</code></div>
+    </main>
+  </div>
+  <!-- JS-->
+  <script src="js/app.js" async=""></script>
+</body>
+
 </html>

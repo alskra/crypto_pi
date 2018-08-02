@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro Regular'), local('DINPro-Regular'),
+  src: local('DIN Pro'), local('DINPro-Regular'),
   url-font('DINPro/subset-DINPro.woff2') format('woff2'),
   url-font('DINPro/subset-DINPro.woff') format('woff');
   font-weight: normal;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro Light'), local('DINPro-Light'),
+  src: local('DIN Pro'), local('DINPro-Light'),
   url-font('DINPro/subset-DINPro-Light.woff2') format('woff2'),
   url-font('DINPro/subset-DINPro-Light.woff') format('woff');
   font-weight: 300;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro Medium'), local('DINPro-Medium'),
+  src: local('DIN Pro Medium'), local('DINPro-Medium'), local('DIN Pro-Medium'),
   url-font('DINPro/subset-DINPro-Medium.woff2') format('woff2'),
   url-font('DINPro/subset-DINPro-Medium.woff') format('woff');
   font-weight: 500;
@@ -27,7 +27,7 @@
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local('DIN Pro Bold'), local('DINPro-Bold'),
+  src: local('DIN Pro'), local('DINPro-Bold'),
   url-font('DINPro/subset-DINPro-Bold.woff2') format('woff2'),
   url-font('DINPro/subset-DINPro-Bold.woff') format('woff');
   font-weight: bold;

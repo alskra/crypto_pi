@@ -1,4 +1,4 @@
-.wysiwyg {
+.formatted-text {
   $font-size: 17px;
   $line-height: 1.5;
   @include init-block;
@@ -101,10 +101,6 @@
     border-collapse: collapse;
     border-spacing: 0;
 
-    thead, tbody {
-
-    }
-
     th, td {
       width: 100%;
       width: 100vw;
@@ -117,10 +113,5 @@
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;
-
-    table {
-
-
-    }
   }
 }

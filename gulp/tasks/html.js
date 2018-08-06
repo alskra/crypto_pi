@@ -44,7 +44,7 @@ export default function html() {
       brace_style: 'collapse',
       indent_scripts: 'normal',
       unformatted: ['b', 'strong', 'i', 'em', 'mark', 'small', 'del', 'ins', 'sub', 'sup', 'code', 'br', 'span'],
-      content_unformatted: ['pre', 'no-html-formatted']
+      content_unformatted: ['pre', 'no-formatted-html']
     }),
     gp.typograf({
       locale: ['ru', 'en-US'],

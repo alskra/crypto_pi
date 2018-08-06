@@ -10,5 +10,5 @@ import 'slick-carousel';
 const WOW = wowjs.WOW;
 
 cssVars();
-new WOW().init();
+new WOW({offset: 200}).init();
 window.jQuery = window.$ = $;

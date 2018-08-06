@@ -127,7 +127,7 @@ console.log(_wowjs2.default);
 var WOW = _wowjs2.default.WOW;
 
 (0, _cssVarsPonyfill2.default)();
-new WOW().init();
+new WOW({ offset: 200 }).init();
 window.jQuery = window.$ = _jquery2.default;
 
 /***/ }),

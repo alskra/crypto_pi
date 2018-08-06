@@ -2,7 +2,9 @@
 
 import paths from '../paths';
 import pkg from '../../package';
+import readdirsyncRecursive from '../readdirsync-recursive';
 import fs from 'fs';
+import camelize from '../camelize';
 import path from 'path';
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
@@ -23,17 +25,9 @@ export default function html() {
 
   global.pugChangedFile = undefined;
 
-  function camelize(str) {
-    return str.replace(/\W+(.)/g, function (match, chr) {
-      return chr.toUpperCase();
-    });
-  }
-
-  fs.readdirSync(`${paths.src}/data`).forEach((item) => {
-    let filepath = path.resolve(`${paths.src}/data`, item),
-      extname = path.extname(filepath);
-    if (fs.lstatSync(filepath).isFile() && extname === '.json') {
-      locals[camelize(path.basename(filepath, extname))] = JSON.parse(fs.readFileSync(filepath));
+  readdirsyncRecursive(`${paths.src}/json`).forEach((item) => {
+    if (fs.statSync(item).isFile() && path.extname(item) === '.json') {
+      locals[camelize(path.basename(item, path.extname(item)))] = JSON.parse(fs.readFileSync(item));
     }
   });
 
@@ -43,7 +37,6 @@ export default function html() {
     gp.pug({
       locals
     }),
-    //gp.htmlmin({collapseWhitespace: true}),
     gp.prettyHtml({
       indent_size: 2,
       indent_char: ' ',

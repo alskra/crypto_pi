@@ -106,7 +106,13 @@ var _carousel = __webpack_require__(4);
 
 var _carousel2 = _interopRequireDefault(_carousel);
 
+var _test = __webpack_require__(5);
+
+var _test2 = _interopRequireDefault(_test);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+console.log(_test2.default);
 
 $(function () {
   (0, _header2.default)();
@@ -223,6 +229,13 @@ function carousel() {
   carousel.init();
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 /***/ })
 /******/ ]);

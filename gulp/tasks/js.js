@@ -23,8 +23,8 @@ export default function js() {
       module: {
         rules: [
           {
-            test: /\.js$/,
-            exclude: /node_modules/,
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
             use: 'babel-loader'
           }
         ]
@@ -41,8 +41,8 @@ export default function js() {
       module: {
         rules: [
           {
-            test: /\.js$/,
-            exclude: /node_modules/,
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
             use: 'babel-loader'
           }
         ]

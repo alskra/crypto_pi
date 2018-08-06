@@ -42,14 +42,14 @@
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local("DIN Pro"), local("DINPro-Regular"), url("../fonts/DINPro/subset-DINPro.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro.woff") format("woff");
+  src: local("DIN Pro Regular"), local("DINPro-Regular"), url("../fonts/DINPro/subset-DINPro.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local("DIN Pro"), local("DINPro-Light"), url("../fonts/DINPro/subset-DINPro-Light.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro-Light.woff") format("woff");
+  src: local("DIN Pro Light"), local("DINPro-Light"), url("../fonts/DINPro/subset-DINPro-Light.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -63,7 +63,7 @@
 
 @font-face {
   font-family: 'DIN Pro';
-  src: local("DIN Pro"), local("DINPro-Bold"), url("../fonts/DINPro/subset-DINPro-Bold.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro-Bold.woff") format("woff");
+  src: local("DIN Pro Bold"), local("DINPro-Bold"), url("../fonts/DINPro/subset-DINPro-Bold.woff2") format("woff2"), url("../fonts/DINPro/subset-DINPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }

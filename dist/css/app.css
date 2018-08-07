@@ -1119,17 +1119,18 @@
 .chart {
   --size: 1;
   --font-size: 1;
+  text-align: left;
+  text-align: start;
   position: relative;
 }
 
 .chart__grid {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 
 .chart__lines {
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -1757,6 +1758,10 @@
   font-weight: 500;
   padding: 0 calc(5.625rem * var(--size));
   margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .section-subscribe__desc {

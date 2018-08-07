@@ -455,13 +455,48 @@ template {
   pointer-events: none;
 }
 
+.icon-svg-bonus-1 {
+  width: 0.875em;
+  height: 1em;
+}
+
+.icon-svg-bonus-2 {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-svg-bonus-3 {
+  width: 1.3333333333333333em;
+  height: 1em;
+}
+
+.icon-svg-bonus {
+  width: 1em;
+  height: 1em;
+}
+
 .icon-svg-calendar {
   width: 1.112099768794227em;
   height: 1em;
 }
 
+.icon-svg-consulting {
+  width: 1.0019473684210525em;
+  height: 1em;
+}
+
 .icon-svg-facebook {
   width: 1em;
+  height: 1em;
+}
+
+.icon-svg-favicon {
+  width: 1.0000353057477755em;
+  height: 1em;
+}
+
+.icon-svg-ico {
+  width: 1.103448275862069em;
   height: 1em;
 }
 
@@ -495,8 +530,18 @@ template {
   height: 1em;
 }
 
+.icon-svg-mining {
+  width: 0.9423125em;
+  height: 1em;
+}
+
 .icon-svg-ms {
   width: 1.2856717175618853em;
+  height: 1em;
+}
+
+.icon-svg-sales {
+  width: 1em;
   height: 1em;
 }
 
@@ -532,6 +577,16 @@ template {
 
 .icon-svg-watch {
   width: 1em;
+  height: 1em;
+}
+
+.icon-svg-why-eye {
+  width: 0.9999843752441367em;
+  height: 1em;
+}
+
+.icon-svg-why-figure {
+  width: 1.546875em;
   height: 1em;
 }
 

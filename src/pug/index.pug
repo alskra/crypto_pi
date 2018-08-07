@@ -116,7 +116,9 @@ include blocks/footer
         .row.justify-content-center
           .col-12.col-lg-10
             +b.chart
-              +e.IMG.__grid(src='img/content/График доходности black_grid.svg' alt='')
+              block chart
+                - let srcGrid = 'График доходности black_grid.svg';
+              +e.IMG.__grid(src=`img/content/${srcGrid}` alt='')
               +e.IMG.__lines.wow(src='img/content/График доходности black_lines.svg' alt='' data-wow-duration='2.5s')
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.mb-3-inv.mb-md-4-inv
@@ -217,9 +219,11 @@ include blocks/footer
                         +e.__value-text-2 общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
                       +e.__label - долгосрочные вложения
-            .col-12.px-0.col-md-6.px-md-1.wow.slideInRight
-              +e.__chart--0
-                +e.IMG.__chart-img(src='img/content/chart-1.svg' alt='')
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--0.wow.slideInRight
+                block chart-1
+                  - let src = 'Долгосрочные стратегии light.svg';
+                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -247,9 +251,11 @@ include blocks/footer
                         +e.__value-text-2 общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
                       +e.__label - среднесрочные вложения
-            .col-12.px-0.col-md-6.px-md-1.wow.slideInLeft
-              +e.__chart--1.--left
-                +e.IMG.__chart-img(src='img/content/chart-2.svg' alt='')
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--1.--left.wow.slideInLeft
+                block chart-2
+                  - let src = 'Среднесрочные стратегии light.svg';
+                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -280,8 +286,8 @@ include blocks/footer
                         +e.__value-text-2 общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
                       +e.__label - краткосрочные вложения
-            .col-12.px-0.col-md-6.px-md-1.wow.slideInRight
-              +e.__chart--2
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--2.wow.slideInRight
                 +e.IMG.__chart-img(src='img/content/chart-3.svg' alt='')
       +b.SECTION.section-chart
         .container-fluid.max-w-md.max-w-lg
@@ -311,8 +317,8 @@ include blocks/footer
                         +e.__value-text-2 общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
                       +e.__label - инвестирование в майнинг
-            .col-12.px-0.col-md-6.px-md-1.wow.slideInLeft
-              +e.__chart--3.--left
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--3.--left.wow.slideInLeft
                 +e.IMG.__chart-img(src='img/content/chart-4.svg' alt='')
     +b.SECTION.section--analytics
       +e.HEADER.__header

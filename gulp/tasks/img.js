@@ -62,6 +62,7 @@ export default gulp.series(
   function imgSASSImage() {
     return combiner.obj([
       gulp.src(paths.img.srcSASSImage),
+      gp.cached('sass-image'),
       gp.sassImage({
         targetFile: 'sass-image.scss',
         images_path: paths.img.dest,
@@ -101,7 +102,7 @@ export default gulp.series(
       ),
       gp.debug({title: "Asset task 'imgSVGSymbols'"}),
       gulp.dest(function (file) {
-        return file.extname === '.svg' ? paths.img.dest : file.extname === '' ? (file.basename = 'svg-symbols.scss', paths.img.destSVGSymbolsCSS) : paths.html.dest
+        return file.extname === '.svg' ? paths.img.dest : file.extname === '.scss' ? (file.basename = 'svg-symbols.scss', paths.img.destSVGSymbolsCSS) : paths.html.dest
       }),
       bs.stream({once: true})
     ]).on('error', gp.notify.onError(function (err) {

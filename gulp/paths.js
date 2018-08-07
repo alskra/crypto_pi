@@ -24,16 +24,16 @@ export default {
   img: {
     src: `${src}/img/**/*.{jpeg,jpg,png,gif,svg}`,
     dest: `${dest}/img`,
-    srcSASSImage: [`${dest}/img/**/*.{jpeg,jpg,png,gif,svg}`, `!${dest}/img/content/**/*.*`],
+    srcSASSImage: [`${dest}/img/**/*.{jpeg,jpg,png,gif,svg}`, `!${dest}/img/content/**/*.*`, `!${dest}/img/svg-symbols.svg`],
     destSASSImage: `${src}/scss/lib`,
     srcSVGSymbolsIcons: `${dest}/img/icons/**/*.svg`,
-    srcSVGSymbolsCSS: `${src}/vendors/svg-symbols/template-css`,
+    srcSVGSymbolsCSS: `${src}/vendors/svg-symbols/svg-symbols.scss`,
     destSVGSymbolsCSS: `${src}/scss/lib`,
     watch: `${src}/img/**/*.{jpeg,jpg,png,gif,svg}`
   },
   copy: {
-    src: [`${src}/data/**/*`, `${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/vendors/**/*`],
+    src: [`${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/json/**/*`, `${src}/vendors/**/*`],
     dest,
-    watch: [`${src}/data/**/*`, `${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/vendors/**/*`]
+    watch: [`${src}/favicon/**/*`, `${src}/fonts/**/*`, `${src}/json/**/*`, `${src}/vendors/**/*`]
   }
 };

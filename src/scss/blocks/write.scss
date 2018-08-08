@@ -1,6 +1,5 @@
 .write {
-  --size: 1;
-  --font-size: 1;
+  @include init-block;
 
   &:hover {
     .write {

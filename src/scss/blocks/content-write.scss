@@ -1,0 +1,44 @@
+.content-write {
+  @include init-block;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: font-size(30px);
+  }
+
+  &__title {
+    font-size: font-size(28px);
+    text-transform: uppercase;
+    flex-grow: 1;
+    align-self: center;
+    margin: 0;
+  }
+
+  &__icon {
+    height: font-size(130px);
+    flex-shrink: 0;
+    margin-left: font-size(30px);
+
+    &.icon-svg-mining {
+      font-size: font-size(127px);
+    }
+
+    &.icon-svg-ico {
+      font-size: font-size(117px);
+    }
+
+    &.icon-svg-sales {
+      font-size: font-size(107px);
+    }
+
+    &.icon-svg-consulting {
+      font-size: font-size(115px);
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

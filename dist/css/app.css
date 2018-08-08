@@ -1046,6 +1046,10 @@
   color: #757575;
 }
 
+.section--advantages {
+  background: url("../img/bg-6.jpg") no-repeat 50% 50%/cover;
+}
+
 @media (max-width: 59.99875rem) {
   .section {
     --size: 3/4;
@@ -1483,6 +1487,8 @@
 .write {
   --size: 1;
   --font-size: 1;
+  text-align: left;
+  text-align: start;
 }
 
 .write:hover .write__img-inner {
@@ -1907,6 +1913,56 @@
 
 @media (max-width: 59.99875rem) {
   .blockquote {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}
+
+.content-write {
+  --size: 1;
+  --font-size: 1;
+  text-align: left;
+  text-align: start;
+}
+
+.content-write__header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: calc(1.875rem * var(--font-size));
+}
+
+.content-write__title {
+  font-size: calc(1.75rem * var(--font-size));
+  text-transform: uppercase;
+  flex-grow: 1;
+  align-self: center;
+  margin: 0;
+}
+
+.content-write__icon {
+  height: calc(8.125rem * var(--font-size));
+  flex-shrink: 0;
+  margin-left: calc(1.875rem * var(--font-size));
+}
+
+.content-write__icon.icon-svg-mining {
+  font-size: calc(7.9375rem * var(--font-size));
+}
+
+.content-write__icon.icon-svg-ico {
+  font-size: calc(7.3125rem * var(--font-size));
+}
+
+.content-write__icon.icon-svg-sales {
+  font-size: calc(6.6875rem * var(--font-size));
+}
+
+.content-write__icon.icon-svg-consulting {
+  font-size: calc(7.1875rem * var(--font-size));
+}
+
+@media (max-width: 59.99875rem) {
+  .content-write {
     --size: 3/4;
     --font-size: 15/17;
   }

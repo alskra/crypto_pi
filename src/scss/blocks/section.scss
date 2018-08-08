@@ -79,6 +79,16 @@
     }
   }
 
+  &--contacts {
+    background: url-img('bg-8.jpg') no-repeat 50% 50%/cover;
+
+    .section {
+      &__title {
+        color: #ffffff;
+      }
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;

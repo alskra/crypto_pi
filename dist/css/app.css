@@ -1066,6 +1066,14 @@
   font-family: 'DIN Pro', sans-serif;
 }
 
+.section--contacts {
+  background: url("../img/bg-8.jpg") no-repeat 50% 50%/cover;
+}
+
+.section--contacts .section__title {
+  color: #ffffff;
+}
+
 @media (max-width: 59.99875rem) {
   .section {
     --size: 3/4;

@@ -9,6 +9,13 @@
   }
 }
 
+// Type
+@for $i from 1 through 9 {
+  .font-weight-#{$i*100} {
+    font-weight: $i*100 !important;
+  }
+}
+
 // Display
 .visuallyhidden {
   border: 0 !important;
@@ -31,10 +38,16 @@
   max-width: none !important;
 }
 
-@each $key, $value in $container-max-widths {
-  @media (min-width: $value) {
+@each $key, $value in $grid-breakpoints {
+  @if strip-unit($value) == 0 {
     .max-w-#{$key} {
-      max-width: $value !important;
+      max-width: map-get($container-max-widths, $key) !important;
+    }
+  } @else {
+    @media (min-width: $value) {
+      .max-w-#{$key} {
+        max-width: map-get($container-max-widths, $key) !important;
+      }
     }
   }
 }

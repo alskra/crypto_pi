@@ -82,11 +82,11 @@
       }
 
       &::before {
-        background: embed-svg('icons/investor-login.svg') no-repeat 50% 50%/contain;
+        background: image-url('icons/investor-login.svg') no-repeat 50% 50%/contain;
       }
 
       &::after {
-        background: embed-svg('icons/investor-login-hover.svg') no-repeat 50% 50%/contain;
+        background: image-url('icons/investor-login-hover.svg') no-repeat 50% 50%/contain;
         opacity: 0;
       }
     }

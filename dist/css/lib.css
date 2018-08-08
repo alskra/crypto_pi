@@ -6169,11 +6169,47 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .color-primary-dark {
-  color: #d08f2c !important;
+  color: #d28600 !important;
 }
 
 .color-primary-dark-bg {
-  background: #d08f2c !important;
+  background: #d28600 !important;
+}
+
+.font-weight-100 {
+  font-weight: 100 !important;
+}
+
+.font-weight-200 {
+  font-weight: 200 !important;
+}
+
+.font-weight-300 {
+  font-weight: 300 !important;
+}
+
+.font-weight-400 {
+  font-weight: 400 !important;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+
+.font-weight-800 {
+  font-weight: 800 !important;
+}
+
+.font-weight-900 {
+  font-weight: 900 !important;
 }
 
 .visuallyhidden {
@@ -6196,10 +6232,8 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: none !important;
 }
 
-@media (min-width: 20rem) {
-  .max-w-xs {
-    max-width: 20rem !important;
-  }
+.max-w-xs {
+  max-width: 20rem !important;
 }
 
 @media (min-width: 40rem) {

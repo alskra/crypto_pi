@@ -6,7 +6,7 @@ include blocks/footer
 
 +page(pagesList.index.title)
   +header.--transparent.__header
-  +e.__main
+  +e.__content
     +b.SECTION.section-intro
       .container-fluid.max-w-md.max-w-lg
         +e.H1.__title
@@ -288,7 +288,9 @@ include blocks/footer
                       +e.__label - краткосрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--2.wow.slideInRight
-                +e.IMG.__chart-img(src='img/content/chart-3.svg' alt='')
+                block chart-3
+                  - let src = 'Краткосрочные стратегии light.svg';
+                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
       +b.SECTION.section-chart
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -319,7 +321,9 @@ include blocks/footer
                       +e.__label - инвестирование в майнинг
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--3.--left.wow.slideInLeft
-                +e.IMG.__chart-img(src='img/content/chart-4.svg' alt='')
+                block chart-4
+                  - let src = 'Прибыльность майнинга light.svg';
+                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
     +b.SECTION.section--analytics
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
@@ -490,4 +494,43 @@ include blocks/footer
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3.color-base Почему CRYPTO Pi Fund?
+      +b.formatted-content
+        .container-fluid.max-w-md.max-w-lg
+          .row.mb-3.mb-md-4
+            .col-12.order-1.col-sm-8.order-sm-0.col-md-6.wow.fadeInRight
+              h3.color-primary-dark.font-weight-500.mt-0 Профессиональный подход / для нас это работа
+              ul
+                li Большой штат сотрудников в разных часовых поясах контролирует торговый процесс 24/7.
+                li Профессиональные трейдеры с большим опытом работы на классических рынках и на рынке криптовалюты.
+                li Большой штат аналитиков и маркетологов в области технологий блокчейн.
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img.jpg' alt='')
+          .row.mb-3.mb-md-4
+            .col-12.order-1.col-sm-8.col-md-6.wow.fadeInLeft
+              ul
+                li Регламентированный процесс контроля за торговыми операциями.
+                li Разработка и оперативная корректировка стратегий на основе аналитики и статистики и с помощью запатентованных программ.
+                li Огромные вычислительные мощности и постоянно обновляемые торговые программы (роботы и боты).
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-1.jpg' alt='')
+          .row
+            .col-12.order-1.col-sm-8.order-sm-0.col-md-6.wow.fadeInRight
+              p В прошедшем году <span class="color-primary-dark">криптовалюты в целом и биткоин в частности показали себя как наиболее эффективный класс вложений</span>: за 2017 год курсы биткоина и основных криптовалют выросли более чем на 1000% и продолжают расти.
+              p Наш профессиональный опыт позволяет нам говорить о том, что <span class="color-primary-dark">инвестиции в этот класс будут оставаться высокодоходными, но при условии правильной оценки ситуации на рынке</span>. Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно «CRYPTO Pi»?
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-2.jpg' alt='')
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Более пристальный взгляд на наши преимущества:
+      +b.formatted-content
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.order-1.col-sm-8.col-md-6.wow.fadeInLeft
+              ul
+                li Мы уделяем много внимания информационной и аналитической поддержке наших клиентов. На молодом быстрорастущем криптовалютном рынке невозможно двигаться в правильном направлении без глубоко понимания происходящего. <span class="color-primary-dark">Клиенты получают максимально полную и разностороннюю информацию о текущей ситуации в мире «крипты»</span> и меньше страдают от «информационного шума», накрывшего в последние годы этот перспективный рынок.
+                li Мы находимся в юрисдикциях, <span class="color-primary-dark">максимально благоприятствующих инвесторам и гарантирующих им полную конфиденциальность и защиту</span> со стороны правового поля.
+                li Мы обеспечиваем <span class="color-primary-dark">прозрачность публичной отчетности и отсутствие проблем</span> со стороны регулирующих органов.
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-1.jpg' alt='')
   +footer.__footer

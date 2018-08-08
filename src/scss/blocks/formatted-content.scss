@@ -1,4 +1,4 @@
-.formatted-text {
+.formatted-content {
   $font-size: 17px;
   $line-height: 1.5;
   @include init-block;
@@ -93,6 +93,10 @@
       color: darken($color-link, 15%);
       text-decoration: none;
     }
+  }
+
+  img {
+    max-width: 100%;
   }
 
   table {

@@ -61,6 +61,24 @@
     background: url-img('bg-6.jpg') no-repeat 50% 50%/cover;
   }
 
+  &--bonus {
+    background: url-img('bg-7.jpg') no-repeat 50% 50%/cover;
+
+    .section {
+      &__title {
+        color: $color-base;
+        text-transform: uppercase;
+      }
+
+      &__desc {
+        font-weight: 500;
+        font-size: font-size(24px);
+        line-height: 1.25;
+        font-family: 'DIN Pro', sans-serif;
+      }
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;

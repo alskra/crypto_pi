@@ -21,7 +21,7 @@ export default function css() {
 
   return combiner.obj([
     gulp.src(paths.css.src),
-    gp.if(global.watch && changedFile !== undefined, emittySCSS.stream(changedFile)),
+    gp.if(global.watch && changedFile !== undefined, emittySCSS.stream(changedFile), (emittySCSS.scan(), null)),
     gp.sourcemaps.init(),
     gp.cssimport({matchPattern: '*.css'}),
     gp.sass({

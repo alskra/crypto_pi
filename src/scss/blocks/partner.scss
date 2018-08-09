@@ -1,0 +1,60 @@
+.partner {
+  @include init-block;
+  display: flex;
+  flex-flow: column;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: font-size(90px);
+    padding: 0 font-size(20px);
+    margin-bottom: font-size(-40px);
+    position: relative;
+
+    &-inner {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    padding: font-size(65px) font-size(20px);
+    border: 1px solid rgba(79, 79, 77, 0.21);
+    background: repeating-linear-gradient(-45deg, red, red 10px, transparent 10px, transparent 20px) #ffffff;
+    background: repeating-linear-gradient(-45deg, red 10px, transparent 10px, transparent 20px) #ffffff;
+    background: repeating-linear-gradient(-45deg, red, red 2px, transparent 2px, transparent 5px) #ffffff;
+    background: repeating-linear-gradient(-45deg, red, red 1px, transparent 1px, transparent 5px) #ffffff;
+    background: repeating-linear-gradient(-45deg, #f5f6f6, #f5f6f6 2px, transparent 2px, transparent 5px) #ffffff;
+  }
+
+  &__content {
+    color: $color-base;
+    font-size: font-size(17px);
+    line-height: 1.5;
+  }
+
+  @include media-breakpoint-up(md) {
+    [class*='col-']:nth-child(3n + 1) & {
+      &__img {
+        justify-content: flex-start;
+        padding-left: 0;
+        margin-left: -15px;
+      }
+    }
+
+    [class*='col-']:nth-child(3n + 3) & {
+      &__img {
+        justify-content: flex-end;
+        padding-right: 0;
+        margin-right: -15px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

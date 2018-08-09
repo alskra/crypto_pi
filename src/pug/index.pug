@@ -116,10 +116,12 @@ include blocks/footer
         .row.justify-content-center
           .col-12.col-lg-10
             +b.chart
-              block chart
-                - let srcGrid = 'График доходности black_grid.svg';
-              +e.IMG.__grid(src=`img/content/${srcGrid}` alt='')
-              +e.IMG.__lines.wow(src='img/content/График доходности black_lines.svg' alt='' data-wow-duration='2.5s')
+              +e.NO-FORMATTED-HTML.__grid
+                block chart__grid
+                  include ../../dist/img/content/График доходности black_grid.svg
+              +e.NO-FORMATTED-HTML.__lines.wow(data-wow-duration='2.5s')
+                block chart__lines
+                  include ../../dist/img/content/График доходности black_lines.svg
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
@@ -221,9 +223,9 @@ include blocks/footer
                       +e.__label - долгосрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--0.wow.slideInRight
-                block chart-1
-                  - let src = 'Долгосрочные стратегии light.svg';
-                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Долгосрочные стратегии light.svg
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -253,9 +255,9 @@ include blocks/footer
                       +e.__label - среднесрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--1.--left.wow.slideInLeft
-                block chart-2
-                  - let src = 'Среднесрочные стратегии light.svg';
-                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Среднесрочные стратегии light.svg
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -288,9 +290,9 @@ include blocks/footer
                       +e.__label - краткосрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--2.wow.slideInRight
-                block chart-3
-                  - let src = 'Краткосрочные стратегии light.svg';
-                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Краткосрочные стратегии light.svg
       +b.SECTION.section-chart
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -321,9 +323,9 @@ include blocks/footer
                       +e.__label - инвестирование в майнинг
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--3.--left.wow.slideInLeft
-                block chart-4
-                  - let src = 'Прибыльность майнинга light.svg';
-                +e.IMG.__chart-img(src=`img/content/${src}` alt='')
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Прибыльность майнинга light.svg
     +b.SECTION.section--analytics
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
@@ -610,6 +612,53 @@ include blocks/footer
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3.color-base Партнеры
+      .container.mb-3.mb-md-4
+        .row.justify-content-center.mb-2-inv
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/capital-pi.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    Альтернативный инвестиционный фонд, основанный в Амстердаме, Нидерландах.
+                    Инвестиционная деятельность Фонда предназначена для клиентов и партнеров с высоким уровнем собственного капитала, которые ищут фонд, целью которого является не только защита инвестиционного капитала, но и генерация дохода выше среднего.
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/ex-pi.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    EX Pi - Exchange Pi service, лицензированный международный сервис по обмену виртуальной валюты на другие валюты. Обмен осуществляется с использованием собственного программного комплекса, построенного на основе классических банковских технологий.
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/rich-gate.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    Компания поставляет оборудование для майнинга и предоставляет услуги по поиску самых выгодных мест в Европе по стоимости аренды помещения и электроснабжения для установки майнингового оборудования. Компания устанавливает и настраивает майнинговое оборудование, а также готовит все необходимые документы для запуска майнинга в Европе.
+      .container.wow.fadeInUp
+        .row.justify-content-center
+          .col-12.mt-0.mb-0.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/capital-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.capitalpi.fund' target='_blank') www.capitalpi.fund
+          .col-12.mt-2.mb-2-inv.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/ex-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.expi.trade' target='_blank') www.expi.trade
+          .col-12.mt-4.mb-0.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/capital-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.rich-gate.com' target='_blank') www.rich-gate.com
     +b.SECTION.section--contacts
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg

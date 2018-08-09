@@ -1,0 +1,37 @@
+.partner-source {
+  @include init-block;
+
+  &__img {
+    display: block;
+
+    &-inner {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    color: $color-base;
+    font-weight: 500;
+    font-size: font-size(17px);
+    line-height: 1.25;
+    font-family: 'DIN Pro', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: font-size(15px);
+
+    a {
+      transition: $transition-color;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

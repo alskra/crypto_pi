@@ -33,7 +33,7 @@ export default function html() {
 
   return combiner.obj([
     gulp.src(paths.html.src),
-    gp.if(global.watch && changedFile !== undefined && path.extname(changedFile) !== '.json', emittyPug.stream(changedFile)),
+    gp.if(global.watch && changedFile !== undefined && path.extname(changedFile) !== '.json', emittyPug.stream(changedFile), (emittyPug.scan(), null)),
     gp.pug({
       locals
     }),

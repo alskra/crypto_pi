@@ -663,4 +663,25 @@ include blocks/footer
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3 Контакты
+      .container-fluid.max-w-md.max-w-lg
+        .row
+          .col-12.col-md-6
+            +b.contacts
+              +e.H3.__title Наши офисы:
+              +e.__content
+                ul
+                  li МОСКВА, ПРЕСНЕНСКАЯ НАБЕРЕЖНАЯ, 10 БЛОК С
+                  li 92 WATERLOO STREET #05-01, SKY LINE BUILDING, SINGAPORE (187966)
+                  li KONINGINNEGRACHT 10, DEN HAAG, 2514BC, NETHERLANDS
+              +e.FOOTER.__footer
+                address
+                  dl
+                    dt Email:
+                    dd
+                      a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
+                      br
+                    dt Phone:
+                      dd
+                        a(href='tel:+79295773655') +7 (929) 577-36-55
+          .col-12.col-md-6
   +footer.__footer

@@ -2242,4 +2242,140 @@
   }
 }
 
+.form-feedback {
+  --size: 1;
+  --font-size: 1;
+  text-align: left;
+  text-align: start;
+  padding: calc(1.875rem * var(--font-size)) calc(3.75rem * var(--font-size));
+  border: 0.0625rem solid rgba(0, 0, 0, 0.21);
+  background-color: #ffffff;
+}
+
+.form-feedback__header {
+  padding-bottom: calc(1.875rem * var(--font-size));
+}
+
+.form-feedback__title {
+  color: #4f4f4d;
+  font-weight: 700;
+  font-size: calc(1.75rem * var(--font-size));
+  line-height: 1.25;
+  font-family: "DIN Pro", sans-serif;
+  margin: 0;
+}
+
+.form-feedback__desc {
+  color: #4f4f4d;
+  font-weight: 500;
+  font-size: calc(1.5rem * var(--font-size));
+  line-height: 1.25;
+  font-family: "DIN Pro", sans-serif;
+  margin: calc(0.9375rem * var(--font-size)) 0 0;
+}
+
+.form-feedback__row {
+  margin-bottom: -0.0625rem;
+}
+
+.form-feedback__row--actions {
+  text-align: center;
+  margin-top: calc(1.875rem * var(--font-size));
+}
+
+.form-feedback__field {
+  width: 100%;
+}
+
+@media (max-width: 59.99875rem) {
+  .form-feedback {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}
+
+@media (max-width: 39.99875rem) {
+  .form-feedback {
+    padding-left: calc(1.875rem * var(--font-size));
+    padding-right: calc(1.875rem * var(--font-size));
+  }
+}
+
+.field-btb {
+  --size: 1;
+  --font-size: 1;
+  text-align: left;
+  text-align: start;
+  color: #4f4f4d;
+  font-size: calc(1.3125rem * var(--font-size));
+  line-height: 1.25;
+  font-family: "DIN Pro", sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  padding: calc(1.02344rem * var(--font-size)) 0;
+  border-top: 0.0625rem solid rgba(79, 79, 77, 0.56);
+  border-right: 0;
+  border-bottom: 0.0625rem solid rgba(79, 79, 77, 0.56);
+  border-left: 0;
+  background: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.field-btb::-webkit-input-placeholder {
+  color: rgba(79, 79, 77, 0.7);
+}
+
+.field-btb:-ms-input-placeholder {
+  color: rgba(79, 79, 77, 0.7);
+}
+
+.field-btb::-ms-input-placeholder {
+  color: rgba(79, 79, 77, 0.7);
+}
+
+.field-btb::placeholder {
+  color: rgba(79, 79, 77, 0.7);
+}
+
+.field-btb:focus {
+  outline: 0;
+  border-color: #fb953b;
+  position: relative;
+}
+
+.field-btb:disabled {
+  opacity: 0.7;
+}
+
+.field-btb--bt-transparent {
+  border-top-color: transparent;
+}
+
+.field-btb--select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-indent: 0.00063rem;
+  text-overflow: "";
+  /* This hides native dropdown button arrow in IE */
+  height: calc(calc(3.6875rem * var(--font-size)) + 0.125rem);
+}
+
+.field-btb--select::-ms-expand {
+  display: none;
+}
+
+.field-btb--textarea {
+  overflow-y: auto;
+  resize: none;
+}
+
+@media (max-width: 59.99875rem) {
+  .field-btb {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,52 @@
+.field-btb {
+  @include init-block;
+  color: $color-base;
+  font-size: font-size(21px);
+  line-height: 1.25;
+  font-family: "DIN Pro", sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  padding: font-size((59px - 21px*1.25)/2) 0;
+  border: {
+    top: 1px solid rgba($color-base, 0.56);
+    right: 0;
+    bottom: 1px solid rgba($color-base, 0.56);
+    left: 0;
+  };
+  background: transparent;
+  transition: $transition-color;
+
+  &::placeholder {
+    color: rgba($color-base, 0.7);
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $color-primary;
+    position: relative;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &--bt-transparent {
+    border-top-color: transparent;
+  }
+  
+  &--select {
+    @include reset-select;
+    height: calc(#{font-size(59px)} + 2px);
+  }
+
+  &--textarea {
+    overflow-y: auto;
+    resize: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --size: 3/4;
+    --font-size: 15/17;
+  }
+}

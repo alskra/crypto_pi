@@ -24,3 +24,15 @@
     @content;
   }
 }
+
+// Forms
+@mixin reset-select {
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+
+  /* This hides native dropdown button arrow in IE */
+  &::-ms-expand {
+    display: none;
+  }
+}

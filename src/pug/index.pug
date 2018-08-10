@@ -664,45 +664,46 @@ include blocks/footer
         .container-fluid.max-w-md.max-w-lg
           +e.H2.__title.px-md-3 Контакты
       .container-fluid.max-w-md.max-w-lg
-        .row.mb-3-inv.mb-md-4-inv.justify-content-lg-between
-          .col-12.mb-3.col-md-6.mb-md-4.col-lg-4
-            +b.contacts
-              +e.H3.__title Наши офисы:
-              +e.__content
-                ul
-                  li МОСКВА, ПРЕСНЕНСКАЯ НАБЕРЕЖНАЯ, 10 БЛОК С
-                  li 92 WATERLOO STREET #05-01, SKY LINE BUILDING, SINGAPORE (187966)
-                  li KONINGINNEGRACHT 10, DEN HAAG, 2514BC, NETHERLANDS
-              +e.FOOTER.__footer
-                address
-                  dl
-                    dt Email:
-                    dd
-                      a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
-                      br
-                    dt Phone:
+        +b.grid-contacts
+          +e.__row
+            +e.__col--0
+              +b.contacts
+                +e.H3.__title Наши офисы:
+                +e.__content
+                  ul
+                    li МОСКВА, ПРЕСНЕНСКАЯ НАБЕРЕЖНАЯ, 10 БЛОК С
+                    li 92 WATERLOO STREET #05-01, SKY LINE BUILDING, SINGAPORE (187966)
+                    li KONINGINNEGRACHT 10, DEN HAAG, 2514BC, NETHERLANDS
+                +e.FOOTER.__footer
+                  address
+                    dl
+                      dt Email:
                       dd
-                        a(href='tel:+79295773655') +7 (929) 577-36-55
-          .col-12.mb-3.col-md-6.mb-md-4
-            +b.FORM.form-feedback(action='')
-              +e.HEADER.__header
-                +e.H3.__title Обратная связь
-                +e.P.__desc Задайте интересующий Вас вопрос
-              +e.__content
-                +e.__row
-                  +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
-                +e.__row
-                  +b.INPUT.field-btb--bt-transparent.__field(type='email' placeholder='Email')
-                +e.__row
-                  +b.INPUT.field-btb--bt-transparent.__field(type='tel' placeholder='Телефон')
-                +e.__row
-                  +b.SELECT.field-btb--bt-transparent.--select.__field
-                    option(selected='') Тема обращения
-                    option Subject 1
-                    option Subject 2
-                    option Subject 3
-                +e.__row
-                  +b.TEXTAREA.field-btb--bt-transparent.--textarea.__field(rows='5' placeholder='Ваше имя')
-                +e.__row--actions
-                  +b.BUTTON.btn-secondary Отправить
+                        a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
+                        br
+                      dt Phone:
+                        dd
+                          a(href='tel:+79295773655') +7 (929) 577-36-55
+            +e.__col--1
+              +b.FORM.form-feedback(action='')
+                +e.HEADER.__header
+                  +e.H3.__title Обратная связь
+                  +e.P.__desc Задайте интересующий Вас вопрос
+                +e.__content
+                  +e.__row
+                    +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='email' placeholder='Email')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='tel' placeholder='Телефон')
+                  +e.__row
+                    +b.SELECT.field-btb--next.--select.__field
+                      option(selected='') Тема обращения
+                      option Subject 1
+                      option Subject 2
+                      option Subject 3
+                  +e.__row
+                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше имя')
+                  +e.__row--actions
+                    +b.BUTTON.btn-secondary.__btn Отправить
   +footer.__footer

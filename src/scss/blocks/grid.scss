@@ -1,0 +1,57 @@
+.grid {
+  &-contacts {
+    @include init-block;
+    display: flex;
+    flex-flow: column;
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: {
+        top: gs(-30);
+        right: gs(-15);
+        bottom: gs(-30);
+        left: gs(-15);
+      };
+    }
+
+    &__col {
+      flex-shrink: 0;
+      padding: {
+        top: gs(30);
+        right: gs(15);
+        bottom: gs(30);
+        left: gs(15);
+      };
+
+      &--0 {
+        width: percentage(4/12);
+      }
+
+      &--1 {
+        width: percentage(6/12);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &__col {
+        &--0 {
+          width: percentage(6/12);
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      &__col {
+        &--0 {
+          width: percentage(12/12);
+        }
+
+        &--1 {
+          width: percentage(12/12);
+        }
+      }
+    }
+  }
+}

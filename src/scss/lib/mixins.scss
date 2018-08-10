@@ -1,13 +1,22 @@
 // BEM
 @mixin init-block {
+  --fs: 1rem;
+  --gs: 2rem;
+  // Deprecated variables
+  --scale: 1;
   --size: 1;
   --font-size: 1;
   text-align: left;
   text-align: start;
+
+  @include media-breakpoint-down(sm) {
+    --fs: #{14/16*1rem};
+    --gs: #{2/3*2rem};
+  }
 }
 
 // State
-@mixin focus-visible {
+@mixin focus {
   outline: 2px solid rgba($color-primary, 0.5);
   outline-offset: -1px;
 }

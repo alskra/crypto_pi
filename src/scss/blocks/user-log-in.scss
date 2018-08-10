@@ -4,10 +4,11 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  padding: 30px 0;
   background: url-img('key.png') no-repeat 50% 50%/contain;
 
   &__btn {
-    width: 210px;
+    width: 250px;
   }
 
   &__content {

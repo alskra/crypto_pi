@@ -4,37 +4,35 @@
   &__title {
     color: $color-primary;
     font-weight: 500;
-    font-size: font-size(24px);
+    font-size: fs(24);
     line-height: 1.25;
     font-family: 'DIN Pro', sans-serif;
-    margin: 0 0 font-size(30px);
+    margin: 0 0 gs(30);
   }
 
   &__content {
-    $font-size: 17px;
-    $line-height: 1.5;
     color: #ffffff;
-    font-size: font-size($font-size);
-    line-height: $line-height;
+    font-size: fs(17);
+    line-height: 1.5;
 
     ul {
       list-style: none;
-      padding-left: em(26px, $font-size);
+      padding-left: fs(26);
 
       > li {
-        margin-bottom: $line-height*1em;
+        margin-bottom: fs(17*1.5);
 
         &::before {
           content: '';
           display: inline-block;
           vertical-align: baseline;
-          border-width: em(8px, $font-size);
+          border-width: fs(8);
           border-style: solid;
           border-color: #d9dada #d9dada #ca8510 #ca8510;
           margin: {
-            right: em(10px, $font-size);
-            bottom: em(-1px, $font-size);
-            left: em(-26px, $font-size);
+            right: fs(10);
+            bottom: fs(-1);
+            left: fs(-26);
           };
         }
       }
@@ -43,10 +41,10 @@
 
   &__footer {
     color: #ffffff;
-    font-size: font-size(24px);
+    font-size: fs(24);
     line-height: 1.5;
     font-family: 'DIN Pro', sans-serif;
-    margin-top: size(100px);
+    margin-top: gs(100);
 
     address {
       font-style: normal;
@@ -59,14 +57,9 @@
         dt {
           color: $color-primary;
           font-weight: 500;
-          font-size: font-size(25px);
+          font-size: fs(25);
         }
       }
     }
-  }
-
-  @include media-breakpoint-down(sm) {
-    --size: 3/4;
-    --font-size: 15/17;
   }
 }

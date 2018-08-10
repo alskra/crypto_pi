@@ -1,7 +1,7 @@
 .btn-secondary {
   @include init-block;
   color: #ffffff;
-  font-size: font-size(20px);
+  font-size: fs(20);
   line-height: 1.25;
   text-align: center;
   white-space: nowrap;
@@ -10,10 +10,10 @@
   display: inline-block;
   vertical-align: top;
   max-width: 100%;
-  padding: font-size((47px - 20px*1.25)/2) font-size(30px);
+  padding: fs((47 - 20*1.25)/2) fs(30);
   border: 0;
   background: linear-gradient(to top, rgba(188, 117, 45, 0.67) 0%, rgba(251, 149, 59, 0.67) 100%) #fb953b;
-  box-shadow: inset 0 font-size(-2px) #985a1a;
+  box-shadow: inset 0 fs(-2) #985a1a;
   user-select: none;
   transition: $transition-color;
 
@@ -25,10 +25,5 @@
 
   &:disabled {
     opacity: 0.7;
-  }
-
-  @include media-breakpoint-down(sm) {
-    --size: 3/4;
-    --font-size: 15/17;
   }
 }

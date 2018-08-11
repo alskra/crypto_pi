@@ -3,6 +3,7 @@ include lib/mixins
 include blocks/page
 include blocks/header
 include blocks/footer
+include blocks/map
 
 +page(pagesList.index.title)
   +header.--transparent.__header
@@ -726,53 +727,5 @@ include blocks/footer
                     +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше сообщение')
                   +e.__row--actions
                     +b.BUTTON.btn-secondary.__btn Отправить
-    +b.map
-      +e.__inner#map
-      block map
-        script.
-          var branches = [
-            ['Crypto Pi Russia', 55.747061, 37.536314, 2, 'Москва, Пресненская набережная, 10 блок С'],
-            ['Crypto Pi Singapore', 1.301186, 103.853159, 3, '92 Waterloo Street #05-01, Sky Line Building, <br>Singapore (187966)'],
-            ['Crypto Pi Netherlands', 52.086597, 4.314358, 1, 'Koninginnegracht 10, Den Haag, <br>2514BC, Netherlands']
-          ];
-
-          function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 3,
-              center: {lat: 36.115805, lng: 54.370451},
-              styles: [{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"lightness":"50"}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]
-            });
-
-            setMarkers(map);
-          }
-
-          function setMarkers(map) {
-            var image = {
-              url: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 56.65 56.648%22 width=%2240%22 height=%2240%22%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23F59900%22 d=%22M0 .007h56.64v56.641H0z%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23CA8608%22 d=%22M56.65 56.648H0V0z%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 d=%22M34.081 24.021h3.136v13.17h-3.136z%22/%3E%3Ccircle fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 cx=%2235.649%22 cy=%2220.572%22 r=%222.195%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 d=%22M29.983 19.944c-1.205-1.103-2.859-1.654-4.96-1.654H18.03v18.807h3.666v-6.82h3.327c2.101 0 3.755-.547 4.96-1.64 1.205-1.094 1.808-2.54 1.808-4.34 0-1.8-.603-3.251-1.808-4.353zm-2.637 6.568c-.527.572-1.301.859-2.323.859h-3.327v-6.174h3.327c1.03 0 1.806.295 2.33.884.523.59.784 1.337.784 2.241 0 .887-.263 1.617-.79 2.19z%22/%3E%3C/svg%3E",
-              size: new google.maps.Size(40, 40),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(0, 40)
-            };
-
-            for (var i = 0; i < branches.length; i++) {
-              (function () {
-                var branch = branches[i];
-                var marker = new google.maps.Marker({
-                  position: {lat: branch[1], lng: branch[2]},
-                  map: map,
-                  icon: image,
-                  title: branch[0],
-                  zIndex: branch[3]
-                });
-                var infowindow = new google.maps.InfoWindow({
-                  content: branch[4]
-                });
-
-                marker.addListener('click', function () {
-                  infowindow.open(map, marker);
-                });
-              })();
-            }
-          }
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap"></script>
+    +map
   +footer.__footer

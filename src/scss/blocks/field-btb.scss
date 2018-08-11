@@ -39,6 +39,8 @@
   &--select {
     @include reset-select;
     height: fs(61);
+    padding-right: fs(40);
+    background: inline-image('icons/rsp/angle-down.svg') no-repeat right fs(15) center/fs(10) auto;
   }
 
   &--textarea {

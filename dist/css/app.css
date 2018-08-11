@@ -554,7 +554,7 @@
 }
 
 .footer__row-1 {
-  padding: calc(2.1875rem * var(--scale)) 0;
+  padding: calc(4.375rem * var(--scale)) 0 calc(2.1875rem * var(--scale));
 }
 
 .footer__logo {

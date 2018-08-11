@@ -65,10 +65,10 @@ mixin map
 
         function setMarkers(map) {
           var image = {
-            url: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 56.65 56.648%22 width=%2240%22 height=%2240%22%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23F59900%22 d=%22M0 .007h56.64v56.641H0z%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23CA8608%22 d=%22M56.65 56.648H0V0z%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 d=%22M34.081 24.021h3.136v13.17h-3.136z%22/%3E%3Ccircle fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 cx=%2235.649%22 cy=%2220.572%22 r=%222.195%22/%3E%3Cpath fill-rule=%22evenodd%22 clip-rule=%22evenodd%22 fill=%22%23FFF%22 d=%22M29.983 19.944c-1.205-1.103-2.859-1.654-4.96-1.654H18.03v18.807h3.666v-6.82h3.327c2.101 0 3.755-.547 4.96-1.64 1.205-1.094 1.808-2.54 1.808-4.34 0-1.8-.603-3.251-1.808-4.353zm-2.637 6.568c-.527.572-1.301.859-2.323.859h-3.327v-6.174h3.327c1.03 0 1.806.295 2.33.884.523.59.784 1.337.784 2.241 0 .887-.263 1.617-.79 2.19z%22/%3E%3C/svg%3E",
-            size: new google.maps.Size(40, 40),
+            url: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 55%22 width=%2240%22 height=%2255%22%3E%3Cpath fill=%22%23f59900%22 d=%22M0 0h40v40H0z%22/%3E%3Cpath fill=%22%23ca8608%22 d=%22M0 0v40h13l7 15 7-15h13z%22/%3E%3Cpath fill=%22%23fff%22 d=%22M24.338 16.961h2.214v9.299h-2.214z%22/%3E%3Ccircle cx=%2225.445%22 cy=%2214.526%22 r=%221.55%22 fill=%22%23fff%22/%3E%3Cpath d=%22M21.445 14.082c-.851-.778-2.019-1.167-3.502-1.167h-4.938v13.279h2.589v-4.816h2.349c1.483 0 2.65-.386 3.502-1.158.85-.772 1.276-1.794 1.276-3.064 0-1.271-.425-2.296-1.276-3.074zm-1.862 4.638c-.372.404-.92.606-1.64.606h-2.35v-4.36h2.35c.727 0 1.275.209 1.644.625.37.417.554.944.554 1.583 0 .626-.186 1.141-.558 1.546z%22 fill=%22%23fff%22/%3E%3C/svg%3E",
+            size: new google.maps.Size(40, 55),
             origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(0, 40)
+            anchor: new google.maps.Point(20, 55)
           };
 
           for (var i = 0; i < branches.length; i++) {

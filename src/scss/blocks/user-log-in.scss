@@ -21,8 +21,44 @@
     margin-top: size(30);
   }
 
+  &--thin {
+    padding: 0;
+    background: none;
+
+    .user-log-in {
+      &__row {
+        align-items: center;
+
+        &::before {
+          content: '';
+          width: image-width('key-1.png')/2;
+          height: image-height('key-1.png')/2;
+          margin: 15px;
+          background: inline-image('key-1.png') no-repeat 50% 50%/contain;
+        }
+      }
+
+      &__content {
+        display: none;
+      }
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     --scale: 3/4;
     --font-size: 15/17;
+
+    &--thin {
+      padding: 0;
+      background: none;
+
+      .user-log-in {
+        &__row {
+          &::before {
+            content: normal;
+          }
+        }
+      }
+    }
   }
 }

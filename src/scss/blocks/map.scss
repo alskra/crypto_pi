@@ -1,4 +1,6 @@
 .map {
-  height: 50vmax;
-  max-height: 500px;
+  &__inner {
+    height: 500px;
+    max-height: 100vmin;
+  }
 }

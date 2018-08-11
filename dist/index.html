@@ -1032,7 +1032,7 @@
             <h2 class="section__title px-md-3">Контакты</h2>
           </div>
         </header>
-        <div class="container-fluid max-w-md max-w-lg">
+        <div class="container-fluid max-w-md max-w-lg position-relative z-index-1">
           <div class="grid-contacts">
             <div class="grid-contacts__row">
               <div class="grid-contacts__col grid-contacts__col--0">
@@ -1086,7 +1086,7 @@
                       </select>
                     </div>
                     <div class="form-feedback__row">
-                      <textarea class="field-btb field-btb--next field-btb--textarea form-feedback__field" rows="5" placeholder="Ваше имя"></textarea>
+                      <textarea class="field-btb field-btb--next field-btb--textarea form-feedback__field" rows="5" placeholder="Ваше сообщение"></textarea>
                     </div>
                     <div class="form-feedback__row form-feedback__row--actions">
                       <button class="btn-secondary form-feedback__btn">Отправить</button>
@@ -1098,6 +1098,144 @@
           </div>
         </div>
       </section>
+      <div class="map mt-10-inv" id="map"></div>
+      <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 3,
+            center: {
+              lat: 36.115805,
+              lng: 54.370451
+            },
+            styles: [{
+              "featureType": "administrative",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": "-100"
+              }]
+            }, {
+              "featureType": "administrative.province",
+              "elementType": "all",
+              "stylers": [{
+                "visibility": "off"
+              }]
+            }, {
+              "featureType": "landscape",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "lightness": 65
+              }, {
+                "visibility": "on"
+              }]
+            }, {
+              "featureType": "poi",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "lightness": "50"
+              }, {
+                "visibility": "simplified"
+              }]
+            }, {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": "-100"
+              }]
+            }, {
+              "featureType": "road.highway",
+              "elementType": "all",
+              "stylers": [{
+                "visibility": "simplified"
+              }]
+            }, {
+              "featureType": "road.arterial",
+              "elementType": "all",
+              "stylers": [{
+                "lightness": "30"
+              }]
+            }, {
+              "featureType": "road.local",
+              "elementType": "all",
+              "stylers": [{
+                "lightness": "40"
+              }]
+            }, {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [{
+                "saturation": -100
+              }, {
+                "visibility": "simplified"
+              }]
+            }, {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [{
+                "hue": "#ffff00"
+              }, {
+                "lightness": -25
+              }, {
+                "saturation": -97
+              }]
+            }, {
+              "featureType": "water",
+              "elementType": "geometry.fill",
+              "stylers": [{
+                "lightness": "50"
+              }]
+            }, {
+              "featureType": "water",
+              "elementType": "labels",
+              "stylers": [{
+                "lightness": -25
+              }, {
+                "saturation": -100
+              }]
+            }]
+          });
+          setMarkers(map);
+        }
+        var branches = [
+          ['Москва, Пресненская набережная, 10 блок С', 55.747061, 37.536314, 1, 'Москва, Пресненская набережная, 10 блок С'],
+          ['92 Waterloo Street #05-01, Sky Line Building, Singapore (187966)', 1.301186, 103.853159, 2, '92 Waterloo Street #05-01, Sky Line Building, <br>Singapore (187966)'],
+          ['Koninginnegracht 10, Den Haag, 2514BC, Netherlands', 52.086597, 4.314358, 3, 'Koninginnegracht 10, Den Haag, <br>2514BC, Netherlands']
+        ];
+
+        function setMarkers(map) {
+          var image = {
+            url: "data:image/svg+xml;charset=utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 54.757 54.757%22 width=%2260%22 height=%2260%22%3E%3Cpath d=%22M40.94 5.617A19.052 19.052 0 0 0 27.38 0a19.05 19.05 0 0 0-13.56 5.617c-6.703 6.702-7.536 19.312-1.804 26.952L27.38 54.757 42.721 32.6c5.755-7.671 4.922-20.281-1.781-26.983zM27.557 26c-3.859 0-7-3.141-7-7s3.141-7 7-7 7 3.141 7 7-3.141 7-7 7z%22 fill=%22%23333%22/%3E%3C/svg%3E",
+            size: new google.maps.Size(60, 60),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(30, 60)
+          };
+          for (var i = 0; i < branches.length; i++) {
+            (function() {
+              var branch = branches[i];
+              var marker = new google.maps.Marker({
+                position: {
+                  lat: branch[1],
+                  lng: branch[2]
+                },
+                map: map,
+                icon: image,
+                title: branch[0],
+                zIndex: branch[3]
+              });
+              var infowindow = new google.maps.InfoWindow({
+                content: branch[4]
+              });
+              marker.addListener('click', function() {
+                infowindow.open(map, marker);
+              });
+            })();
+          }
+        }
+      </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap"></script>
     </div>
     <footer class="footer page__footer">
       <div class="footer__row-1">

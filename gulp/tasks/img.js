@@ -62,7 +62,6 @@ export default gulp.series(
   function imgSASSImage() {
     return combiner.obj([
       gulp.src(paths.img.srcSASSImage),
-      gp.cached('sass-image'),
       gp.sassImage({
         targetFile: 'sass-image.scss',
         images_path: paths.img.dest,

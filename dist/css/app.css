@@ -24,19 +24,16 @@
 .grid-contacts__row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: calc(-0.9375 * var(--gs));
-  margin-right: calc(-0.46875 * var(--gs));
-  margin-bottom: calc(-0.9375 * var(--gs));
-  margin-left: calc(-0.46875 * var(--gs));
+  margin: calc(-0.9375 * var(--gs)) calc(-0.46875 * var(--gs));
 }
 
 .grid-contacts__col {
   flex-shrink: 0;
-  padding-top: calc(0.9375 * var(--gs));
-  padding-right: calc(0.46875 * var(--gs));
-  padding-bottom: calc(0.9375 * var(--gs));
-  padding-left: calc(0.46875 * var(--gs));
+  padding: calc(0.9375 * var(--gs)) calc(0.46875 * var(--gs));
+}
+
+.grid-contacts__row {
+  justify-content: space-between;
 }
 
 .grid-contacts__col--0 {
@@ -2550,6 +2547,11 @@
 .field-btb--textarea {
   overflow-y: auto;
   resize: none;
+}
+
+.map {
+  height: 50vmax;
+  max-height: 31.25rem;
 }
 
 /*# sourceMappingURL=app.css.map */

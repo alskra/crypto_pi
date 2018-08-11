@@ -34,6 +34,24 @@
   }
 }
 
+// Grid
+@mixin init-grid($gutter-y, $gutter-x) {
+  @include init-block;
+  display: flex;
+  flex-flow: column;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: gs(-$gutter-y) gs(-$gutter-x);
+  }
+
+  &__col {
+    flex-shrink: 0;
+    padding: gs($gutter-y) gs($gutter-x);
+  }
+}
+
 // Forms
 @mixin reset-select {
   appearance: none;

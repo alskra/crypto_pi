@@ -4,47 +4,80 @@
   &__title {
     color: $color-primary;
     font-weight: 500;
-    font-size: fs(24);
+    font-size: bfs(24);
     line-height: 1.25;
     font-family: 'DIN Pro', sans-serif;
-    margin: 0 0 gs(30);
+    margin: 0 0 bss(30);
   }
 
   &__content {
     color: #ffffff;
-    font-size: fs(17);
+    font-size: bfs(17);
     line-height: 1.5;
+
+    address {
+      font-style: normal;
+    }
 
     ul {
       list-style: none;
-      padding-left: fs(26);
+      padding: 0;
 
       > li {
-        margin-bottom: fs(17*1.5);
+        padding-left: bfs(26);
+        margin-bottom: bfs(17*1.5);
 
         &::before {
           content: '';
           display: inline-block;
           vertical-align: baseline;
-          border-width: fs(8);
+          border-width: bfs(8);
           border-style: solid;
           border-color: #d9dada #d9dada #ca8510 #ca8510;
           margin: {
-            right: fs(10);
-            bottom: fs(-1);
-            left: fs(-26);
+            right: bfs(10);
+            bottom: bfs(-1);
+            left: bfs(-26);
           };
         }
+      }
+    }
+
+    dl {
+      list-style: none;
+      padding: 0;
+
+      > dt {
+        padding-left: bfs(26);
+        margin-bottom: bfs(17*1.5);
+
+        &::before {
+          content: '';
+          display: inline-block;
+          vertical-align: baseline;
+          border-width: bfs(8);
+          border-style: solid;
+          border-color: #d9dada #d9dada #ca8510 #ca8510;
+          margin: {
+            right: bfs(10);
+            bottom: bfs(-1);
+            left: bfs(-26);
+          };
+        }
+      }
+
+      > dd {
+        margin-bottom: bfs(17*1.5);
       }
     }
   }
 
   &__footer {
     color: #ffffff;
-    font-size: fs(24);
+    font-size: bfs(24);
     line-height: 1.5;
     font-family: 'DIN Pro', sans-serif;
-    margin-top: gs(100);
+    margin-top: bss(100);
 
     address {
       font-style: normal;
@@ -57,8 +90,18 @@
         dt {
           color: $color-primary;
           font-weight: 500;
-          font-size: fs(25);
+          font-size: bfs(25);
         }
+      }
+    }
+  }
+
+  &--bg {
+    background: image-url('contacts-bg.png') no-repeat 50% 50%/contain;
+
+    .contacts {
+      &__content {
+        color: $color-base;
       }
     }
   }

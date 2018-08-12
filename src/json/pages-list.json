@@ -10,5 +10,9 @@
   "faq": {
     "title": "FAQ",
     "url": "faq.html"
+  },
+  "contacts": {
+    "title": "Контакты",
+    "url": "contacts.html"
   }
 }

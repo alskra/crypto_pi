@@ -9502,6 +9502,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: 900 !important;
 }
 
+.font-family-heading {
+  font-family: "DIN Pro", sans-serif;
+}
+
 .visuallyhidden {
   border: 0 !important;
   clip: rect(0, 0, 0, 0) !important;

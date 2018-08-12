@@ -4,7 +4,7 @@
   @include init-block;
   color: $color-base;
   font-weight: $font-weight-base;
-  font-size: font-size($font-size);
+  font-size: bfs($font-size);
   line-height: $line-height;
   font-family: $font-family-base;
 
@@ -21,42 +21,45 @@
   }
 
   h1, .h1 {
-    font-size: em(32px, $font-size);
+    font-size: em(32, $font-size);
   }
 
   h2, .h2 {
-    font-size: em(28px, $font-size);
+    font-size: em(28, $font-size);
   }
 
   h3, .h3 {
-    font-size: em(24px, $font-size);
+    font-size: em(24, $font-size);
   }
 
   h4, .h4 {
-    font-size: em(20px, $font-size);
+    font-size: em(20, $font-size);
   }
 
   h5, .h5 {
-    font-size: em(18px, $font-size);
+    font-size: em(18, $font-size);
   }
 
   h6, .h6 {
-    font-size: em(16px, $font-size);
+    font-size: em(16, $font-size);
   }
 
   p, ol, ul, dl {
-    margin: {
-      top: 0;
-      bottom: 1em;
-    };
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
   }
 
   li, dd {
-    margin-bottom: 1em;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
   }
 
   dt {
-    margin-bottom: 0.5em;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
   }
 
   ol, ul {
@@ -73,11 +76,11 @@
         content: '';
         display: inline-block;
         vertical-align: middle;
-        width: em(8px, $font-size);
-        height: em(8px, $font-size);
+        width: em(8, $font-size);
+        height: em(8, $font-size);
         margin: {
-          left: em(-18px, $font-size);
-          right: em(10px, $font-size);
+          left: em(-18, $font-size);
+          right: em(10, $font-size);
         };
         background-color: #d28600;
       }
@@ -109,13 +112,8 @@
       width: 100%;
       width: 100vw;
       vertical-align: baseline;
-      padding: em(10px, $font-size);
+      padding: em(10, $font-size);
       border: 1px solid rgba($color-base, 0.3);
     }
-  }
-
-  @include media-breakpoint-down(sm) {
-    --size: 3/4;
-    --font-size: 15/17;
   }
 }

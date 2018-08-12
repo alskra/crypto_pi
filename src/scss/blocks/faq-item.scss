@@ -5,7 +5,7 @@
   & + & {
     &::before {
       content: '';
-      border-top: bfs(1) solid $color-primary-dark;
+      border-top: 1px solid $color-primary-dark;
       position: absolute;
       top: 0;
       right: bss(30);
@@ -20,16 +20,22 @@
     position: relative;
     cursor: pointer;
 
+    &:hover {
+      .faq-item {
+        &__header {
+          &-title {
+            color: $color-primary-dark;
+          }
+        }
+      }
+    }
+
     &-icon {
       color: $color-link;
       font-size: bss(35);
       flex-shrink: 0;
       margin-left: bss(-45);
       margin-right: bss(10);
-
-      &.icon-svg-minus {
-        display: none;
-      }
     }
 
     &-title {
@@ -39,12 +45,8 @@
       line-height: 1.25;
       font-family: $font-family-heading;
       flex-grow: 1;
-      padding: calc((#{bss(35)} - #{bfs(22*1.25)})/2) 0;
+      margin: calc((#{bss(35)} - #{bfs(22*1.25)})/2) 0;
       transition: $transition-color;
-
-      &:hover {
-        color: $color-primary-dark;
-      }
     }
   }
 
@@ -56,16 +58,6 @@
   &--opened {
     .faq-item {
       &__header {
-        &-icon {
-          &.icon-svg-plus {
-            display: none;
-          }
-
-          &.icon-svg-minus {
-            display: block;
-          }
-        }
-
         &-title {
           color: $color-primary-dark;
         }

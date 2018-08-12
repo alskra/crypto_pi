@@ -41,3 +41,7 @@ $spacers: ();
 @for $i from 1 through 10 {
   $spacers: map-merge($spacers, ($i: $i*$spacer, #{$i}-inv: -$i*$spacer));
 }
+
+@for $i from 1 through 10 {
+  $spacers: map-merge($spacers, (#{$i}bss: bss($i*15), #{$i}bss-inv: bss(-$i*15)));
+}

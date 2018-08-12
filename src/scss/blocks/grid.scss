@@ -36,4 +36,24 @@
       }
     }
   }
+
+  &-analytics {
+    @include init-grid(30, 15);
+
+    &__col {
+      width: percentage(4/12);
+    }
+
+    @include media-breakpoint-down(sm) {
+      &__col {
+        width: percentage(6/12);
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      &__col {
+        width: percentage(12/12);
+      }
+    }
+  }
 }

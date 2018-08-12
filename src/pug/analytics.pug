@@ -1,0 +1,200 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include blocks/header
+include blocks/footer
+include blocks/map
+
++page(pagesList.analytics.title)
+  +header.--transparent.__header
+  +e.__content
+    +e.__intro--analytics
+      .container-fluid.max-w-md.max-w-lg
+        +e.H1.__intro-title Аналитика
+    .container-fluid.max-w-md.max-w-lg.pt-3bss
+      +b.NAV.breadcrumb
+        +e.OL.__inner
+          +e.LI.__item
+            +icon-svg('home').__icon-home
+            +e.A.__link(href=pagesList.index.url) Главная
+          +e.LI.__item
+            +e.__icon
+            +e.__link Аналитика
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3.color-base Аналитика
+      .container
+        +b.grid-analytics
+          +e.__row
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 25
+                        span jul
+                      +e.H3.__title Лишь элементы политического процесса неоднозначны и будут своевременно верифицированы
+                    +e.__content
+                      p Имеется спорная точка зрения, гласящая примерно следующее: базовые сценарии поведения пользователей и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 23
+                        span jul
+                      +e.H3.__title Также как укрепление
+                    +e.__content
+                      p Учитывая ключевые сценарии поведения, синтетическое тестирование не оставляет шанса для модели развития
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-2.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 21
+                        span jul
+                      +e.H3.__title Но разбавленное изрядной долей эмпатии, рациональное мышление создает предпосылки для инновационных методов управления процессами
+                    +e.__content
+                      p В своем стремлении улучшить пользовательский опыт мы упускаем, что представители современных социальных резервов обнародованы
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 19
+                        span jul
+                      +e.H3.__title Прежде всего, существующая теория не оставляет шанса для укрепления моральных ценностей
+                    +e.__content
+                      p В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для экономической целесообразности принимаемых решений
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 17
+                        span jul
+                      +e.H3.__title Таким образом, базовый вектор развития позволяет оценить значение распределения внутренних резервов и ресурсов
+                    +e.__content
+                      p Но акционеры крупнейших компаний являются только методом политического участия и призваны к ответу
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            +e.__col.write-box
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-2.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 15
+                        span jul
+                      +e.H3.__title Не следует, однако, забывать
+                    +e.__content
+                      p Равным образом, курс на социально-ориентированный национальный проект однозначно фиксирует необходимость первоочередных требований
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+      .container-fluid.max-w-md.max-w-lg.mt-4bss
+        +b.NAV.pagination
+          +e.UL.__inner
+            +e.LI.__item--disabled
+              +e.SPAN.__link &laquo;
+            +e.LI.__item--current
+              +e.SPAN.__link 1
+            +e.LI.__item
+              +e.A.__link(href='') 2
+            +e.LI.__item
+              +e.A.__link(href='') 3
+            +e.LI.__item
+              +e.A.__link(href='') 4
+            +e.LI.__item
+              +e.A.__link(href='') 5
+            +e.LI.__item
+              +e.A.__link(href='') 6
+            +e.LI.__item
+              +e.A.__link(href='') &raquo;
+      +b.SECTION.section-subscribe.mt-4bss
+        +e.HEADER.__header
+          .container-fluid.max-w-md.max-w-lg
+            +e.H2.__title Subscribe
+            +e.P.__desc Подпишись на рассылку аналитики, прогнозов и новостей CRYPTO Pi
+        +e.__content
+          .container-fluid.max-w-md.max-w-lg
+            +b.FORM.form-subscribe(action='')
+              +e.__row.row
+                +e.__col.col-auto
+                  +b.INPUT.field.__field(type='email' placeholder='Введите свой email адрес')
+                +e.__col.col-auto
+                  +b.BUTTON.btn-primary.__btn Подписаться
+    +b.SECTION.section--contacts
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Контакты
+      .container-fluid.max-w-md.max-w-lg
+        +b.grid-contacts
+          +e.__row
+            +e.__col--0
+              +b.contacts
+                +e.H3.__title Наши офисы:
+                +e.__content
+                  ul
+                    li МОСКВА, ПРЕСНЕНСКАЯ НАБЕРЕЖНАЯ, 10 БЛОК С
+                    li 92 WATERLOO STREET #05-01, SKY LINE BUILDING, SINGAPORE (187966)
+                    li KONINGINNEGRACHT 10, DEN HAAG, 2514BC, NETHERLANDS
+                +e.FOOTER.__footer
+                  address
+                    dl
+                      dt Email:
+                      dd
+                        a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
+                        br
+                      dt Phone:
+                        dd
+                          a(href='tel:+79295773655') +7 (929) 577-36-55
+            +e.__col--1.position-relative.z-index-1.mb-md-10-inv
+              +b.FORM.form-feedback(action='')
+                +e.HEADER.__header
+                  +e.H3.__title Обратная связь
+                  +e.P.__desc Задайте интересующий Вас вопрос
+                +e.__content
+                  +e.__row
+                    +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='email' placeholder='Email')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='tel' placeholder='Телефон')
+                  +e.__row
+                    +b.SELECT.field-btb--next.--select.__field
+                      option(selected='') Тема обращения
+                      option Subject 1
+                      option Subject 2
+                      option Subject 3
+                  +e.__row
+                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше сообщение')
+                  +e.__row--actions
+                    +b.BUTTON.btn-secondary.__btn Отправить
+    +map
+  +footer.__footer

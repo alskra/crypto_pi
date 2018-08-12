@@ -2,5 +2,9 @@
   "index": {
     "title": "Главная",
     "url": "index.html"
+  },
+  "analytics": {
+    "title": "Аналитика",
+    "url": "analytics.html"
   }
 }

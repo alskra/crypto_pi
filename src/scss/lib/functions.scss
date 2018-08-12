@@ -29,24 +29,26 @@
   @return $number/$base*1em;
 }
 
-@function fs($number) {
+// Block Font Size
+@function bfs($number) {
   $number: strip-unit($number);
 
   @if $number == 0 {
     @return 0;
   }
 
-  @return calc(#{$number/16} * var(--fs));
+  @return calc(#{$number/16} * var(--block-font-size));
 }
 
-@function gs($number) {
+// Block Space Size
+@function bss($number) {
   $number: strip-unit($number);
 
   @if $number == 0 {
     @return 0;
   }
 
-  @return calc(#{$number/32} * var(--gs));
+  @return calc(#{$number/15} * var(--block-space-size));
 }
 
 // Sources
@@ -85,6 +87,14 @@
   }
 
   @return calc(#{$number}px * var(--font-size));
+}
+
+@function fs($number) {
+  @return bfs($number);
+}
+
+@function gs($number) {
+  @return bss($number);
 }
 
 @function url-img($path) {

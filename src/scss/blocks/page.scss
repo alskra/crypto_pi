@@ -17,6 +17,29 @@
     flex-grow: 1;
   }
 
+  &__intro {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: bss(500);
+    padding: bss(130) 0;
+    background: none no-repeat 50% 0/cover $color-base;
+
+    &--analytics {
+      background-image: image-url('bg-9.jpg');
+    }
+
+    &-title {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: bfs(48);
+      line-height: 1.25;
+      font-family: $font-family-heading;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     &--open-panel {
       overflow: hidden;

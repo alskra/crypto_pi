@@ -89,6 +89,10 @@
     }
   }
 
+  &--faq {
+    background: url-img('bg-10.jpg') no-repeat 0 50px;
+  }
+
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;

@@ -6,5 +6,9 @@
   "analytics": {
     "title": "Аналитика",
     "url": "analytics.html"
+  },
+  "faq": {
+    "title": "FAQ",
+    "url": "faq.html"
   }
 }

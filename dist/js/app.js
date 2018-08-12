@@ -106,7 +106,11 @@ var _carousel = __webpack_require__(4);
 
 var _carousel2 = _interopRequireDefault(_carousel);
 
-var _test = __webpack_require__(5);
+var _faqItem = __webpack_require__(5);
+
+var _faqItem2 = _interopRequireDefault(_faqItem);
+
+var _test = __webpack_require__(6);
 
 var _test2 = _interopRequireDefault(_test);
 
@@ -117,6 +121,7 @@ console.log(_test2.default);
 $(function () {
   (0, _header2.default)();
   (0, _carousel2.default)();
+  (0, _faqItem2.default)();
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
@@ -232,6 +237,38 @@ function carousel() {
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = faqItem;
+
+
+faqItem.init = function () {};
+
+faqItem.bindUIActions = function () {
+  document.addEventListener('click', toggle);
+};
+
+function faqItem() {
+  faqItem.init();
+  faqItem.bindUIActions();
+}
+
+function toggle(event) {
+  if (event.target.closest('[data-toggle=faq-item]')) {
+    var faqItemElement = event.target.closest('.faq-item');
+    event.preventDefault();
+    faqItemElement.classList.toggle('faq-item--opened');
+  }
+}
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

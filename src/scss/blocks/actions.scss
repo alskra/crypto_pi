@@ -1,0 +1,18 @@
+.actions {
+  @include init-block;
+  display: flex;
+  flex-flow: column;
+
+  &__content {
+    color: $color-base;
+    font-size: bfs(17);
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: bss(20);
+  }
+
+  &__btn {
+    width: 250px;
+    margin: 0 auto;
+  }
+}

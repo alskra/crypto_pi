@@ -1,0 +1,134 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include blocks/header
+include blocks/footer
+include blocks/map
+
++page(pagesList.faq.title)
+  +header.--transparent.__header
+  +e.__content
+    +e.__intro--faq
+      .container-fluid.max-w-md.max-w-lg
+        +e.H1.__intro-title F.A.Q.
+    .container-fluid.max-w-md.max-w-lg.pt-3bss
+      +b.NAV.breadcrumb
+        +e.OL.__inner
+          +e.LI.__item
+            +icon-svg('home').__icon-home
+            +e.A.__link(href=pagesList.index.url) Главная
+          +e.LI.__item
+            +e.__icon
+            +e.__link FAQ
+    +b.SECTION.section--faq
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3.color-base F.A.Q.
+      .container-fluid.max-w-md.max-w-lg
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title Что нужно для того, чтобы купить токен фонда?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title Можно ли перевести деньги на Смарт-контракт с биржи?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title Что такое смарт-контракт?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title За какую валюту можно купить токен?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title Где купить криптовалюту Ethereum?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+        +b.ARTICLE.faq-item
+          +e.HEADER.__header(data-toggle='faq-item')
+            +icon-svg('plus').__header-icon
+            +icon-svg('minus').__header-icon
+            +e.H3.__header-title Что такое токен?
+          +e.__content
+            .formatted-content
+              p Банальные, но неопровержимые выводы, а также независимые государства могут быть ограничены исключительно образом мышления. С другой стороны, постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании новых принципов формирования материально-технической и кадровой базы. Есть над чем задуматься: реплицированные с зарубежных источников, современные исследования описаны максимально подробно.
+              p А также предприниматели в сети интернет описаны максимально подробно. Являясь всего лишь частью общей картины, некоторые особенности внутренней политики будут ассоциативно распределены по отраслям.
+      .container-fluid.max-w-md.max-w-lg.mt-4bss
+        +b.actions
+          +e.P.__content Не нашел ответ на вопрос?
+          +b.A.btn-primary(href='').__btn Больше ответов
+    +b.SECTION.section--contacts
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Контакты
+      .container-fluid.max-w-md.max-w-lg
+        +b.grid-contacts
+          +e.__row
+            +e.__col--0
+              +b.contacts
+                +e.H3.__title Наши офисы:
+                +e.__content
+                  ul
+                    li МОСКВА, ПРЕСНЕНСКАЯ НАБЕРЕЖНАЯ, 10 БЛОК С
+                    li 92 WATERLOO STREET #05-01, SKY LINE BUILDING, SINGAPORE (187966)
+                    li KONINGINNEGRACHT 10, DEN HAAG, 2514BC, NETHERLANDS
+                +e.FOOTER.__footer
+                  address
+                    dl
+                      dt Email:
+                      dd
+                        a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
+                        br
+                      dt Phone:
+                        dd
+                          a(href='tel:+79295773655') +7 (929) 577-36-55
+            +e.__col--1.position-relative.z-index-1.mb-md-10-inv
+              +b.FORM.form-feedback(action='')
+                +e.HEADER.__header
+                  +e.H3.__title Обратная связь
+                  +e.P.__desc Задайте интересующий Вас вопрос
+                +e.__content
+                  +e.__row
+                    +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='email' placeholder='Email')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='tel' placeholder='Телефон')
+                  +e.__row
+                    +b.SELECT.field-btb--next.--select.__field
+                      option(selected='') Тема обращения
+                      option Subject 1
+                      option Subject 2
+                      option Subject 3
+                  +e.__row
+                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше сообщение')
+                  +e.__row--actions
+                    +b.BUTTON.btn-secondary.__btn Отправить
+    +map
+  +footer.__footer

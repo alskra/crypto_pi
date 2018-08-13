@@ -147,60 +147,81 @@ include blocks/map
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
             +b.SECTION.section-sm
               +e.HEADER.__header
-                +e.H3.__title Фонд занимается инвестированием в криптовалюты.
+                +e.H3.__title
+                  block section-sm__title
+                    | Фонд занимается инвестированием в криптовалюты.
               +e.__content
-                p.
-                  В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает «CRYPTO Pi Fund» весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
-                p.
-                  Фонд проводит сбалансированную политику риск-менеджмента с приоритетным фокусом на сохранении вложенных инвесторами средств.
+                block section-sm__content
+                  p.
+                    В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает «CRYPTO Pi Fund» весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
+                  p.
+                    Фонд проводит сбалансированную политику риск-менеджмента с приоритетным фокусом на сохранении вложенных инвесторами средств.
               +e.FOOTER.__footer
-                p.
-                  Для достижения наилучших инвестиционных результатов мы используем четыре торговые стратегии. В основе каждой из них лежит принцип минимизации рисков и сохранения инвестиционного капитала.
+                block section-sm__footer
+                  p.
+                    Для достижения наилучших инвестиционных результатов мы используем четыре торговые стратегии. В основе каждой из них лежит принцип минимизации рисков и сохранения инвестиционного капитала.
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
             +b.ARTICLE.invest-go.h-100
-              +e.H3.__title Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+              +e.H3.__title
+                block invest-go__title-0
+                  | Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
               +b.A.btn-primary(href='').__btn Инвестировать сейчас
               +e.__content
-                p.
-                  У нас нет ограничений по количеству паев – <br>
-                  стать нашим клиентом может каждый!
+                block invest-go__content-0
+                  p.
+                    У нас нет ограничений по количеству паев – <br>
+                    стать нашим клиентом может каждый!
       +b.SECTION.section-sm
         +e.HEADER.__header
           .container-fluid.max-w-md.max-w-lg
             .row
               .col-12.col-md-8
-                +e.H3.__title Фонд предоставляет своим клиентам возможность приобретать паи трех видов инвестиционных портфелей:
+                +e.H3.__title
+                  block section-sm__title-1
+                    | Фонд предоставляет своим клиентам возможность приобретать паи трех видов инвестиционных портфелей:
         .container
           .row.mb-2-inv.justify-content-center
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item.wow.flipInX
+              +b.FIGURE.invest-item.h-100.wow.flipInX
                 +e.__img
                   +icon-svg('sand-watch').__img-svg
                 +e.FIGCAPTION.__body
-                  +e.__title Краткосрочный
-                  +e.__desc 3 месяца
+                  +e.__title
+                    block invest-item__title-0
+                      | Краткосрочный
+                  +e.__desc
+                    block invest-item__desc-0
+                      | 3 месяца
                   +e.__value
                     +e.SPAN.__value-text-0 7
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-1 %
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.2s')
+              +b.FIGURE.invest-item.h-100.wow.flipInX(data-wow-delay='0.2s')
                 +e.__img
                   +icon-svg('watch').__img-svg
                 +e.FIGCAPTION.__body
-                  +e.__title Среднесрочный
-                  +e.__desc 6 месяцев
+                  +e.__title
+                    block invest-item__title-1
+                      | Среднесрочный
+                  +e.__desc
+                    block invest-item__desc-1
+                      | 6 месяцев
                   +e.__value
                     +e.SPAN.__value-text-0 8
                     +e.SPAN.__value-text-0 5
                     +e.SPAN.__value-text-1 %
             .col-12.mb-2.col-sm-6.col-md-4
-              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.4s')
+              +b.FIGURE.invest-item.h-100.wow.flipInX(data-wow-delay='0.4s')
                 +e.__img
                   +icon-svg('calendar').__img-svg
                 +e.FIGCAPTION.__body
-                  +e.__title Долгосрочный
-                  +e.__desc 12 месяцев
+                  +e.__title
+                    block invest-item__title-2
+                      | Долгосрочный
+                  +e.__desc
+                    block invest-item__desc-2
+                      | 12 месяцев
                   +e.__value
                     +e.SPAN.__value-text-0--one 1
                     +e.SPAN.__value-text-0 0
@@ -217,18 +238,19 @@ include blocks/map
               +e.HEADER.__header
                 .row
                   .col-12.col-lg-8
-                    +e.H3.__title.m-0 Global cryptocarrency market
+                    +e.H3.__title.m-0 Global cryptocurrency market
               .row
                 .col-12.mb-2.col-lg-8.mb-lg-0
                   +e.__content
-                    p.
-                      Долгосрочные вложения, как правило, составляют 45% от общей стоимости портфеля.
-                    p
-                      strong Инвестиции делаются в топ-10 криптовалют в соответствии с рейтингом их капитализации.
-                    p.
-                      Длительные инвестиции в ведущие криптовалюты с большой рыночной капитализацией и ликвидностью нивелируют
-                      риски резких колебаний стоимости, а защищенные холодные кошельки делают
-                      долгосрочное хранение безопасным.
+                    block section-chart__content-0
+                      p.
+                        Долгосрочные вложения, как правило, составляют 45% от общей стоимости портфеля.
+                      p
+                        strong Инвестиции делаются в топ-10 криптовалют в соответствии с рейтингом их капитализации.
+                      p.
+                        Длительные инвестиции в ведущие криптовалюты с большой рыночной капитализацией и ликвидностью нивелируют
+                        риски резких колебаний стоимости, а защищенные холодные кошельки делают
+                        долгосрочное хранение безопасным.
                 .col-12.text-center.col-lg-4.text-lg-right
                   .row.align-items-center.flex-lg-column.align-items-lg-stretch
                     .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
@@ -238,13 +260,17 @@ include blocks/map
                         +e.SPAN.__value-text-0 4
                         +e.SPAN.__value-text-0 5
                         +e.SPAN.__value-text-1 %
-                        +e.__value-text-2 общей стоимости портфеля
+                        +e.__value-text-2
+                          block section-chart__value-text-2-0
+                            | общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
-                      +e.__label - долгосрочные вложения
+                      +e.__label
+                        block section-chart__label-0
+                          | - долгосрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--0.wow.slideInRight
                 +e.NO-FORMATTED-HTML.__chart-img
-                  block section-chart__chart-img
+                  block section-chart__chart-img-0
                     include ../../dist/img/content/Долгосрочные стратегии light.svg
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg

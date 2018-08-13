@@ -104,9 +104,7 @@ var _cssVarsPonyfill = __webpack_require__(208);
 
 var _cssVarsPonyfill2 = _interopRequireDefault(_cssVarsPonyfill);
 
-var _focusVisible = __webpack_require__(209);
-
-var _focusVisible2 = _interopRequireDefault(_focusVisible);
+__webpack_require__(209);
 
 var _wowjs = __webpack_require__(210);
 
@@ -119,10 +117,6 @@ var _jquery2 = _interopRequireDefault(_jquery);
 __webpack_require__(212);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log(_focusVisible2.default);
-console.log(_wowjs2.default);
-
 
 var WOW = _wowjs2.default.WOW;
 

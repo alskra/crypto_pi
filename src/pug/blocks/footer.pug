@@ -23,7 +23,7 @@ mixin footer
       .container-fluid.max-w-md.max-w-lg
         .row.my-1-inv.mx-lg-2
           .col-12.py-1.col-sm-6.col-md-3
-            +e.__title Документы
+            +e.__title= lang === 'ru' ? 'Документы' : 'Documents'
             +e.UL.__nav
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Privacy Policy
@@ -32,16 +32,16 @@ mixin footer
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Refund and Return policy
           .col-12.py-1.col-sm-6.col-md-3
-            +e.__title Помощь
+            +e.__title= lang === 'ru' ? 'Помощь' : 'Help'
             +e.UL.__nav
               +e.LI.__nav-item
-                +e.A.__nav-link(href='') Контакты
+                +e.A.__nav-link(href='')= lang === 'ru' ? 'Контакты' : 'Contacts'
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Задать вопрос
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') FAQ
           .col-12.py-1.col-sm-6.col-md-3
-            +e.__title Личный кабинет
+            +e.__title= lang === 'ru' ? 'Личный кабинет' : 'Personal cabinet'
             +e.UL.__nav
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Регистрация
@@ -50,7 +50,7 @@ mixin footer
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') Купить токен
           .col-12.py-1.col-sm-6.col-md-3
-            +e.__title Партнеры
+            +e.__title= lang === 'ru' ? 'Партнеры' : 'Partners'
             +e.UL.__nav
               +e.LI.__nav-item
                 +e.A.__nav-link(href='') CAPITAL Pi
@@ -62,8 +62,12 @@ mixin footer
       .container-fluid.max-w-md.max-w-lg
         .row.my-1-inv
           .col-12.py-1.text-center.col-md.text-md-left
-            p * Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.
-            p ** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.
+            if lang === 'ru'
+              p * Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.
+              p ** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.
+            else
+              p * The percentages indicate the level of efficiency possible in relation to the term of participation in the short, medium, and long term strategies, taking into account the large costs of buying and selling high-yield assets and the increased costs of very volatile market hedging.
+              p ** Crypto PI reserves the right to change the ratio of trading strategies.
           .col-12.py-1.text-center.col-md-auto.text-md-right
             +e.__pay
               +e.__pay-col

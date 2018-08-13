@@ -80,9 +80,12 @@ else
                 .col-auto.mw-100.p-1
                   +b.A.btn-secondary.__btn(href='')= lang === 'ru' ? 'Авторизация' : 'Sign In'
               +e.__content
-                p.
-                  У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
-                  в личном кабинете сегодня!
+                if lang === 'ru'
+                  p.
+                    У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+                    в личном кабинете сегодня!
+                else
+                  p Do you already have an account? Register or log in to your account today!
     +b.SECTION.section--service
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
@@ -238,7 +241,7 @@ else
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi
+          +e.H2.__title.px-md-3= lang === 'ru' ? 'Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi' : 'Crypto-сurrency Market overview, Investment Portfolio CRYPTO Pi'
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -513,9 +516,9 @@ else
             +b.FORM.form-subscribe(action='')
               +e.__row.row
                 +e.__col.col-auto
-                  +b.INPUT.field.__field(type='email' placeholder='Введите свой email адрес')
+                  +b.INPUT.field.__field(type='email' placeholder=lang === 'ru' ? 'Введите свой email адрес': 'Enter your email')
                 +e.__col.col-auto
-                  +b.BUTTON.btn-primary.__btn Подписаться
+                  +b.BUTTON.btn-primary.__btn= lang === 'ru' ? 'Подписаться' : 'Subscribe'
     +b.SECTION.section--risks
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
@@ -619,7 +622,7 @@ else
             cite Алексей Штерншис, <br><small>Chief Financial Officer</small>
           else
             q Despite the high risks of investment in the cryptocurrency, more and more people are ready to invest their savings in it. After all, on the other side, incredible prospects open up to generate more income.
-            cite Alexey Shternshis, <br><small>CIO</small>
+            cite Alexey Shternshis, <br><small>CFO</small>
         .row.justify-content-center.mt-3.mt-md-4
           .col-12.col-md-6
             +b.ARTICLE.invest-go
@@ -694,7 +697,7 @@ else
                   li Мы обеспечиваем <span class="color-primary-dark">прозрачность публичной отчетности и отсутствие проблем</span> со стороны регулирующих органов.
               else
                 ul
-                  li We pay a lot of attention to information and analytical support for our clients. It is impossible to move in the right direction without a deep understanding of what is happening in such a young and fast-growing market as a cryptocurrencies. Customers receive the fullest and most comprehensive information about the current situation in the world of "crypto’s" and suffer less from the "information noise" that is so characteristic in recent years of this promising market.
+                  li We pay a lot of attention to information and analytical support for our clients. It is impossible to move in the right direction without a deep understanding of what is happening in such a young and fast-growing market as a cryptocurrencies. <span class="color-primary-dark">Customers receive the fullest and most comprehensive information about the current situation in the world of "crypto’s"</span> and suffer less from the "information noise" that is so characteristic in recent years of this promising market.
                   li We invest a lot in <span class="color-primary-dark">service and active customer support</span>. Each client has a personal manager, which can be contacted at any time of the day and receive detailed advice on the situation in the market and the current state of the portfolio.
                   li We are in jurisdictions that <span class="color-primary-dark">favor investors and guarantee them complete confidentiality</span>.
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
@@ -814,9 +817,12 @@ else
             .col-auto.mw-100.p-1
               +b.A.btn-secondary.__btn(href='')= lang === 'ru' ? 'Авторизация' : 'Sign In'
           +e.__content
-            p.
-              У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
-              в личном кабинете сегодня!
+            if lang === 'ru'
+              p.
+                У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+                в личном кабинете сегодня!
+            else
+              p Do you already have an account? Register or log in to your account today!
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg

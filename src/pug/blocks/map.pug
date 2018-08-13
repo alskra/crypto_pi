@@ -3,12 +3,13 @@ mixin map
     +e.__inner#map
     block map
       script.
+        var lang = document.documentElement.getAttribute('lang');
         var branches = [
           ['Crypto Pi Singapore', 1.301186, 103.853159, 3, '92 Waterloo Street #05-01, Sky Line Building, <br>Singapore (187966)'],
           ['Crypto Pi Netherlands', 52.086597, 4.314358, 1, 'Koninginnegracht 10, Den Haag, <br>2514BC, Netherlands']
         ];
 
-        if (document.documentElement.getAttribute('lang') === 'ru') {
+        if (lang === 'ru') {
           branches.push(['Crypto Pi Russia', 55.747061, 37.536314, 2, 'Москва, Пресненская набережная, 10 блок С']);
         }
 
@@ -94,4 +95,8 @@ mixin map
             })();
           }
         }
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap"></script>
+
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap&language=' + lang;
+        script.async = true;
+        document.body.appendChild(script);

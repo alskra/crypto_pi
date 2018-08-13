@@ -2,8 +2,8 @@
 
 import './core-js';
 import cssVars from 'css-vars-ponyfill';
-import focusVisible from 'focus-visible';console.log(focusVisible);
-import wowjs from 'wowjs';console.log(wowjs);
+import 'focus-visible';
+import wowjs from 'wowjs';
 import $ from 'jquery';
 import 'slick-carousel';
 

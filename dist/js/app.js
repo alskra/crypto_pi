@@ -110,13 +110,7 @@ var _faqItem = __webpack_require__(5);
 
 var _faqItem2 = _interopRequireDefault(_faqItem);
 
-var _test = __webpack_require__(6);
-
-var _test2 = _interopRequireDefault(_test);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-console.log(_test2.default);
 
 $(function () {
   (0, _header2.default)();
@@ -268,13 +262,6 @@ function toggle(event) {
     faqItemElement.querySelector('.faq-item__header-icon').children[0].setAttribute('xlink:href', '#icon-svg-' + (faqItemElement.classList.contains('faq-item--opened') ? 'minus' : 'plus'));
   }
 }
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
 
 /***/ })
 /******/ ]);

@@ -15,11 +15,11 @@ mixin header
                 +b.NAV.menu.__menu
                   +e.UL.__inner
                     +e.LI.__item
-                      +e.A.__link--current(href='analytics.html') Аналитика
+                      +e.A.__link--current(href='analytics.html')= lang === 'ru' ? 'Аналитика' : 'Analytics'
                     +e.LI.__item
                       +e.A.__link(href='faq.html') FAQ
                     +e.LI.__item
-                      +e.A.__link(href='contacts.html') Контакты
+                      +e.A.__link(href='contacts.html')= lang === 'ru' ? 'Контакты' : 'Contacts'
               +e.__panel-col.col-12.col-md-auto
                 +e.__lang
                   +e.__lang-inner

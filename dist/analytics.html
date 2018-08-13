@@ -11,10 +11,10 @@
   <meta name="author" content="" />
   <!-- Favicon-->
   <!-- CSS-->
-  <link rel="stylesheet" href="css/lib.css" />
-  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/lib.min.css" />
+  <link rel="stylesheet" href="css/app.min.css" />
   <!-- JS-->
-  <script src="js/lib.js"></script>
+  <script src="js/lib.min.js"></script>
   <script>
     // Load and insert svg-symbols.svg
     (function() {
@@ -58,13 +58,13 @@
                   <nav class="menu header__menu">
                     <ul class="menu__inner">
                       <li class="menu__item">
-                        <a class="menu__link menu__link--current" href="analytics.html">Аналитика</a>
+                        <a class="menu__link menu__link--current" href="analytics.html">Analytics</a>
                       </li>
                       <li class="menu__item">
                         <a class="menu__link" href="faq.html">FAQ</a>
                       </li>
                       <li class="menu__item">
-                        <a class="menu__link" href="contacts.html">Контакты</a>
+                        <a class="menu__link" href="contacts.html">Contacts</a>
                       </li>
                     </ul>
                   </nav>
@@ -358,11 +358,12 @@
       <div class="map">
         <div class="map__inner" id="map"></div>
         <script>
+          var lang = document.documentElement.getAttribute('lang');
           var branches = [
             ['Crypto Pi Singapore', 1.301186, 103.853159, 3, '92 Waterloo Street #05-01, Sky Line Building, <br>Singapore (187966)'],
             ['Crypto Pi Netherlands', 52.086597, 4.314358, 1, 'Koninginnegracht 10, Den Haag, <br>2514BC, Netherlands']
           ];
-          if (document.documentElement.getAttribute('lang') === 'ru') {
+          if (lang === 'ru') {
             branches.push(['Crypto Pi Russia', 55.747061, 37.536314, 2, 'Москва, Пресненская набережная, 10 блок С']);
           }
 
@@ -495,8 +496,11 @@
               })();
             }
           }
+          var script = document.createElement('script');
+          script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap&language=' + lang;
+          script.async = true;
+          document.body.appendChild(script);
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap"></script>
       </div>
     </div>
     <footer class="footer page__footer">
@@ -547,7 +551,7 @@
         <div class="container-fluid max-w-md max-w-lg">
           <div class="row my-1-inv mx-lg-2">
             <div class="col-12 py-1 col-sm-6 col-md-3">
-              <div class="footer__title">Документы</div>
+              <div class="footer__title">Documents</div>
               <ul class="footer__nav">
                 <li class="footer__nav-item">
                   <a class="footer__nav-link" href="">Privacy Policy</a>
@@ -561,10 +565,10 @@
               </ul>
             </div>
             <div class="col-12 py-1 col-sm-6 col-md-3">
-              <div class="footer__title">Помощь</div>
+              <div class="footer__title">Help</div>
               <ul class="footer__nav">
                 <li class="footer__nav-item">
-                  <a class="footer__nav-link" href="">Контакты</a>
+                  <a class="footer__nav-link" href="">Contacts</a>
                 </li>
                 <li class="footer__nav-item">
                   <a class="footer__nav-link" href="">Задать вопрос</a>
@@ -575,7 +579,7 @@
               </ul>
             </div>
             <div class="col-12 py-1 col-sm-6 col-md-3">
-              <div class="footer__title">Личный кабинет</div>
+              <div class="footer__title">Personal cabinet</div>
               <ul class="footer__nav">
                 <li class="footer__nav-item">
                   <a class="footer__nav-link" href="">Регистрация</a>
@@ -589,7 +593,7 @@
               </ul>
             </div>
             <div class="col-12 py-1 col-sm-6 col-md-3">
-              <div class="footer__title">Партнеры</div>
+              <div class="footer__title">Partners</div>
               <ul class="footer__nav">
                 <li class="footer__nav-item">
                   <a class="footer__nav-link" href="">CAPITAL Pi</a>
@@ -609,8 +613,9 @@
         <div class="container-fluid max-w-md max-w-lg">
           <div class="row my-1-inv">
             <div class="col-12 py-1 text-center col-md text-md-left">
-              <p>* Проценты, отмеченные в инвестиционных портфелях, указывают на долю в эффективности управления портфелем, в связи с большими расходами на покупку и продажу активов и повышенными расходами на хеджирование волатильности рынка.</p>
-              <p>** Фонд оставляет за собой право изменять соотношение торговых стратегий в инвестиционных портфелях.</p>
+              <p>* The percentages indicate the level of efficiency possible in relation to the term of participation in the short, medium, and long term strategies, taking into account the large costs of buying and selling high-yield assets and the increased
+                costs of very volatile market hedging.</p>
+              <p>** Crypto PI reserves the right to change the ratio of trading strategies.</p>
             </div>
             <div class="col-12 py-1 text-center col-md-auto text-md-right">
               <div class="footer__pay">
@@ -648,7 +653,7 @@
     </footer>
   </div>
   <!-- JS-->
-  <script src="js/app.js" async=""></script>
+  <script src="js/app.min.js" async=""></script>
 </body>
 
 </html>

@@ -16,9 +16,9 @@ mixin page(title)
       link(rel='stylesheet' href=`css/lib${development ? '' : '.min'}.css`)
       link(rel='stylesheet' href=`css/app${development ? '' : '.min'}.css`)
       // JS
-      script(src=`js/lib${development ? '' : '.min'}.js`)
       script
         include ../../vendors/svg-symbols/svg-symbols.js
+      script(src=`js/lib${development ? '' : '.min'}.js`)
     +e.BODY.__body
       +e.__body-inner
         block

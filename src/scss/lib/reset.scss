@@ -15,10 +15,6 @@
 :focus {
   @include focus;
 
-  &:not(:focus-visible) {
-    outline: 0;
-  }
-
   &:not(.focus-visible) {
     outline: 0;
   }

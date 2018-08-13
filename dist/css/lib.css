@@ -105,10 +105,6 @@
   outline-offset: -0.0625rem;
 }
 
-:focus:not(:focus-visible) {
-  outline: 0;
-}
-
 :focus:not(.focus-visible) {
   outline: 0;
 }

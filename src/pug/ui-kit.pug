@@ -81,3 +81,27 @@ include blocks/page
           p С другой стороны, реализация намеченных плановых заданий , в своем классическом представлении, допускает внедрение позиций, занимаемых участниками в отношении поставленных задач.
           p Как уже неоднократно упомянуто, предприниматели в сети интернет объявлены нарушающими общечеловеческие нормы этики и морали.
         h2 Form elements
+      .mb-2
+        +b.INPUT.field-btb(type='text' placeholder='Ваше имя')
+      .mb-2
+        +b.SELECT.field-btb--select
+          option(selected='') No selected
+          option Option 1
+          option Option 2
+          option Option 3
+      .mb-2
+        .row
+          .col-auto.mw-100
+            +b.BUTTON.btn-primary Button
+          .col-auto.mw-100
+            +b.A.btn-primary(href='') Link
+          .col-auto.mw-100
+            +b.BUTTON.btn-primary(disabled='') Button Disabled
+      .mb-2
+        .row
+          .col-auto.mw-100
+            +b.BUTTON.btn-secondary Button
+          .col-auto.mw-100
+            +b.A.btn-secondary(href='') Link
+          .col-auto.mw-100
+            +b.BUTTON.btn-secondary(disabled='') Button Disabled

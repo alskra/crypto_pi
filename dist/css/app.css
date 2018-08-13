@@ -790,7 +790,7 @@
 
 .footer__row-3 {
   color: #757575;
-  font-size: calc(1.0625rem * var(--scale));
+  font-size: calc(0.875 * var(--block-font-size));
   line-height: 1.25;
   padding: calc(2.1875rem * var(--scale)) 0;
   background-color: #f9faf9;

@@ -11,8 +11,12 @@ include blocks/map
     +b.SECTION.section-intro
       .container-fluid.max-w-md.max-w-lg
         +e.H1.__title
-          small.wow.fadeInRight(data-wow-duration='0.5s') «CRYPTO Pi» –
-          span.d-block.wow.fadeInRight Криптовалютый холдинг
+          small.wow.fadeInRight(data-wow-duration='0.5s')
+            block section-intro__title-small
+              | «CRYPTO Pi» –
+          span.d-block.wow.fadeInRight
+            block section-intro__title
+              | Криптовалютый холдинг
     +b.SECTION.px-1.mt-8-inv.mb-3.mb-md-4
       .container-fluid.max-w-md.max-w-lg
         .row.justify-content-center
@@ -21,12 +25,17 @@ include blocks/map
               +e.IMG.__img(src='img/content/kevin.png' alt='Кевин Р. Смит')
               +e.__body
                 +e.__content
-                  p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
+                  block intro-letter__content
+                    p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
                 +e.__footer
                   .row.align-items-end
                     .col-6
-                      +e.CITE.__cite Кевин Р.&nbsp;Смит
-                      +e.__position Chief Executive Officer
+                      +e.CITE.__cite
+                        block intro-letter__cite
+                          | Кевин Р.&nbsp;Смит
+                      +e.__position
+                        block intro-letter__position
+                          | Chief Executive Officer
                     .col-6.text-center
                       +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
     +b.SECTION.section-about
@@ -38,20 +47,23 @@ include blocks/map
               .d-flex.align-items-start
                 +icon-svg('sequre').__icon.d-none.d-sm-block
                 +e.__desc
-                  p.
-                    международный специализированный
-                    криптовалютный центр, созданный
-                    крупными мировыми инвесторами.
+                  block section-about__desc
+                    p.
+                      международный специализированный
+                      криптовалютный центр, созданный
+                      крупными мировыми инвесторами.
             +e.__content
-              p.
-                Клиенты и партнеры центра получают доступ к экспертным знаниям и
-                опыту в области криптовалют и могут пользоваться передовыми
-                финансово-техническими сервисами, легко адаптируемыми под любые задачи и требования.
+              block section-about__content
+                p.
+                  Клиенты и партнеры центра получают доступ к экспертным знаниям и
+                  опыту в области криптовалют и могут пользоваться передовыми
+                  финансово-техническими сервисами, легко адаптируемыми под любые задачи и требования.
             +e.FOOTER.__footer
-              p.
-                Уникальность предложения «CRYPTO Pi» заключается
-                в соединении современной технологии блокчейн и классических
-                финансовых институтов.
+              block section-about__footer
+                p.
+                  Уникальность предложения «CRYPTO Pi» заключается
+                  в соединении современной технологии блокчейн и классических
+                  финансовых институтов.
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
             +b.user-log-in.h-100
               .row.m-1-inv.justify-content-center
@@ -66,53 +78,60 @@ include blocks/map
     +b.SECTION.section--service
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
+          +e.H2.__title.px-md-3
+            block section--service__title
+              | Основные направления деятельности холдинга:
       .container-fluid.max-w-md.max-w-lg
         .row.justify-content-center.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title FUND
+                +e.H3.__title.text-uppercase Fund
               +e.__content
-                p.
-                  CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
+                block service__content-0
+                  p.
+                    CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title MINING
+                +e.H3.__title.text-uppercase Mining
               +e.__content
-                p.
-                  Готовые комплексные решения
-                  по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
-                  нам дата-центрах.
+                block service__content-1
+                  p.
+                    Готовые комплексные решения
+                    по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
+                    нам дата-центрах.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title ICO & CO FUND
+                +e.H3.__title.text-uppercase ICO & ICO fund
               +e.__content
-                p.
-                  Помощь в технических,
-                  финансовых и юридических
-                  вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
+                block service__content-2
+                  p.
+                    Помощь в технических,
+                    финансовых и юридических
+                    вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.6s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title SALES & LEGALIZE
+                +e.H3.__title.text-uppercase Sales & legal framework
               +e.__content
-                p.
-                  Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
+                block service__content-3
+                  p.
+                    Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.8s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title CONSULTING
+                +e.H3.__title.text-uppercase Consulting
               +e.__content
-                p.
-                  Консультации ведущих специалистов
-                  по вопросам правового регулирования, финансового взаимодействия, технических аспектов и маркетинговых технологий в финтехе.
+                block service__content-4
+                  p.
+                    Консультации ведущих специалистов
+                    по вопросам правового регулирования, финансового взаимодействия, технических аспектов и маркетинговых технологий в финтехе.
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 CRYPTO Pi Fund
+          +e.H2.__title.px-md-3 CRYPTO Pi
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.justify-content-center
           .col-12.col-lg-10

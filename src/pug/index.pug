@@ -279,14 +279,15 @@ include blocks/map
               +e.HEADER.__header
                 .row
                   .col-12.col-lg-8
-                    +e.H3.__title.m-0 Hard fork & new carrency
+                    +e.H3.__title.m-0 Hard fork & new currency
               .row
                 .col-12.mb-2.col-lg-8.mb-lg-0
                   +e.__content
-                    p.
-                      Среднесрочные инвестиции обычно составляют 30% от общей стоимости портфеля.
-                    p.
-                      <strong>Это инвестиции в валюты, сформировавшиеся в результате хардфорка высокорейтинговых валют</strong>, а также в новые валюты, капитализация которых превысила 1 млрд долларов США, с последующей корректировкой позиций валют в зависимости от их относительной волатильности и ликвидности в любой момент времени.
+                    block section-chart__content-1
+                      p.
+                        Среднесрочные инвестиции обычно составляют 30% от общей стоимости портфеля.
+                      p.
+                        <strong>Это инвестиции в валюты, сформировавшиеся в результате хардфорка высокорейтинговых валют</strong>, а также в новые валюты, капитализация которых превысила 1 млрд долларов США, с последующей корректировкой позиций валют в зависимости от их относительной волатильности и ликвидности в любой момент времени.
                 .col-12.text-center.col-lg-4.text-lg-right
                   .row.align-items-center.flex-lg-column.align-items-lg-stretch
                     .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
@@ -296,13 +297,17 @@ include blocks/map
                         +e.SPAN.__value-text-0 3
                         +e.SPAN.__value-text-0 0
                         +e.SPAN.__value-text-1 %
-                        +e.__value-text-2 общей стоимости портфеля
+                        +e.__value-text-2
+                          block section-chart__value-text-2-1
+                            | общей стоимости портфеля
                     .col-6.col-sm-4.col-lg-12
-                      +e.__label - среднесрочные вложения
+                      +e.__label
+                        block section-chart__label-1
+                          | - среднесрочные вложения
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--1.--left.wow.slideInLeft
                 +e.NO-FORMATTED-HTML.__chart-img
-                  block section-chart__chart-img
+                  block section-chart__chart-img-1
                     include ../../dist/img/content/Среднесрочные стратегии light.svg
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg

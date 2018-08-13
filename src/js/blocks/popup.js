@@ -19,7 +19,7 @@ popup.popupOpen = function (id) {
   document.body.appendChild(newPopup);
   setTimeout(function () {
     newPopup.classList.add('popup--inited');
-  }, 0);
+  }, 10);
   //newPopup.classList.add('popup--inited');
 };
 

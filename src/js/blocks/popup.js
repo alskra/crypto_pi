@@ -19,7 +19,8 @@ popup.popupOpen = function (id) {
   document.body.appendChild(newPopup);
   setTimeout(function () {
     newPopup.classList.add('popup--inited');
-  }, 10);
+  }, 0);
+  //newPopup.classList.add('popup--inited');
 };
 
 function popup() {
@@ -27,11 +28,14 @@ function popup() {
   popup.bindUIActions();
 }
 
-function close(e) {
+function close(event) {
   if (event.target.closest('[data-toggle=popup-close]')) {
     let popupElement = event.target.closest('.popup');
 
     event.preventDefault();
-    document.body.removeChild(popupElement);
+    popupElement.addEventListener('transitionend', function () {
+      document.body.removeChild(popupElement);
+    });
+    popupElement.classList.remove('popup--inited');
   }
 }

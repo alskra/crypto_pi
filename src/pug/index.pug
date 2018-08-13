@@ -5,7 +5,15 @@ include blocks/header
 include blocks/footer
 include blocks/map
 
-+page(pagesList.index.title)
+block lang
+  - let lang = 'ru', title;
+
+if lang === 'ru'
+  - title = pagesList.index.title;
+else
+  - title = pagesList.indexEn.title;
+
++page(title)(lang=lang)
   +header.--transparent.__header
   +e.__content
     +b.SECTION.section-intro
@@ -320,13 +328,20 @@ include blocks/map
               .row
                 .col-12.mb-2.col-lg-8.mb-lg-0
                   +e.__content
-                    p.
-                      Под краткосрочные инвестиции отводится до 15% от общей стоимости портфеля.<br>
-                      <strong>Такие инвестиции осуществляются в только что созданные валюты и ICO на основе анализа инвестиционной привлекательности лежащих в их основе проектов</strong>, и предназначены для продажи сразу после периода первоначального роста.
-                    p.
-                      Такие валюты мы рекомендуем только после их подробного анализа, который включает в себя изучение бизнес-плана, конкурентоспособности продукта, управляющей команды, маркетинговой стратегии и всех остальных факторов, влияющих на успех.
-                    p.
-                      Наш опыт вложений в ICO, помимо высокой доходности, позволяет нам поддерживать тесные контакты с лучшими специалистами по проведению ICO и делать лучший выбор при инвестировании.
+                    if lang === 'ru'
+                      p.
+                        Под краткосрочные инвестиции отводится до 15% от общей стоимости портфеля.
+                      p.
+                        <strong>Такие инвестиции осуществляются в только что созданные валюты и ICO на основе анализа инвестиционной привлекательности лежащих в их основе проектов</strong>, и предназначены для продажи сразу после периода первоначального роста.
+                      p.
+                        Такие валюты мы рекомендуем только после их подробного анализа, который включает в себя изучение бизнес-плана, конкурентоспособности продукта, управляющей команды, маркетинговой стратегии и всех остальных факторов, влияющих на успех.
+                      p.
+                        Наш опыт вложений в ICO, помимо высокой доходности, позволяет нам поддерживать тесные контакты с лучшими специалистами по проведению ICO и делать лучший выбор при инвестировании.
+                    else
+                      p Short-term investments account for up to 15% of the total portfolio value.
+                      p <strong>Such investments are made in newly created currencies and ICOs on the basis of an analysis of the investment attractiveness of the underlying projects</strong>, and are intended for sale immediately after the period of initial growth.
+                      p We recommend such currencies only after their detailed analysis, which includes the study of the business plan, product competitiveness, management team, marketing strategy and all other factors affecting success.
+                      p Our experience in investing in ICOs, in addition to high profitability, allows us to maintain close contacts with the best ICO experts and make the best choice when investing.
                 .col-12.text-center.col-lg-4.text-lg-right
                   .row.align-items-center.flex-lg-column.align-items-lg-stretch
                     .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
@@ -336,14 +351,25 @@ include blocks/map
                         +e.SPAN.__value-text-0 1
                         +e.SPAN.__value-text-0 5
                         +e.SPAN.__value-text-1 %
-                        +e.__value-text-2 общей стоимости портфеля
+                        +e.__value-text-2
+                          if lang === 'ru'
+                            | общей стоимости портфеля
+                          else
+                            | of the total portfolio value
                     .col-6.col-sm-4.col-lg-12
-                      +e.__label - краткосрочные вложения
+                      +e.__label
+                        if lang === 'ru'
+                          | - краткосрочные вложения
+                        else
+                          | - short-term investments
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--2.wow.slideInRight
                 +e.NO-FORMATTED-HTML.__chart-img
                   block section-chart__chart-img
-                    include ../../dist/img/content/Краткосрочные стратегии light.svg
+                    if lang === 'ru'
+                      include ../../dist/img/content/Краткосрочные стратегии light.svg
+                    else
+                      include ../../dist/img/content/Краткосрочные стратегии light-en.svg
       +b.SECTION.section-chart
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -351,15 +377,19 @@ include blocks/map
               +e.HEADER.__header
                 .row
                   .col-12.col-lg-8
-                    +e.H3.__title.m-0 Extraction & production
+                    +e.H3.__title.m-0 Mining
               .row
                 .col-12.mb-2.col-lg-8.mb-lg-0
                   +e.__content
-                    p.
-                      Около 10% от общей стоимости портфеля выделяется на <strong>инвестирование в традиционный и облачный майнинг</strong>, а также на модернизацию майнингового оборудования и на внедрение
-                      в проекты по созданию AI устройств.
-                    p.
-                      Вложения в майнинг преследуют не только прямые инвестиционные цели, но и позволяют постоянно актуализировать представления о новых цифровых валютах и технологии блокчейн.
+                    if lang === 'ru'
+                      p.
+                        Около 10% от общей стоимости портфеля выделяется на <strong>инвестирование в традиционный и облачный майнинг</strong>, а также на модернизацию майнингового оборудования и на внедрение
+                        в проекты по созданию AI устройств.
+                      p.
+                        Вложения в майнинг преследуют не только прямые инвестиционные цели, но и позволяют постоянно актуализировать представления о новых цифровых валютах и технологии блокчейн.
+                    else
+                      p About 10% of the total portfolio value is allocated for <strong>investing in traditional and cloud mining</strong>, as well as for upgrading of mining equipment and for implementation in projects for the creation of AI devices.
+                      p Investments in mining pursue not only direct investment goals, but also allow you to constantly update the notion of new digital currencies and blockchain technology.
                 .col-12.text-center.col-lg-4.text-lg-right
                   .row.align-items-center.flex-lg-column.align-items-lg-stretch
                     .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
@@ -369,18 +399,29 @@ include blocks/map
                         +e.SPAN.__value-text-0--one 1
                         +e.SPAN.__value-text-0 0
                         +e.SPAN.__value-text-1 %
-                        +e.__value-text-2 общей стоимости портфеля
+                        +e.__value-text-2
+                          if lang === 'ru'
+                            | общей стоимости портфеля
+                          else
+                            | of the total portfolio value
                     .col-6.col-sm-4.col-lg-12
-                      +e.__label - инвестирование в майнинг
+                      +e.__label
+                        if lang === 'ru'
+                          | - инвестирование в майнинг
+                        else
+                          | - investments in mining
             .col-12.px-0.col-md-6.px-md-1
               +e.__chart--3.--left.wow.slideInLeft
                 +e.NO-FORMATTED-HTML.__chart-img
                   block section-chart__chart-img
-                    include ../../dist/img/content/Прибыльность майнинга light.svg
+                    if lang === 'ru'
+                      include ../../dist/img/content/Прибыльность майнинга light.svg
+                    else
+                      include ../../dist/img/content/Прибыльность майнинга light-en.svg
     +b.SECTION.section--analytics
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Аналитика
+          +e.H2.__title.px-md-3= lang === 'ru' ? 'Аналитика' : 'Analytics'
       .container
         +b.carousel
           +e.__inner.row
@@ -478,127 +519,194 @@ include blocks/map
     +b.SECTION.section--risks
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
+          +e.H2.__title.px-md-3
+            if lang === 'ru'
+              | Риски самостоятельной торговли
+            else
+              | Risks of independent trade
       .container-fluid.max-w-md.max-w-lg
         .row.justify-content-center.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Время
+                +e.H3.__title
+                  if lang === 'ru'
+                    | Время
+                  else
+                    | Time
               +e.__content
-                p.
-                  Инвестор, пришедший на рынок криптовалюты из другой сферы деятельности и занятый большую часть времени на основной работе,
-                  не сможет уделять торговле достаточно времени.
+                if lang === 'ru'
+                  p.
+                    Инвестор, пришедший на рынок криптовалюты из другой сферы деятельности и занятый большую часть времени на основной работе,
+                    не сможет уделять торговле достаточно времени.
+                else
+                  p An investor who came to the market of cryptocurrency from another field of activity and who has been working most of the time on the main job will not be able to devote enough time to trade.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Знание трейдинга
+                +e.H3.__title= lang === 'ru' ? 'Знание трейдинга' : 'Knowledge of trading'
               +e.__content
-                p.
-                  Отсутствие профессиональных знаний в трейдинге приводит к непоправимым ошибкам и большим убыткам.
+                if lang === 'ru'
+                  p.
+                    Отсутствие профессиональных знаний в трейдинге приводит к непоправимым ошибкам и большим убыткам.
+                else
+                  p The lack of professional knowledge in trading leads to costly errors and large losses.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Аналитика
+                +e.H3.__title= lang === 'ru' ? 'Аналитика' : 'Analytics'
               +e.__content
-                p.
-                  Процесс инвестирования связан с обработкой большого объема информации на разных языках.
+                if lang === 'ru'
+                  p.
+                    Процесс инвестирования связан с обработкой большого объема информации на разных языках.
+                else
+                  p The investment process involves processing a large amount of information in different languages.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.6s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Риск менеджмент
+                +e.H3.__title= lang === 'ru' ? 'Риск менеджмент' : 'Risk management'
               +e.__content
-                p.
-                  Для поддержания дисциплины при реализации торговой стратегии необходим внешний контроль.
+                if lang === 'ru'
+                  p.
+                    Для поддержания дисциплины при реализации торговой стратегии необходим внешний контроль.
+                else
+                  p To maintain discipline when implementing a trading strategy, external control is necessary.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.8s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Проработка стратегии
+                +e.H3.__title= lang === 'ru' ? 'Проработка стратегии' : 'Processing the strategy'
               +e.__content
-                p.
-                  Тестирование стратегий требует значительных ресурсов – от времени и специальных знаний до вычислительных мощностей.
+                if lang === 'ru'
+                  p.
+                    Тестирование стратегий требует значительных ресурсов – от времени и специальных знаний до вычислительных мощностей.
+                else
+                  p Testing strategies requires considerable resources - from time and special knowledge to computing power.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Технологии
+                +e.H3.__title= lang === 'ru' ? 'Технологии' : 'Technologies'
               +e.__content
-                p.
-                  Серьезный трейдинг предполагает наличие специализированных торговых программ и дополнительного оборудовании.
+                if lang === 'ru'
+                  p.
+                    Серьезный трейдинг предполагает наличие специализированных торговых программ и дополнительного оборудовании.
+                else
+                  p Serious trading involves the availability of specialized trading programs and additional equipment.
           .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1.2s')
             +b.ARTICLE.service
               +e.HEADER.__header
-                +e.H3.__title Опыт
+                +e.H3.__title= lang === 'ru' ? 'Опыт' : 'Experience'
               +e.__content
-                p.
-                  Для того, чтобы знания конвертировались в опыт, должно пройти время. С первого раза всё получается далеко не у каждого.
+                if lang === 'ru'
+                  p.
+                    Для того, чтобы знания конвертировались в опыт, должно пройти время. С первого раза всё получается далеко не у каждого.
+                else
+                  p Even having the necessary knowledge in the field, not everyone is lucky enough to get good results in the early stages.
       +e.FOOTER.__footer
         .container-fluid.max-w-md.max-w-lg
           .row
             .col-12.col-md-7
-              p.
-                Опытный трейдер, с которым у вас выстроены доверительные
-                отношения, сведет перечисленные выше риски к нулю.
+              if lang === 'ru'
+                p.
+                  Опытный трейдер, с которым у вас выстроены доверительные
+                  отношения, сведет перечисленные выше риски к нулю.
+              else
+                p However, you will not face the above problems if trading is handled by an experienced and trustworth trader on your behalf – such as Crypto Pi.
     +b.SECTION.py-3.py-md-4
       .container-fluid.max-w-md.max-w-lg
         +b.BLOCKQUOTE.blockquote.mx-sm-3.mx-md-6.wow.lightSpeedIn
-          q Несмотря на высокие риски инвестиций в криптовалюту, все больше и больше людей готовы вкладывать в нее свои сбережения. Ведь по ту сторону открываются невероятные перспективы для получения больших доходов.
-          cite Алексей Штерншис, <br><small>Chief Financial Officer</small>
+          if lang === 'ru'
+            q Несмотря на высокие риски инвестиций в криптовалюту, все больше и больше людей готовы вкладывать в нее свои сбережения. Ведь по ту сторону открываются невероятные перспективы для получения больших доходов.
+            cite Алексей Штерншис, <br><small>Chief Financial Officer</small>
+          else
+            q Despite the high risks of investment in the cryptocurrency, more and more people are ready to invest their savings in it. After all, on the other side, incredible prospects open up to generate more income.
+            cite Alexey Shternshis, <br><small>CIO</small>
         .row.justify-content-center.mt-3.mt-md-4
           .col-12.col-md-6
             +b.ARTICLE.invest-go
-              +e.H3.__title Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+              +e.H3.__title= lang === 'ru' ? 'Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.' : 'The cost of a token in the Crypto Pi Platform is initially 100 Euro.'
               +b.A.btn-primary(href='').__btn Инвестировать сейчас
               +e.__content
-                p.
-                  У нас нет ограничений по количеству паев – <br>
-                  стать нашим клиентом может каждый!
+                if lang === 'ru'
+                  p.
+                    У нас нет ограничений по количеству паев – <br>
+                    стать нашим клиентом может каждый!
+                else
+                  p We do not have restrictions on the number of tokens — everyone can become our client.
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3.color-base Почему CRYPTO Pi Fund?
+          +e.H2.__title.px-md-3.color-base= lang === 'ru' ? 'Почему CRYPTO Pi Fund?' : 'Why CRYPTO Pi?'
       +b.formatted-content
         .container-fluid.max-w-md.max-w-lg
           .row.mb-3.mb-md-4.justify-content-lg-between
             .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
-              h3.color-primary-dark.font-weight-500.mt-0 Профессиональный подход / для нас это работа
-              ul
-                li Большой штат сотрудников в разных часовых поясах контролирует торговый процесс 24/7.
-                li Профессиональные трейдеры с большим опытом работы на классических рынках и на рынке криптовалюты.
-                li Большой штат аналитиков и маркетологов в области технологий блокчейн.
+              h3.color-primary-dark.font-weight-500.mt-0= lang === 'ru' ? 'Профессиональный подход / для нас это работа' : 'We pride ourselves on a professional approach:'
+              if lang === 'ru'
+                ul
+                  li Большой штат сотрудников в разных часовых поясах контролирует торговый процесс 24/7.
+                  li Профессиональные трейдеры с большим опытом работы на классических рынках и на рынке криптовалюты.
+                  li Большой штат аналитиков и маркетологов в области технологий блокчейн.
+              else
+                ul
+                  li A large staff in different time zones controls the trading process 24/7.
+                  li Professional traders with extensive experience in the classical markets and in the cryptocurrency market.
+                  li A large staff of analysts and marketers in the field of blockchain technology.
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
               img.mx-auto(src='img/content/why-img.jpg' alt='')
           .row.mb-3.mb-md-4.justify-content-lg-between
             .col-12.order-1.col-sm-8.col-md-6.col-lg-5.wow.fadeInLeft
-              ul
-                li Регламентированный процесс контроля за торговыми операциями.
-                li Разработка и оперативная корректировка стратегий на основе аналитики и статистики и с помощью запатентованных программ.
-                li Огромные вычислительные мощности и постоянно обновляемые торговые программы (роботы и боты).
+              if lang === 'ru'
+                ul
+                  li Регламентированный процесс контроля за торговыми операциями.
+                  li Разработка и оперативная корректировка стратегий на основе аналитики и статистики и с помощью запатентованных программ.
+                  li Огромные вычислительные мощности и постоянно обновляемые торговые программы (роботы и боты).
+              else
+                ul
+                  li Regulated process of control over trade operations.
+                  li Development and operational adjustment of strategies based on analytics and statistics and using patented programs.
+                  li Huge computing power and constantly updated trading programs (robots and bots).
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
               img.mx-auto(src='img/content/why-img-1.jpg' alt='')
           .row.justify-content-lg-between
             .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
-              p В прошедшем году <span class="color-primary-dark">криптовалюты в целом и биткоин в частности показали себя как наиболее эффективный класс вложений</span>: за 2017 год курсы биткоина и основных криптовалют выросли более чем на 1000% и продолжают расти.
-              p Наш профессиональный опыт позволяет нам говорить о том, что <span class="color-primary-dark">инвестиции в этот класс будут оставаться высокодоходными, но при условии правильной оценки ситуации на рынке</span>. Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно «CRYPTO Pi»?
+              if lang === 'ru'
+                p В прошедшем году <span class="color-primary-dark">криптовалюты в целом и биткоин в частности показали себя как наиболее эффективный класс вложений</span>: за 2017 год курсы биткоина и основных криптовалют выросли более чем на 1000% и продолжают расти.
+                p Наш профессиональный опыт позволяет нам говорить о том, что <span class="color-primary-dark">инвестиции в этот класс будут оставаться высокодоходными, но при условии правильной оценки ситуации на рынке</span>.
+                p Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно «CRYPTO Pi»?
+              else
+                p In recent years, <span class="color-primary-dark">cryptocurrencies in general and bitcoin in particular proved to be the most effective investment class</span>: in 2017, bitcoin and major cryptocurrencies grew by more than 1000% and continue to grow, albeit with more volatility in 2018.  However, the graph on Page 5 demonstrates that Crypto Pi traders achieved a return of 160% on investments in Bitcoin for the first six months of 2018, easily beating most other investments and those without the same level of experience.
+                p Our professional experience allows us to say that <span class="color-primary-dark">investments in this class will remain highly profitable, but on condition of a correct assessment of the situation on the market</span>.
+                p True success requires in depth knowledge and experience – for this Crypto Pi is the answer!
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
               img.mx-auto(src='img/content/why-img-2.jpg' alt='')
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Более пристальный взгляд на наши преимущества:
+          +e.H2.__title.px-md-3= lang === 'ru' ? 'Более пристальный взгляд на наши преимущества:' : 'A closer look at our advantages:'
       +b.formatted-content
         .container-fluid.max-w-md.max-w-lg
           .row.mb-3.mb-md-4.justify-content-lg-between
             .col-12.order-1.col-sm-8.col-md-6.col-lg-5.wow.fadeInLeft
-              ul
-                li Мы уделяем много внимания информационной и аналитической поддержке наших клиентов. На молодом быстрорастущем криптовалютном рынке невозможно двигаться в правильном направлении без глубоко понимания происходящего. <span class="color-primary-dark">Клиенты получают максимально полную и разностороннюю информацию о текущей ситуации в мире «крипты»</span> и меньше страдают от «информационного шума», накрывшего в последние годы этот перспективный рынок.
-                li Мы находимся в юрисдикциях, <span class="color-primary-dark">максимально благоприятствующих инвесторам и гарантирующих им полную конфиденциальность и защиту</span> со стороны правового поля.
-                li Мы обеспечиваем <span class="color-primary-dark">прозрачность публичной отчетности и отсутствие проблем</span> со стороны регулирующих органов.
+              if lang === 'ru'
+                ul
+                  li Мы уделяем много внимания информационной и аналитической поддержке наших клиентов. На молодом быстрорастущем криптовалютном рынке невозможно двигаться в правильном направлении без глубоко понимания происходящего. <span class="color-primary-dark">Клиенты получают максимально полную и разностороннюю информацию о текущей ситуации в мире «крипты»</span> и меньше страдают от «информационного шума», накрывшего в последние годы этот перспективный рынок.
+                  li Мы находимся в юрисдикциях, <span class="color-primary-dark">максимально благоприятствующих инвесторам и гарантирующих им полную конфиденциальность и защиту</span> со стороны правового поля.
+                  li Мы обеспечиваем <span class="color-primary-dark">прозрачность публичной отчетности и отсутствие проблем</span> со стороны регулирующих органов.
+              else
+                ul
+                  li We pay a lot of attention to information and analytical support for our clients. It is impossible to move in the right direction without a deep understanding of what is happening in such a young and fast-growing market as a cryptocurrencies. Customers receive the fullest and most comprehensive information about the current situation in the world of "crypto’s" and suffer less from the "information noise" that is so characteristic in recent years of this promising market.
+                  li We invest a lot in <span class="color-primary-dark">service and active customer support</span>. Each client has a personal manager, which can be contacted at any time of the day and receive detailed advice on the situation in the market and the current state of the portfolio.
+                  li We are in jurisdictions that <span class="color-primary-dark">favor investors and guarantee them complete confidentiality</span>.
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
               img.mx-auto(src='img/content/why-img-3.jpg' alt='')
           .row.justify-content-lg-between
             .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
-              ul
-                li Мы много вкладываем в сервис и активную клиентскую поддержку. <span class="color-primary-dark">К каждому клиенту прикреплен персональный менеджер</span>, с которым можно связаться в любое время суток и получить подробную консультацию по ситуации на рынке и по текущему состоянию портфеля.
+              if lang === 'ru'
+                ul
+                  li Мы много вкладываем в сервис и активную клиентскую поддержку. <span class="color-primary-dark">К каждому клиенту прикреплен персональный менеджер</span>, с которым можно связаться в любое время суток и получить подробную консультацию по ситуации на рынке и по текущему состоянию портфеля.
+              else
+                ul
+                  li We ensure the transparency of public reporting and the absence of problems on the part of regulators.
             .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
               img.mx-auto(src='img/content/why-img-4.jpg' alt='')
     +b.SECTION.section--advantages

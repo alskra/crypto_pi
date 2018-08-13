@@ -11,9 +11,13 @@
   <meta name="author" content="" />
   <!-- Favicon-->
   <!-- CSS-->
-  <link rel="stylesheet" href="css/lib.min.css" />
-  <link rel="stylesheet" href="css/app.min.css" />
+  <link rel="stylesheet" href="css/lib.css" />
+  <link rel="stylesheet" href="css/app.css" />
   <!-- JS-->
+  <script src="js/lib.js"></script>
+</head>
+
+<body class="page__body">
   <script>
     // Load and insert svg-symbols.svg
     (function() {
@@ -28,10 +32,6 @@
       xhr.send();
     })();
   </script>
-  <script src="js/lib.min.js"></script>
-</head>
-
-<body class="page__body">
   <div class="page__body-inner">
     <header class="header header--transparent page__header">
       <div class="container-fluid max-w-md max-w-lg">
@@ -632,7 +632,22 @@
                     <input class="field form-subscribe__field" type="email" placeholder="Enter your email" />
                   </div>
                   <div class="form-subscribe__col col-auto">
-                    <button class="btn-primary form-subscribe__btn">Subscribe</button>
+                    <button class="btn-primary form-subscribe__btn" onclick="popupOpen(&quot;#popup-subscribe&quot;); return false;">Subscribe</button>
+                  </div>
+                </div>
+                <div class="d-none">
+                  <div class="popup-subscribe" id="popup-subscribe">
+                    <div class="popup-subscribe__header">
+                      <button class="popup-subscribe__btn-close" data-toggle="popup-close">
+                        <svg class="icon-svg-cancel" role="img">
+                          <use xlink:href="#icon-svg-cancel"></use>
+                        </svg>
+                      </button>
+                      <div class="popup-subscribe__header-title">Спасибо за подписку!</div>
+                    </div>
+                    <div class="popup-subscribe__content">
+                      <p>Теперь вам будут приходить уведомления на почту</p>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -1272,7 +1287,7 @@
           var script = document.createElement('script');
           script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap&language=' + lang;
           script.async = true;
-          document.body.appendChild(script);
+          document.head.appendChild(script);
         </script>
       </div>
     </div>
@@ -1426,7 +1441,7 @@
     </footer>
   </div>
   <!-- JS-->
-  <script src="js/app.min.js" async=""></script>
+  <script src="js/app.js" async=""></script>
 </body>
 
 </html>

@@ -110,12 +110,18 @@ var _faqItem = __webpack_require__(5);
 
 var _faqItem2 = _interopRequireDefault(_faqItem);
 
+var _popup = __webpack_require__(6);
+
+var _popup2 = _interopRequireDefault(_popup);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 $(function () {
   (0, _header2.default)();
   (0, _carousel2.default)();
   (0, _faqItem2.default)();
+  (0, _popup2.default)();
+  window.popupOpen = _popup2.default.popupOpen;
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(2)))
 
@@ -260,6 +266,51 @@ function toggle(event) {
     event.preventDefault();
     faqItemElement.classList.toggle('faq-item--opened');
     faqItemElement.querySelector('.faq-item__header-icon').children[0].setAttribute('xlink:href', '#icon-svg-' + (faqItemElement.classList.contains('faq-item--opened') ? 'minus' : 'plus'));
+  }
+}
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = popup;
+
+
+popup.init = function () {};
+
+popup.bindUIActions = function () {
+  document.addEventListener('click', close);
+};
+
+popup.popupOpen = function (id) {
+  var popupContent = document.querySelector(id).cloneNode(true);
+  var newPopup = document.createElement('div');
+  newPopup.classList.add('popup');
+  newPopup.innerHTML = '<div class="popup__overlay"></div><div class="popup__container"></div>';
+  newPopup.querySelector('.popup__container').appendChild(popupContent);
+  document.body.appendChild(newPopup);
+  setTimeout(function () {
+    newPopup.classList.add('popup--inited');
+  }, 10);
+};
+
+function popup() {
+  popup.init();
+  popup.bindUIActions();
+}
+
+function close(e) {
+  if (event.target.closest('[data-toggle=popup-close]')) {
+    var popupElement = event.target.closest('.popup');
+
+    event.preventDefault();
+    document.body.removeChild(popupElement);
   }
 }
 

@@ -16,10 +16,10 @@ mixin page(title)
       link(rel='stylesheet' href=`css/lib${development ? '' : '.min'}.css`)
       link(rel='stylesheet' href=`css/app${development ? '' : '.min'}.css`)
       // JS
-      script
-        include ../../vendors/svg-symbols/svg-symbols.js
       script(src=`js/lib${development ? '' : '.min'}.js`)
     +e.BODY.__body
+      script
+        include ../../vendors/svg-symbols/svg-symbols.js
       +e.__body-inner
         block
       // JS

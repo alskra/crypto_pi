@@ -16,6 +16,7 @@
   box-shadow: inset 0 fs(-2) #286d44;
   user-select: none;
   transition: $transition-color;
+  cursor: pointer;
 
   @include not-disabled {
     &:hover {

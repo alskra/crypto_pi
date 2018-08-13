@@ -99,4 +99,4 @@ mixin map
         var script = document.createElement('script');
         script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDzOTEh0q0r-2BuVxeLGaNTXJDl-pgA_-4&callback=initMap&language=' + lang;
         script.async = true;
-        document.body.appendChild(script);
+        document.head.appendChild(script);

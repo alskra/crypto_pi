@@ -1170,6 +1170,7 @@
   -ms-user-select: none;
   user-select: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 59.99875rem) {
@@ -1214,6 +1215,7 @@
   -ms-user-select: none;
   user-select: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 @media (max-width: 59.99875rem) {
@@ -3155,6 +3157,96 @@
     -webkit-transform: translate(5.9375rem, -50%);
     transform: translate(5.9375rem, -50%);
   }
+}
+
+.popup {
+  --block-font-size: 1rem;
+  --block-space-size: 0.9375rem;
+  --scale: 1;
+  --size: 1;
+  --font-size: 1;
+  text-align: left;
+  text-align: start;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.3s;
+}
+
+@media (max-width: 59.99875rem) {
+  .popup {
+    --block-font-size: 0.875rem;
+    --block-space-size: 0.625rem;
+  }
+}
+
+.popup__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.popup__container {
+  flex-shrink: 0;
+  max-width: 100%;
+  padding: 0.9375rem;
+  margin: auto;
+  position: relative;
+}
+
+.popup:not(.popup--inited) {
+  opacity: 0;
+}
+
+.popup-subscribe {
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 0 0.3125rem rgba(79, 79, 77, 0.5);
+}
+
+.popup-subscribe__btn-close {
+  color: #4f4f4d;
+  font-size: calc(0.875 * var(--block-font-size));
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(2 * var(--block-space-size));
+  height: calc(2 * var(--block-space-size));
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.popup-subscribe__header {
+  padding: calc(2 * var(--block-space-size)) calc(2 * var(--block-space-size)) 0;
+}
+
+.popup-subscribe__header-title {
+  color: #4f4f4d;
+  font-weight: 700;
+  font-size: calc(1.5 * var(--block-font-size));
+  line-height: 1.25;
+  font-family: "DIN Pro", sans-serif;
+}
+
+.popup-subscribe__content {
+  color: #4f4f4d;
+  font-size: calc(1.0625 * var(--block-font-size));
+  line-height: 1.25;
+  padding: calc(2 * var(--block-space-size));
 }
 
 /*# sourceMappingURL=app.css.map */

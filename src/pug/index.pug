@@ -518,7 +518,15 @@ else
                 +e.__col.col-auto
                   +b.INPUT.field.__field(type='email' placeholder=lang === 'ru' ? 'Введите свой email адрес': 'Enter your email')
                 +e.__col.col-auto
-                  +b.BUTTON.btn-primary.__btn= lang === 'ru' ? 'Подписаться' : 'Subscribe'
+                  +b.BUTTON.btn-primary.__btn(onclick='popupOpen("#popup-subscribe"); return false;')= lang === 'ru' ? 'Подписаться' : 'Subscribe'
+              .d-none
+                +b.popup-subscribe#popup-subscribe
+                  +e.__header
+                    +e.BUTTON.__btn-close(data-toggle='popup-close')
+                      +icon-svg('cancel')
+                    +e.__header-title Спасибо за подписку!
+                  +e.__content
+                    p Теперь вам будут приходить уведомления на почту
     +b.SECTION.section--risks
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg

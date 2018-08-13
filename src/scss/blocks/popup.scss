@@ -1,0 +1,76 @@
+.popup {
+  @include init-block;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: opacity 0.3s;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(white, 0.5);
+  }
+
+  &__container {
+    flex-shrink: 0;
+    max-width: 100%;
+    padding: $grid-gutter-width/2;
+    margin: auto;
+    position: relative;
+  }
+
+  &:not(&--inited) {
+    opacity: 0;
+  }
+
+  &-subscribe {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba($color-base, 0.5);
+
+    &__btn-close {
+      color: $color-base;
+      font-size: bfs(14);
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: bss(30);
+      height: bss(30);
+      padding: 0;
+      border: 0;
+      position: absolute;
+      top: bss(0);
+      right: bss(0);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    &__header {
+      padding: bss(30) bss(30) 0;
+
+      &-title {
+        color: $color-base;
+        font-weight: 700;
+        font-size: bfs(24);
+        line-height: 1.25;
+        font-family: $font-family-heading;
+      }
+    }
+
+    &__content {
+      color: $color-base;
+      font-size: bfs(17);
+      line-height: 1.25;
+      padding: bss(30);
+    }
+  }
+}

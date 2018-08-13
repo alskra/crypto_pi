@@ -190,10 +190,12 @@
         <div class="map__inner" id="map"></div>
         <script>
           var branches = [
-            ['Crypto Pi Russia', 55.747061, 37.536314, 2, 'Москва, Пресненская набережная, 10 блок С'],
             ['Crypto Pi Singapore', 1.301186, 103.853159, 3, '92 Waterloo Street #05-01, Sky Line Building, <br>Singapore (187966)'],
             ['Crypto Pi Netherlands', 52.086597, 4.314358, 1, 'Koninginnegracht 10, Den Haag, <br>2514BC, Netherlands']
           ];
+          if (document.documentElement.getAttribute('lang') === 'ru') {
+            branches.push(['Crypto Pi Russia', 55.747061, 37.536314, 2, 'Москва, Пресненская набережная, 10 блок С']);
+          }
 
           function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {

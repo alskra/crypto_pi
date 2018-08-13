@@ -1565,6 +1565,7 @@
 }
 
 .invest-go__btn {
+  width: 17.5rem;
   align-self: center;
   margin-bottom: calc(1.875rem * var(--size));
 }

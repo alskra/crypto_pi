@@ -76,9 +76,9 @@ else
             +b.user-log-in.h-100
               .row.m-1-inv.justify-content-center
                 .col-auto.mw-100.p-1
-                  +b.A.btn-primary.__btn(href='') Регистрация
+                  +b.A.btn-primary.__btn(href='')= lang === 'ru' ? 'Регистрация' : 'Sign Up'
                 .col-auto.mw-100.p-1
-                  +b.A.btn-secondary.__btn(href='') Авторизация
+                  +b.A.btn-secondary.__btn(href='')= lang === 'ru' ? 'Авторизация' : 'Sign In'
               +e.__content
                 p.
                   У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
@@ -173,7 +173,7 @@ else
               +e.H3.__title
                 block invest-go__title-0
                   | Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
-              +b.A.btn-primary(href='').__btn Инвестировать сейчас
+              +b.A.btn-primary(href='').__btn= lang === 'ru' ? 'Инвестировать сейчас' : 'Invest now'
               +e.__content
                 block invest-go__content-0
                   p.
@@ -624,7 +624,7 @@ else
           .col-12.col-md-6
             +b.ARTICLE.invest-go
               +e.H3.__title= lang === 'ru' ? 'Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.' : 'The cost of a token in the Crypto Pi Platform is initially 100 Euro.'
-              +b.A.btn-primary(href='').__btn Инвестировать сейчас
+              +b.A.btn-primary(href='').__btn= lang === 'ru' ? 'Инвестировать сейчас' : 'Invest now'
               +e.__content
                 if lang === 'ru'
                   p.
@@ -718,71 +718,101 @@ else
                 +e.H3.__title Mining
                 +icon-svg('mining').__icon
               +e.__content.formatted-content
-                p Наши майнинговые центры, расположенные в зонах с самым высоким уровнем энергоэффективности по всему миру, оснащены новейшим эффективным оборудованием.
-                p Благодаря этому мы снижаем затраты на предоставление услуг майнинга и имеем значительные преимущества перед конкурентами.
-                p.color-primary-dark У нас – лучший из возможных сервисов по лучшей цене.
+                if lang === 'ru'
+                  p Наши майнинговые центры, расположенные в зонах с самым высоким уровнем энергоэффективности по всему миру, оснащены новейшим эффективным оборудованием.
+                  p Благодаря этому мы снижаем затраты на предоставление услуг майнинга и имеем значительные преимущества перед конкурентами.
+                  p.color-primary-dark У нас – лучший из возможных сервисов по лучшей цене.
+                else
+                  p Our mining centers are located in the areas with the highest level of energy efficiency around the world, as well as equipped with the latest and most efficient equipment.
+                  p Due to this, we reduce the cost of providing services and have significant advantages over competitors.
+                  p.color-primary-dark We provide the best possible service at the best possible price.
           .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
             +b.ARTICLE.content-write
               +e.HEADER.__header
-                +e.H3.__title Ico & co fund
+                +e.H3.__title ICO & ICO fund
                 +icon-svg('ico').__icon
               +e.__content.formatted-content
-                p.color-primary-dark Мы разрабатываем новые виды криптовалюты не только с профессиональными ICO командами, но и с физическими лицами.
-                p Признание криптовалюты правительствами многих стран подталкивает организации и учреждения к созданию собственных ее видов – как для упрощенного проведения платежей, так и с инвестиционными целями. Но достичь этих целей можно только при профессиональном подходе и соответствующих технологиях. «Крипто Пи» помогает воплощать задуманное.
+                if lang === 'ru'
+                  p.color-primary-dark Мы разрабатываем новые виды криптовалюты не только с профессиональными ICO командами, но и с физическими лицами.
+                  p Признание криптовалюты правительствами многих стран подталкивает организации и учреждения к созданию собственных ее видов – как для упрощенного проведения платежей, так и с инвестиционными целями. Но достичь этих целей можно только при профессиональном подходе и соответствующих технологиях. «Крипто Пи» помогает воплощать задуманное.
+                else
+                  p.color-primary-dark We develop new types of cryptocurrency not only with professional ICO teams, but also with individuals.
+                  p Recognition of the cryptocurrency by the governments of many countries pushes organizations and institutions to create their own tokens or coins - both for simplified payments and for investment purposes. But these goals can be achieved only  with a professional approach and appropriate technologies. Crypto Pi helps to embody what was conceived.
     +b.SECTION.section
       .container-fluid.max-w-md.max-w-lg
         .row.mb-3-inv.mb-md-4-inv.justify-content-lg-between.wow.slideInRight
           .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
             +b.ARTICLE.content-write
               +e.HEADER.__header
-                +e.H3.__title Sales & legalize
+                +e.H3.__title Sales & legal framework
                 +icon-svg('sales').__icon
               +e.__content.formatted-content
-                p Профессиональным трейдерам и уже действующим ICO <span class="color-primary-dark">мы предлагаем для реализации их проектов собственные лицензионные решения, такие как суб-фонд или листинг</span> в нашей торгово-платежной системе.
-                p Наши лицензированные европейские сервисы помогают справиться с такими трудо- и ресурсоемкими проблемами, как прием средств от третьих лиц, прием «фиатных» средств и их дальнейшая конвертация в цифровые валюты, крипто-процессинг, разработка и ведение бэк-офиса и разработка правовой документации.
-                p И все это с круглосуточной технической поддержкой.
+                if lang === 'ru'
+                  p Профессиональным трейдерам и уже действующим ICO <span class="color-primary-dark">мы предлагаем для реализации их проектов собственные лицензионные решения, такие как суб-фонд или листинг</span> в нашей торгово-платежной системе.
+                  p Наши лицензированные европейские сервисы помогают справиться с такими трудо- и ресурсоемкими проблемами, как прием средств от третьих лиц, прием «фиатных» средств и их дальнейшая конвертация в цифровые валюты, крипто-процессинг, разработка и ведение бэк-офиса и разработка правовой документации.
+                  p И все это с круглосуточной технической поддержкой.
+                else
+                  p For professional traders already operating ICOs <span class="color-primary-dark">we offer our own licensing solutions for realization of their projects, such as a sub-fund or listing</span> in our trading-payment system.
+                  p Our licensed European services help to cope with such labour-consuming and resource-intensive problems such as: receiving funds from third parties; accepting "fiat" funds and their further conversion into digital currencies; crypto-processing; development and maintenance of back-office, and; development of legal documentation.
+                  p And all this with 24-hour technical support.
           .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
             +b.ARTICLE.content-write
               +e.HEADER.__header
                 +e.H3.__title Consulting
                 +icon-svg('consulting').__icon
               +e.__content.formatted-content
-                p <span class="color-primary-dark">Мы оказываем полный спектр консультационных услуг по всем перечисленным выше вопросам</span>, а также по любым другим, связанным с крипто-трейдингом – этой коммерцией будущего.
-                p Расскажите нам о своих требованиях и желаемых результатах, и мы предоставим вам несколько вариантов стратегий, направленных на решение ваших задач.
+                if lang === 'ru'
+                  p <span class="color-primary-dark">Мы оказываем полный спектр консультационных услуг по всем перечисленным выше вопросам</span>, а также по любым другим, связанным с крипто-трейдингом – этой коммерцией будущего.
+                  p Расскажите нам о своих требованиях и желаемых результатах, и мы предоставим вам несколько вариантов стратегий, направленных на решение ваших задач.
+                else
+                  p <span class="color-primary-dark">We provide a full range of advisory services on all matters listed above</span>, as well as any other issue related to crypto-trading – the future of commerce.
+                  p Tell us about your requirements and the desired results, and we will give you several options for strategies to solve your problems.
     +b.SECTION.section--bonus
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title Exclusive bonus
-          +e.P.__desc Для деловых людей, не склонных к высоким рискам, у нас существует <span class="color-primary">специальная стратегия, направленная на извлечение стабильно растущих высоких доходов</span> в долгосрочной перспективе.
+          +e.H2.__title= lang === 'ru' ? 'Exclusive bonus' : 'Additional benefits'
+          +e.P.__desc!= lang === 'ru' ? 'Для деловых людей, не склонных к высоким рискам, у нас существует <span class="color-primary">специальная стратегия, направленная на извлечение стабильно растущих высоких доходов</span> в долгосрочной перспективе.' : 'For business people who wish to mitigate their risks further, we have a <span class="color-primary">special strategy that nevertheless is aimed at producing a high income that demonstrates high growth</span> in the long term.'
       .container-fluid.max-w-md.max-w-lg
         .row.mb-2-inv.mx-0.px-md-2
           .col-12.mb-2.col-md-7
             +b.FIGURE.bonus-write.wow.slideInRight
               +icon-svg('bonus').__icon
               +e.FIGCAPTION.__content
-                p В основу фонда заложены классические правовые принципы, как при организации классического лицензируемого фонда.
+                if lang === 'ru'
+                  p В основу фонда заложены классические правовые принципы, как при организации классического лицензируемого фонда.
+                else
+                  p The Fund is based on classical legal principles, as in the organization of a classic licensed Fund.
           .col-12.mb-2.col-md-7.ml-md-auto
             +b.FIGURE.bonus-write--revert.wow.slideInLeft
               +icon-svg('bonus-1').__icon
               +e.FIGCAPTION.__content
-                p КриптоФонд CryptoPi совместно с европейским банком-партнером предлагает своим клиентам сервис покупки токенов фонда с дебетовых карт с последующим обратным выкупом этих токенов Фондом с оплатой на любой банковский, электронный, или криптовалютный счет, принадлежащий клиенту!
+                if lang === 'ru'
+                  p КриптоФонд CryptoPi совместно с европейским банком-партнером предлагает своим клиентам сервис покупки токенов фонда с дебетовых карт с последующим обратным выкупом этих токенов Фондом с оплатой на любой банковский, электронный, или криптовалютный счет, принадлежащий клиенту!
+                else
+                  p CryptoPi together with a European partner bank offers its customers the service of purchasing the tokens from debit cards with the subsequent repurchase of these tokens with payment to any bank, electronic, or cryptocurrency account owned by the client!
           .col-12.mb-2.col-md-7
             +b.FIGURE.bonus-write.wow.slideInRight
               +icon-svg('bonus-2').__icon
               +e.FIGCAPTION.__content
-                p Собственный stablecoin – в основе которого лежит пай CapitalPi Fund. А состав CapitalPi Fund – это низковолатильные американские бонды!
+                if lang === 'ru'
+                  p Собственный stablecoin – в основе которого лежит пай CapitalPi Fund. А состав CapitalPi Fund – это низковолатильные американские бонды!
+                else
+                  p We can also work with the client to produce their own StableCoin, which is based on a share in the underlying Capital Pi Fund.  The structure of the Capital Pi Fund is a low risk, alternative investment fund that is designed to protect capital but provide higher than average returns.
           .col-12.mb-2.col-md-7.ml-md-auto
             +b.FIGURE.bonus-write--revert.wow.slideInLeft
               +icon-svg('bonus-3').__icon
               +e.FIGCAPTION.__content
-                p Для удобства клиентов и партнеров специалисты Crypto Pi предусмотрели функциональный личный кабинет, одним из преимуществ которого является возможность ежедневно следить за динамикой стоимости купленных токенов.
+                if lang === 'ru'
+                  p Для удобства клиентов и партнеров специалисты Crypto Pi предусмотрели функциональный личный кабинет, одним из преимуществ которого является возможность ежедневно следить за динамикой стоимости купленных токенов.
+                else
+                  p For the convenience of customers and partners, Crypto Pi specialists have provided a functional personal account, one of the advantages of which is the ability to monitor the dynamics of the purchased tokens cost on a daily basis.
       .container-fluid.max-w-md.max-w-lg.mt-3.mt-md-4
         +b.user-log-in--thin
           +e.__row.row.m-1-inv.justify-content-center
             .col-auto.mw-100.p-1
-              +b.A.btn-primary.__btn(href='') Регистрация
+              +b.A.btn-primary.__btn(href='')= lang === 'ru' ? 'Регистрация' : 'Sign Up'
             .col-auto.mw-100.p-1
-              +b.A.btn-secondary.__btn(href='') Авторизация
+              +b.A.btn-secondary.__btn(href='')= lang === 'ru' ? 'Авторизация' : 'Sign In'
           +e.__content
             p.
               У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
@@ -790,7 +820,7 @@ else
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3.color-base Партнеры
+          +e.H2.__title.px-md-3.color-base= lang === 'ru' ? 'Партнеры' : 'Partners'
       .container.mb-3.mb-md-4
         .row.justify-content-center.mb-2-inv
           .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
@@ -799,25 +829,36 @@ else
                 +e.IMG.__img-inner(src='img/content/capital-pi.png' alt='')
               +e.FIGCAPTION.__body
                 +e.__content
-                  p.
-                    Альтернативный инвестиционный фонд, основанный в Амстердаме, Нидерландах.
-                    Инвестиционная деятельность Фонда предназначена для клиентов и партнеров с высоким уровнем собственного капитала, которые ищут фонд, целью которого является не только защита инвестиционного капитала, но и генерация дохода выше среднего.
+                  if lang === 'ru'
+                    p.
+                      Альтернативный инвестиционный фонд, основанный в Амстердаме, Нидерландах.
+                      Инвестиционная деятельность Фонда предназначена для клиентов и партнеров с высоким уровнем собственного капитала, которые ищут фонд, целью которого является не только защита инвестиционного капитала, но и генерация дохода выше среднего.
+                  else
+                    p.
+                      Alternative investment Fund, based in Amsterdam, the Netherlands.
+                      The investment activity of the Fund is intended for clients and partners with a high level of equity, who are looking for a Fund which purpose is not only to protect investment capital, but also to generate income above average.
           .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
             +b.FIGURE.partner.h-100
               +e.__img
                 +e.IMG.__img-inner(src='img/content/ex-pi.png' alt='')
               +e.FIGCAPTION.__body
                 +e.__content
-                  p.
-                    EX Pi - Exchange Pi service, лицензированный международный сервис по обмену виртуальной валюты на другие валюты. Обмен осуществляется с использованием собственного программного комплекса, построенного на основе классических банковских технологий.
+                  if lang === 'ru'
+                    p.
+                      EX Pi - Exchange Pi service, лицензированный международный сервис по обмену виртуальной валюты на другие валюты. Обмен осуществляется с использованием собственного программного комплекса, построенного на основе классических банковских технологий.
+                  else
+                    p Our own cryptocurrency trading platform, Ex Pi is a licensed international service for the exchange of virtual and other currencies. Exchange is carried out using our own software complex, built on the basis of classical banking technologies.
           .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
             +b.FIGURE.partner.h-100
               +e.__img
                 +e.IMG.__img-inner(src='img/content/rich-gate.png' alt='')
               +e.FIGCAPTION.__body
                 +e.__content
-                  p.
-                    Компания поставляет оборудование для майнинга и предоставляет услуги по поиску самых выгодных мест в Европе по стоимости аренды помещения и электроснабжения для установки майнингового оборудования. Компания устанавливает и настраивает майнинговое оборудование, а также готовит все необходимые документы для запуска майнинга в Европе.
+                  if lang === 'ru'
+                    p.
+                      Компания поставляет оборудование для майнинга и предоставляет услуги по поиску самых выгодных мест в Европе по стоимости аренды помещения и электроснабжения для установки майнингового оборудования. Компания устанавливает и настраивает майнинговое оборудование, а также готовит все необходимые документы для запуска майнинга в Европе.
+                  else
+                    p The company supplies equipment for mining and provides the most favorable conditions in Europe for the cost of renting premises and electricity for mining equipment installation. The company installs and sets up mining equipment, and prepares all the necessary documents for the launch of mining in Europe.
       .container.wow.fadeInUp
         .row.justify-content-center
           .col-12.mt-0.mb-0.mx-2-inv.col-sm-6.col-md-4
@@ -841,16 +882,17 @@ else
     +b.SECTION.section--contacts
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3 Контакты
+          +e.H2.__title.px-md-3= lang === 'ru' ? 'Контакты' : 'Contacts'
       .container-fluid.max-w-md.max-w-lg
         +b.grid-contacts
           +e.__row
             +e.__col--0
               +b.contacts
-                +e.H3.__title Наши офисы:
+                +e.H3.__title= lang === 'ru' ? 'Наши офисы:' : 'Our offices:'
                 +e.__content
                   ul.text-uppercase
-                    li Москва, Пресненская набережная, 10 блок С
+                    if lang === 'ru'
+                      li Москва, Пресненская набережная, 10 блок С
                     li 92 Waterloo Street #05-01, Sky Line Building, Singapore (187966)
                     li Koninginnegracht 10, Den Haag, 2514BC, Netherlands
                 +e.FOOTER.__footer
@@ -866,24 +908,24 @@ else
             +e.__col--1.position-relative.z-index-1.mb-md-10-inv
               +b.FORM.form-feedback(action='')
                 +e.HEADER.__header
-                  +e.H3.__title Обратная связь
-                  +e.P.__desc Задайте интересующий Вас вопрос
+                  +e.H3.__title= lang === 'ru' ? 'Обратная связь' : 'Feedback'
+                  +e.P.__desc= lang === 'ru' ? 'Задайте интересующий Вас вопрос' : 'Ask the question interesting you'
                 +e.__content
                   +e.__row
-                    +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
+                    +b.INPUT.field-btb.__field(type='text' placeholder=lang === 'ru' ? 'Ваше имя': 'Your name')
                   +e.__row
                     +b.INPUT.field-btb--next.__field(type='email' placeholder='Email')
                   +e.__row
-                    +b.INPUT.field-btb--next.__field(type='tel' placeholder='Телефон')
+                    +b.INPUT.field-btb--next.__field(type='tel' placeholder=lang === 'ru' ? 'Телефон': 'Phone')
                   +e.__row
                     +b.SELECT.field-btb--next.--select.__field
-                      option(selected='') Тема обращения
+                      option(selected='')= lang === 'ru' ? 'Тема обращения' : 'Subject'
                       option Subject 1
                       option Subject 2
                       option Subject 3
                   +e.__row
-                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше сообщение')
+                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder=lang === 'ru' ? 'Ваше сообщение': 'Your message')
                   +e.__row--actions
-                    +b.BUTTON.btn-secondary.__btn Отправить
+                    +b.BUTTON.btn-secondary.__btn= lang === 'ru' ? 'Отправить' : 'Submit'
     +map
   +footer.__footer

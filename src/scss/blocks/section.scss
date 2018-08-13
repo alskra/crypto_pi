@@ -38,8 +38,43 @@
   }
 
   &__contacts {
-    min-height: bss(175);
+    overflow: hidden;
     background-color: #f59d07;
+
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: bss(-15);
+    }
+
+    &-col {
+      flex-shrink: 0;
+      width: 25%;
+      min-height: bss(205);
+      padding: bss(15);
+    }
+
+    &-item {
+      color: white;
+      font-style: normal;
+      font-weight: 500;
+      font-size: bfs(20);
+      line-height: 1.25;
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      height: 100%;
+      padding: bss(15);
+
+      &--tel {
+        background: image-url('phone.png') no-repeat 50% 50%/contain;
+      }
+
+      &--email {
+        background: image-url('@.png') no-repeat 50% 50%/contain;
+      }
+    }
   }
 
   &--service {
@@ -101,5 +136,27 @@
   @include media-breakpoint-down(sm) {
     --size: 3/4;
     --font-size: 15/17;
+
+    &__contacts {
+      &-col {
+        width: 50%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    &__contacts {
+      &-row {
+        margin: {
+          top: 0;
+          bottom: 0;
+        };
+      }
+
+      &-col {
+        width: 100%;
+        min-height: bss(100);
+      }
+    }
   }
 }

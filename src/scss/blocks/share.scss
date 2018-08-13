@@ -1,0 +1,36 @@
+.share {
+  @include init-block;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: bfs(157);
+    height: bfs(157);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+    transform: translate(0, -50%);
+    background: image-url('share.png') no-repeat 50% 50%/contain;
+  }
+
+  &__label {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: bfs(17);
+    line-height: 1.25;
+    cursor: pointer;
+    position: relative;
+    transition: $transition-color;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &::before {
+      transform: translate(95px, -50%);
+    }
+  }
+}

@@ -1,4 +1,7 @@
 .grid {
+  @include init-grid(15, 15);
+  overflow: hidden;
+
   &-contacts {
     @include init-grid(30, 15);
 

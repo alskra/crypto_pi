@@ -14,5 +14,9 @@
   "contacts": {
     "title": "Контакты",
     "url": "contacts.html"
+  },
+  "articleView": {
+    "title": "Статья",
+    "url": "article-view.html"
   }
 }

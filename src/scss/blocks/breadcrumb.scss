@@ -7,7 +7,6 @@
   &__inner {
     list-style: none;
     padding: bfs(4) 0 0;
-    margin: 0 bfs(-15);
   }
 
   &__item {
@@ -17,7 +16,10 @@
     font-size: bfs(15);
     line-height: 1.25;
     display: inline;
-    margin: 0 bfs(15);
+
+    & + & {
+      margin-left: bfs(15);
+    }
   }
 
   &__icon {

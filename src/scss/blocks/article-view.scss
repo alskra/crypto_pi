@@ -1,0 +1,30 @@
+.article-view {
+  @include init-block;
+  padding: bss(60) 0;
+
+  &__header {
+    padding-bottom: bss(45);
+
+    &-datetime {
+      color: #a3a3a3;
+      font-weight: 300;
+      font-size: bfs(17);
+      line-height: 1.25;
+    }
+
+    &-title {
+      color: $color-base;
+      font-weight: 700;
+      font-size: bfs(28);
+      line-height: 1.25;
+      font-family: $font-family-heading;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .container, .container-fluid {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
+  }
+}

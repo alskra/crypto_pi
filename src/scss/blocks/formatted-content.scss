@@ -87,6 +87,25 @@
     }
   }
 
+  blockquote {
+    color: #abaaaa;
+    font-style: italic;
+    padding: em(10, $font-size) em(25, $font-size);
+    border-left: em(5, $font-size) solid #f59a00;
+    margin: em(60, $font-size) em(75, $font-size);
+    position: relative;
+
+    &::before {
+      content: '';
+      width: em(54, $font-size);
+      height: em(46, $font-size);
+      position: absolute;
+      top: 0;
+      left: em(-75, $font-size);
+      background: image-url('icons/quote-open-1.png') no-repeat 50% 50%/contain;
+    }
+  }
+
   a {
     color: $color-link;
     text-decoration: underline;
@@ -114,6 +133,17 @@
       vertical-align: baseline;
       padding: em(10, $font-size);
       border: 1px solid rgba($color-base, 0.3);
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    blockquote {
+      margin-left: em(10, $font-size);
+      margin-right: em(10, $font-size);
+
+      &::before {
+        content: normal;
+      }
     }
   }
 }

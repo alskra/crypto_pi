@@ -1,0 +1,731 @@
+include lib/variables
+include lib/mixins
+include blocks/page
+include blocks/header
+include blocks/footer
+include blocks/map
+
++page(pagesList.index.title)
+  +header.--transparent.__header
+  +e.__content
+    +b.SECTION.section-intro
+      .container-fluid.max-w-md.max-w-lg
+        +e.H1.__title
+          small.wow.fadeInRight(data-wow-duration='0.5s') «CRYPTO Pi» –
+          span.d-block.wow.fadeInRight Криптовалютый холдинг
+    +b.SECTION.px-1.mt-8-inv.mb-3.mb-md-4
+      .container-fluid.max-w-md.max-w-lg
+        .row.justify-content-center
+          .col-12.col-lg-10
+            +b.BLOCKQUOTE.intro-letter.m-0.wow.fadeIn
+              +e.IMG.__img(src='img/content/kevin.png' alt='Кевин Р. Смит')
+              +e.__body
+                +e.__content
+                  p С радостью делюсь новостью: наш объединенный голландско-сингапурский криптовалютный холдинг открыл представительство в России и готов предоставить в распоряжение клиентов новейшие технологии финтеха.
+                +e.__footer
+                  .row.align-items-end
+                    .col-6
+                      +e.CITE.__cite Кевин Р.&nbsp;Смит
+                      +e.__position Chief Executive Officer
+                    .col-6.text-center
+                      +e.IMG.__sign(src='img/content/sign.png' alt='Кевин Р. Смит')
+    +b.SECTION.section-about
+      .container-fluid.max-w-md.max-w-lg
+        .row.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
+            +e.HEADER.__header
+              +e.H2.__title «CRYPTO Pi» —
+              .d-flex.align-items-start
+                +icon-svg('sequre').__icon.d-none.d-sm-block
+                +e.__desc
+                  p.
+                    международный специализированный
+                    криптовалютный центр, созданный
+                    крупными мировыми инвесторами.
+            +e.__content
+              p.
+                Клиенты и партнеры центра получают доступ к экспертным знаниям и
+                опыту в области криптовалют и могут пользоваться передовыми
+                финансово-техническими сервисами, легко адаптируемыми под любые задачи и требования.
+            +e.FOOTER.__footer
+              p.
+                Уникальность предложения «CRYPTO Pi» заключается
+                в соединении современной технологии блокчейн и классических
+                финансовых институтов.
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
+            +b.user-log-in.h-100
+              .row.m-1-inv.justify-content-center
+                .col-auto.mw-100.p-1
+                  +b.A.btn-primary.__btn(href='') Регистрация
+                .col-auto.mw-100.p-1
+                  +b.A.btn-secondary.__btn(href='') Авторизация
+              +e.__content
+                p.
+                  У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+                  в личном кабинете сегодня!
+    +b.SECTION.section--service
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
+      .container-fluid.max-w-md.max-w-lg
+        .row.justify-content-center.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title FUND
+              +e.__content
+                p.
+                  CRYPTO Pi Fund – это альтернативный инвестиционный фонд, реализующий свои торговые стратегии на новом быстроразвивающемся рынке цифровых валют и ICO.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title MINING
+              +e.__content
+                p.
+                  Готовые комплексные решения
+                  по покупке и установке доказавшего свою эффективность майнингового оборудования в принадлежащих
+                  нам дата-центрах.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title ICO & CO FUND
+              +e.__content
+                p.
+                  Помощь в технических,
+                  финансовых и юридических
+                  вопросах при первичном размещении токенов, а также совместное проведение CO на базе «Фонда Крипто Пи».
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.6s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title SALES & LEGALIZE
+              +e.__content
+                p.
+                  Организация продаж токенов и создание субфондов в партнерстве с рофессиональными участниками рынка цифровых активов.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.8s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title CONSULTING
+              +e.__content
+                p.
+                  Консультации ведущих специалистов
+                  по вопросам правового регулирования, финансового взаимодействия, технических аспектов и маркетинговых технологий в финтехе.
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 CRYPTO Pi Fund
+      .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
+        .row.justify-content-center
+          .col-12.col-lg-10
+            +b.chart
+              +e.NO-FORMATTED-HTML.__grid
+                block chart__grid
+                  include ../../dist/img/content/График доходности black_grid.svg
+              +e.NO-FORMATTED-HTML.__lines.wow(data-wow-duration='2.5s')
+                block chart__lines
+                  include ../../dist/img/content/График доходности black_lines.svg
+      .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
+        .row.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
+            +b.SECTION.section-sm
+              +e.HEADER.__header
+                +e.H3.__title Фонд занимается инвестированием в криптовалюты.
+              +e.__content
+                p.
+                  В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает «CRYPTO Pi Fund» весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
+                p.
+                  Фонд проводит сбалансированную политику риск-менеджмента с приоритетным фокусом на сохранении вложенных инвесторами средств.
+              +e.FOOTER.__footer
+                p.
+                  Для достижения наилучших инвестиционных результатов мы используем четыре торговые стратегии. В основе каждой из них лежит принцип минимизации рисков и сохранения инвестиционного капитала.
+          .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
+            +b.ARTICLE.invest-go.h-100
+              +e.H3.__title Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+              +b.A.btn-primary(href='').__btn Инвестировать сейчас
+              +e.__content
+                p.
+                  У нас нет ограничений по количеству паев – <br>
+                  стать нашим клиентом может каждый!
+      +b.SECTION.section-sm
+        +e.HEADER.__header
+          .container-fluid.max-w-md.max-w-lg
+            .row
+              .col-12.col-md-8
+                +e.H3.__title Фонд предоставляет своим клиентам возможность приобретать паи трех видов инвестиционных портфелей:
+        .container
+          .row.mb-2-inv.justify-content-center
+            .col-12.mb-2.col-sm-6.col-md-4
+              +b.FIGURE.invest-item.wow.flipInX
+                +e.__img
+                  +icon-svg('sand-watch').__img-svg
+                +e.FIGCAPTION.__body
+                  +e.__title Краткосрочный
+                  +e.__desc 3 месяца
+                  +e.__value
+                    +e.SPAN.__value-text-0 7
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-1 %
+            .col-12.mb-2.col-sm-6.col-md-4
+              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.2s')
+                +e.__img
+                  +icon-svg('watch').__img-svg
+                +e.FIGCAPTION.__body
+                  +e.__title Среднесрочный
+                  +e.__desc 6 месяцев
+                  +e.__value
+                    +e.SPAN.__value-text-0 8
+                    +e.SPAN.__value-text-0 5
+                    +e.SPAN.__value-text-1 %
+            .col-12.mb-2.col-sm-6.col-md-4
+              +b.FIGURE.invest-item.wow.flipInX(data-wow-delay='0.4s')
+                +e.__img
+                  +icon-svg('calendar').__img-svg
+                +e.FIGCAPTION.__body
+                  +e.__title Долгосрочный
+                  +e.__desc 12 месяцев
+                  +e.__value
+                    +e.SPAN.__value-text-0--one 1
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-0 0
+                    +e.SPAN.__value-text-1 %
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi
+      +b.SECTION.section-chart.mb-3.mb-md-4
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 Global cryptocarrency market
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Долгосрочные вложения, как правило, составляют 45% от общей стоимости портфеля.
+                    p
+                      strong Инвестиции делаются в топ-10 криптовалют в соответствии с рейтингом их капитализации.
+                    p.
+                      Длительные инвестиции в ведущие криптовалюты с большой рыночной капитализацией и ликвидностью нивелируют
+                      риски резких колебаний стоимости, а защищенные холодные кошельки делают
+                      долгосрочное хранение безопасным.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-0.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0 4
+                        +e.SPAN.__value-text-0 5
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - долгосрочные вложения
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--0.wow.slideInRight
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Долгосрочные стратегии light.svg
+      +b.SECTION.section-chart.mb-3.mb-md-4
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0.order-md-1
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 Hard fork & new carrency
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Среднесрочные инвестиции обычно составляют 30% от общей стоимости портфеля.
+                    p.
+                      <strong>Это инвестиции в валюты, сформировавшиеся в результате хардфорка высокорейтинговых валют</strong>, а также в новые валюты, капитализация которых превысила 1 млрд долларов США, с последующей корректировкой позиций валют в зависимости от их относительной волатильности и ликвидности в любой момент времени.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-1.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0 3
+                        +e.SPAN.__value-text-0 0
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - среднесрочные вложения
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--1.--left.wow.slideInLeft
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Среднесрочные стратегии light.svg
+      +b.SECTION.section-chart.mb-3.mb-md-4
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 Ico leverage
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Под краткосрочные инвестиции отводится до 15% от общей стоимости портфеля.<br>
+                      <strong>Такие инвестиции осуществляются в только что созданные валюты и ICO на основе анализа инвестиционной привлекательности лежащих в их основе проектов</strong>, и предназначены для продажи сразу после периода первоначального роста.
+                    p.
+                      Такие валюты мы рекомендуем только после их подробного анализа, который включает в себя изучение бизнес-плана, конкурентоспособности продукта, управляющей команды, маркетинговой стратегии и всех остальных факторов, влияющих на успех.
+                    p.
+                      Наш опыт вложений в ICO, помимо высокой доходности, позволяет нам поддерживать тесные контакты с лучшими специалистами по проведению ICO и делать лучший выбор при инвестировании.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-2.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0 1
+                        +e.SPAN.__value-text-0 5
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - краткосрочные вложения
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--2.wow.slideInRight
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Краткосрочные стратегии light.svg
+      +b.SECTION.section-chart
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.mb-2.col-md-6.mb-md-0.order-md-1
+              +e.HEADER.__header
+                .row
+                  .col-12.col-lg-8
+                    +e.H3.__title.m-0 Extraction & production
+              .row
+                .col-12.mb-2.col-lg-8.mb-lg-0
+                  +e.__content
+                    p.
+                      Около 10% от общей стоимости портфеля выделяется на <strong>инвестирование в традиционный и облачный майнинг</strong>, а также на модернизацию майнингового оборудования и на внедрение
+                      в проекты по созданию AI устройств.
+                    p.
+                      Вложения в майнинг преследуют не только прямые инвестиционные цели, но и позволяют постоянно актуализировать представления о новых цифровых валютах и технологии блокчейн.
+                .col-12.text-center.col-lg-4.text-lg-right
+                  .row.align-items-center.flex-lg-column.align-items-lg-stretch
+                    .d-none.col-sm-4.d-sm-block.col-lg-12.mb-lg-2
+                      +e.IMG.__img(src='img/content/case-3.svg' alt='')
+                    .col-6.col-sm-4.col-lg-12.mb-lg-2
+                      +e.__value
+                        +e.SPAN.__value-text-0--one 1
+                        +e.SPAN.__value-text-0 0
+                        +e.SPAN.__value-text-1 %
+                        +e.__value-text-2 общей стоимости портфеля
+                    .col-6.col-sm-4.col-lg-12
+                      +e.__label - инвестирование в майнинг
+            .col-12.px-0.col-md-6.px-md-1
+              +e.__chart--3.--left.wow.slideInLeft
+                +e.NO-FORMATTED-HTML.__chart-img
+                  block section-chart__chart-img
+                    include ../../dist/img/content/Прибыльность майнинга light.svg
+    +b.SECTION.section--analytics
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Аналитика
+      .container
+        +b.carousel
+          +e.__inner.row
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 25
+                        span jul
+                      +e.H3.__title Лишь элементы политического процесса неоднозначны и будут своевременно верифицированы
+                    +e.__content
+                      p Имеется спорная точка зрения, гласящая примерно следующее: базовые сценарии поведения пользователей и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 23
+                        span jul
+                      +e.H3.__title Также как укрепление
+                    +e.__content
+                      p Учитывая ключевые сценарии поведения, синтетическое тестирование не оставляет шанса для модели развития
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-2.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 21
+                        span jul
+                      +e.H3.__title Но разбавленное изрядной долей эмпатии, рациональное мышление создает предпосылки для инновационных методов управления процессами
+                    +e.__content
+                      p В своем стремлении улучшить пользовательский опыт мы упускаем, что представители современных социальных резервов обнародованы
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-0.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 19
+                        span jul
+                      +e.H3.__title Прежде всего, существующая теория не оставляет шанса для укрепления моральных ценностей
+                    +e.__content
+                      p В целом, конечно, постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для экономической целесообразности принимаемых решений
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+            .col-auto
+              +b.ARTICLE.write.h-100
+                +e.A.__inner(href='')
+                  +e.DIV.__img
+                    +e.IMG.__img-inner(src='img/content/pic-1.jpg' alt='')
+                  +e.DIV.__body
+                    +e.HEADER.__header
+                      +e.TIME.__datetime(datetime='ГГГГ-ММ-ДДTчч:мм:сс')
+                        span 17
+                        span jul
+                      +e.H3.__title Таким образом, базовый вектор развития позволяет оценить значение распределения внутренних резервов и ресурсов
+                    +e.__content
+                      p Но акционеры крупнейших компаний являются только методом политического участия и призваны к ответу
+                    +e.FOOTER.__footer
+                      +e.SPAN.__read-more Читать далее >
+          +e.__arrows
+      .container-fluid.max-w-md.max-w-lg.text-right.mt-2
+        +e.A.__link-goto(href='') В раздел Аналитики
+      +b.SECTION.section-subscribe.mt-3.mt-md-4
+        +e.HEADER.__header
+          .container-fluid.max-w-md.max-w-lg
+            +e.H2.__title Subscribe
+            +e.P.__desc Подпишись на рассылку аналитики, прогнозов и новостей CRYPTO Pi
+        +e.__content
+          .container-fluid.max-w-md.max-w-lg
+            +b.FORM.form-subscribe(action='')
+              +e.__row.row
+                +e.__col.col-auto
+                  +b.INPUT.field.__field(type='email' placeholder='Введите свой email адрес')
+                +e.__col.col-auto
+                  +b.BUTTON.btn-primary.__btn Подписаться
+    +b.SECTION.section--risks
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Основные направления деятельности холдинга
+      .container-fluid.max-w-md.max-w-lg
+        .row.justify-content-center.mb-3-inv.mb-md-4-inv
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Время
+              +e.__content
+                p.
+                  Инвестор, пришедший на рынок криптовалюты из другой сферы деятельности и занятый большую часть времени на основной работе,
+                  не сможет уделять торговле достаточно времени.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.2s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Знание трейдинга
+              +e.__content
+                p.
+                  Отсутствие профессиональных знаний в трейдинге приводит к непоправимым ошибкам и большим убыткам.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.wow.fadeInRight(data-wow-delay='0.4s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Аналитика
+              +e.__content
+                p.
+                  Процесс инвестирования связан с обработкой большого объема информации на разных языках.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.6s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Риск менеджмент
+              +e.__content
+                p.
+                  Для поддержания дисциплины при реализации торговой стратегии необходим внешний контроль.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='0.8s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Проработка стратегии
+              +e.__content
+                p.
+                  Тестирование стратегий требует значительных ресурсов – от времени и специальных знаний до вычислительных мощностей.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Технологии
+              +e.__content
+                p.
+                  Серьезный трейдинг предполагает наличие специализированных торговых программ и дополнительного оборудовании.
+          .col-12.mb-3.col-sm-6.col-md-4.mb-md-4.col-lg-3.wow.fadeInRight(data-wow-delay='1.2s')
+            +b.ARTICLE.service
+              +e.HEADER.__header
+                +e.H3.__title Опыт
+              +e.__content
+                p.
+                  Для того, чтобы знания конвертировались в опыт, должно пройти время. С первого раза всё получается далеко не у каждого.
+      +e.FOOTER.__footer
+        .container-fluid.max-w-md.max-w-lg
+          .row
+            .col-12.col-md-7
+              p.
+                Опытный трейдер, с которым у вас выстроены доверительные
+                отношения, сведет перечисленные выше риски к нулю.
+    +b.SECTION.py-3.py-md-4
+      .container-fluid.max-w-md.max-w-lg
+        +b.BLOCKQUOTE.blockquote.mx-sm-3.mx-md-6.wow.lightSpeedIn
+          q Несмотря на высокие риски инвестиций в криптовалюту, все больше и больше людей готовы вкладывать в нее свои сбережения. Ведь по ту сторону открываются невероятные перспективы для получения больших доходов.
+          cite Алексей Штерншис, <br><small>Chief Financial Officer</small>
+        .row.justify-content-center.mt-3.mt-md-4
+          .col-12.col-md-6
+            +b.ARTICLE.invest-go
+              +e.H3.__title Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+              +b.A.btn-primary(href='').__btn Инвестировать сейчас
+              +e.__content
+                p.
+                  У нас нет ограничений по количеству паев – <br>
+                  стать нашим клиентом может каждый!
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3.color-base Почему CRYPTO Pi Fund?
+      +b.formatted-content
+        .container-fluid.max-w-md.max-w-lg
+          .row.mb-3.mb-md-4.justify-content-lg-between
+            .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
+              h3.color-primary-dark.font-weight-500.mt-0 Профессиональный подход / для нас это работа
+              ul
+                li Большой штат сотрудников в разных часовых поясах контролирует торговый процесс 24/7.
+                li Профессиональные трейдеры с большим опытом работы на классических рынках и на рынке криптовалюты.
+                li Большой штат аналитиков и маркетологов в области технологий блокчейн.
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img.jpg' alt='')
+          .row.mb-3.mb-md-4.justify-content-lg-between
+            .col-12.order-1.col-sm-8.col-md-6.col-lg-5.wow.fadeInLeft
+              ul
+                li Регламентированный процесс контроля за торговыми операциями.
+                li Разработка и оперативная корректировка стратегий на основе аналитики и статистики и с помощью запатентованных программ.
+                li Огромные вычислительные мощности и постоянно обновляемые торговые программы (роботы и боты).
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-1.jpg' alt='')
+          .row.justify-content-lg-between
+            .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
+              p В прошедшем году <span class="color-primary-dark">криптовалюты в целом и биткоин в частности показали себя как наиболее эффективный класс вложений</span>: за 2017 год курсы биткоина и основных криптовалют выросли более чем на 1000% и продолжают расти.
+              p Наш профессиональный опыт позволяет нам говорить о том, что <span class="color-primary-dark">инвестиции в этот класс будут оставаться высокодоходными, но при условии правильной оценки ситуации на рынке</span>. Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно «CRYPTO Pi»?
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-2.jpg' alt='')
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Более пристальный взгляд на наши преимущества:
+      +b.formatted-content
+        .container-fluid.max-w-md.max-w-lg
+          .row.mb-3.mb-md-4.justify-content-lg-between
+            .col-12.order-1.col-sm-8.col-md-6.col-lg-5.wow.fadeInLeft
+              ul
+                li Мы уделяем много внимания информационной и аналитической поддержке наших клиентов. На молодом быстрорастущем криптовалютном рынке невозможно двигаться в правильном направлении без глубоко понимания происходящего. <span class="color-primary-dark">Клиенты получают максимально полную и разностороннюю информацию о текущей ситуации в мире «крипты»</span> и меньше страдают от «информационного шума», накрывшего в последние годы этот перспективный рынок.
+                li Мы находимся в юрисдикциях, <span class="color-primary-dark">максимально благоприятствующих инвесторам и гарантирующих им полную конфиденциальность и защиту</span> со стороны правового поля.
+                li Мы обеспечиваем <span class="color-primary-dark">прозрачность публичной отчетности и отсутствие проблем</span> со стороны регулирующих органов.
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-3.jpg' alt='')
+          .row.justify-content-lg-between
+            .col-12.order-1.col-sm-8.order-sm-0.col-md-6.col-lg-5.wow.fadeInRight
+              ul
+                li Мы много вкладываем в сервис и активную клиентскую поддержку. <span class="color-primary-dark">К каждому клиенту прикреплен персональный менеджер</span>, с которым можно связаться в любое время суток и получить подробную консультацию по ситуации на рынке и по текущему состоянию портфеля.
+            .col-12.mb-2.d-flex.flex-column.col-sm-4.mb-sm-0.col-md-6.col-lg-5.wow.fadeInUp
+              img.mx-auto(src='img/content/why-img-4.jpg' alt='')
+    +b.SECTION.section--advantages
+      .container-fluid.max-w-md.max-w-lg
+        .row.mb-3-inv.mb-md-4-inv.justify-content-lg-between.wow.slideInLeft
+          .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
+            +b.ARTICLE.content-write
+              +e.HEADER.__header
+                +e.H3.__title Mining
+                +icon-svg('mining').__icon
+              +e.__content.formatted-content
+                p Наши майнинговые центры, расположенные в зонах с самым высоким уровнем энергоэффективности по всему миру, оснащены новейшим эффективным оборудованием.
+                p Благодаря этому мы снижаем затраты на предоставление услуг майнинга и имеем значительные преимущества перед конкурентами.
+                p.color-primary-dark У нас – лучший из возможных сервисов по лучшей цене.
+          .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
+            +b.ARTICLE.content-write
+              +e.HEADER.__header
+                +e.H3.__title Ico & co fund
+                +icon-svg('ico').__icon
+              +e.__content.formatted-content
+                p.color-primary-dark Мы разрабатываем новые виды криптовалюты не только с профессиональными ICO командами, но и с физическими лицами.
+                p Признание криптовалюты правительствами многих стран подталкивает организации и учреждения к созданию собственных ее видов – как для упрощенного проведения платежей, так и с инвестиционными целями. Но достичь этих целей можно только при профессиональном подходе и соответствующих технологиях. «Крипто Пи» помогает воплощать задуманное.
+    +b.SECTION.section
+      .container-fluid.max-w-md.max-w-lg
+        .row.mb-3-inv.mb-md-4-inv.justify-content-lg-between.wow.slideInRight
+          .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
+            +b.ARTICLE.content-write
+              +e.HEADER.__header
+                +e.H3.__title Sales & legalize
+                +icon-svg('sales').__icon
+              +e.__content.formatted-content
+                p Профессиональным трейдерам и уже действующим ICO <span class="color-primary-dark">мы предлагаем для реализации их проектов собственные лицензионные решения, такие как суб-фонд или листинг</span> в нашей торгово-платежной системе.
+                p Наши лицензированные европейские сервисы помогают справиться с такими трудо- и ресурсоемкими проблемами, как прием средств от третьих лиц, прием «фиатных» средств и их дальнейшая конвертация в цифровые валюты, крипто-процессинг, разработка и ведение бэк-офиса и разработка правовой документации.
+                p И все это с круглосуточной технической поддержкой.
+          .col-12.mb-3.col-md-6.mb-md-4.col-lg-5
+            +b.ARTICLE.content-write
+              +e.HEADER.__header
+                +e.H3.__title Consulting
+                +icon-svg('consulting').__icon
+              +e.__content.formatted-content
+                p <span class="color-primary-dark">Мы оказываем полный спектр консультационных услуг по всем перечисленным выше вопросам</span>, а также по любым другим, связанным с крипто-трейдингом – этой коммерцией будущего.
+                p Расскажите нам о своих требованиях и желаемых результатах, и мы предоставим вам несколько вариантов стратегий, направленных на решение ваших задач.
+    +b.SECTION.section--bonus
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title Exclusive bonus
+          +e.P.__desc Для деловых людей, не склонных к высоким рискам, у нас существует <span class="color-primary">специальная стратегия, направленная на извлечение стабильно растущих высоких доходов</span> в долгосрочной перспективе.
+      .container-fluid.max-w-md.max-w-lg
+        .row.mb-2-inv.mx-0.px-md-2
+          .col-12.mb-2.col-md-7
+            +b.FIGURE.bonus-write.wow.slideInRight
+              +icon-svg('bonus').__icon
+              +e.FIGCAPTION.__content
+                p В основу фонда заложены классические правовые принципы, как при организации классического лицензируемого фонда.
+          .col-12.mb-2.col-md-7.ml-md-auto
+            +b.FIGURE.bonus-write--revert.wow.slideInLeft
+              +icon-svg('bonus-1').__icon
+              +e.FIGCAPTION.__content
+                p КриптоФонд CryptoPi совместно с европейским банком-партнером предлагает своим клиентам сервис покупки токенов фонда с дебетовых карт с последующим обратным выкупом этих токенов Фондом с оплатой на любой банковский, электронный, или криптовалютный счет, принадлежащий клиенту!
+          .col-12.mb-2.col-md-7
+            +b.FIGURE.bonus-write.wow.slideInRight
+              +icon-svg('bonus-2').__icon
+              +e.FIGCAPTION.__content
+                p Собственный stablecoin – в основе которого лежит пай CapitalPi Fund. А состав CapitalPi Fund – это низковолатильные американские бонды!
+          .col-12.mb-2.col-md-7.ml-md-auto
+            +b.FIGURE.bonus-write--revert.wow.slideInLeft
+              +icon-svg('bonus-3').__icon
+              +e.FIGCAPTION.__content
+                p Для удобства клиентов и партнеров специалисты Crypto Pi предусмотрели функциональный личный кабинет, одним из преимуществ которого является возможность ежедневно следить за динамикой стоимости купленных токенов.
+      .container-fluid.max-w-md.max-w-lg.mt-3.mt-md-4
+        +b.user-log-in--thin
+          +e.__row.row.m-1-inv.justify-content-center
+            .col-auto.mw-100.p-1
+              +b.A.btn-primary.__btn(href='') Регистрация
+            .col-auto.mw-100.p-1
+              +b.A.btn-secondary.__btn(href='') Авторизация
+          +e.__content
+            p.
+              У вас уже есть аккаунт? Зарегистрируйтесь или авторизуйтесь
+              в личном кабинете сегодня!
+    +b.SECTION.section
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3.color-base Партнеры
+      .container.mb-3.mb-md-4
+        .row.justify-content-center.mb-2-inv
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/capital-pi.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    Альтернативный инвестиционный фонд, основанный в Амстердаме, Нидерландах.
+                    Инвестиционная деятельность Фонда предназначена для клиентов и партнеров с высоким уровнем собственного капитала, которые ищут фонд, целью которого является не только защита инвестиционного капитала, но и генерация дохода выше среднего.
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/ex-pi.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    EX Pi - Exchange Pi service, лицензированный международный сервис по обмену виртуальной валюты на другие валюты. Обмен осуществляется с использованием собственного программного комплекса, построенного на основе классических банковских технологий.
+          .col-12.mb-2.col-sm-6.col-md-4.wow.zoomInDown
+            +b.FIGURE.partner.h-100
+              +e.__img
+                +e.IMG.__img-inner(src='img/content/rich-gate.png' alt='')
+              +e.FIGCAPTION.__body
+                +e.__content
+                  p.
+                    Компания поставляет оборудование для майнинга и предоставляет услуги по поиску самых выгодных мест в Европе по стоимости аренды помещения и электроснабжения для установки майнингового оборудования. Компания устанавливает и настраивает майнинговое оборудование, а также готовит все необходимые документы для запуска майнинга в Европе.
+      .container.wow.fadeInUp
+        .row.justify-content-center
+          .col-12.mt-0.mb-0.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/capital-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.capitalpi.fund' target='_blank') www.capitalpi.fund
+          .col-12.mt-2.mb-2-inv.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/ex-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.expi.trade' target='_blank') www.expi.trade
+          .col-12.mt-4.mb-0.mx-2-inv.col-sm-6.col-md-4
+            +b.FIGURE.partner-source
+              +e.A.__img(href='')
+                +e.IMG.__img-inner(src='img/content/capital-pi-preview.jpg' alt='')
+              +e.FIGCAPTION.__content
+                a(href='//www.rich-gate.com' target='_blank') www.rich-gate.com
+    +b.SECTION.section--contacts
+      +e.HEADER.__header
+        .container-fluid.max-w-md.max-w-lg
+          +e.H2.__title.px-md-3 Контакты
+      .container-fluid.max-w-md.max-w-lg
+        +b.grid-contacts
+          +e.__row
+            +e.__col--0
+              +b.contacts
+                +e.H3.__title Наши офисы:
+                +e.__content
+                  ul.text-uppercase
+                    li Москва, Пресненская набережная, 10 блок С
+                    li 92 Waterloo Street #05-01, Sky Line Building, Singapore (187966)
+                    li Koninginnegracht 10, Den Haag, 2514BC, Netherlands
+                +e.FOOTER.__footer
+                  address
+                    dl
+                      dt Email:
+                      dd
+                        a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
+                        br
+                      dt Phone:
+                        dd
+                          a(href='tel:+79295773655') +7 (929) 577-36-55
+            +e.__col--1.position-relative.z-index-1.mb-md-10-inv
+              +b.FORM.form-feedback(action='')
+                +e.HEADER.__header
+                  +e.H3.__title Обратная связь
+                  +e.P.__desc Задайте интересующий Вас вопрос
+                +e.__content
+                  +e.__row
+                    +b.INPUT.field-btb.__field(type='text' placeholder='Ваше имя')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='email' placeholder='Email')
+                  +e.__row
+                    +b.INPUT.field-btb--next.__field(type='tel' placeholder='Телефон')
+                  +e.__row
+                    +b.SELECT.field-btb--next.--select.__field
+                      option(selected='') Тема обращения
+                      option Subject 1
+                      option Subject 2
+                      option Subject 3
+                  +e.__row
+                    +b.TEXTAREA.field-btb--next.--textarea.__field(rows='5' placeholder='Ваше сообщение')
+                  +e.__row--actions
+                    +b.BUTTON.btn-secondary.__btn Отправить
+    +map
+  +footer.__footer

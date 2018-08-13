@@ -18,5 +18,9 @@
   "articleView": {
     "title": "Статья",
     "url": "article-view.html"
+  },
+  "indexEn": {
+    "title": "Главная EN",
+    "url": "index-en.html"
   }
 }

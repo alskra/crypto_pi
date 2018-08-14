@@ -21,6 +21,7 @@ popup.popupOpen = function (id) {
     newPopup.classList.add('popup--inited');
   }, 10);
   //newPopup.classList.add('popup--inited');
+  document.documentElement.classList.add('overflow-hidden');
 };
 
 function popup() {
@@ -35,6 +36,7 @@ function close(event) {
     event.preventDefault();
     popupElement.addEventListener('transitionend', function () {
       document.body.removeChild(popupElement);
+      document.documentElement.classList.remove('overflow-hidden');
     });
     popupElement.classList.remove('popup--inited');
   }

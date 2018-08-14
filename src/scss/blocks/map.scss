@@ -2,5 +2,9 @@
   &__inner {
     height: 500px;
     max-height: 100vmin;
+
+    *, ::before, ::after {
+      box-sizing: content-box;
+    }
   }
 }

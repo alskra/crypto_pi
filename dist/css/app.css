@@ -2819,6 +2819,10 @@
   max-height: 100vmin;
 }
 
+.map__inner *, .map__inner ::before, .map__inner ::after {
+  box-sizing: content-box;
+}
+
 .breadcrumb {
   --block-font-size: 1rem;
   --block-space-size: 0.9375rem;

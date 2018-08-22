@@ -153,11 +153,12 @@ else
               +e.NO-FORMATTED-HTML.__lines.wow(data-wow-duration='2.5s')
                 block chart__lines
                   include ../../dist/img/content/График доходности black_lines.svg
-        .formatted-content.mt-2
-          if lang === 'ru'
-            p ...
-          else
-            p Performance of the Crypto Pi Index from 1st January 2018 (expressed in € and BTC).
+          .col-12.col-lg-10.mt-2
+            .formatted-content
+              if lang === 'ru'
+                p ...
+              else
+                p Performance of the Crypto Pi Index from 1st January 2018 (expressed in € and BTC).
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft

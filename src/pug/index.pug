@@ -21,7 +21,7 @@ else
         +e.H1.__title
           small.wow.fadeInRight(data-wow-duration='0.5s')
             block section-intro__title-small
-              | «CRYPTO Pi» –
+              | CRYPTO Pi –
           span.d-block.wow.fadeInRight
             block section-intro__title
               | Криптовалютый холдинг
@@ -51,7 +51,7 @@ else
         .row.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
             +e.HEADER.__header
-              +e.H2.__title «CRYPTO Pi» —
+              +e.H2.__title CRYPTO Pi —
               .d-flex.align-items-start
                 +icon-svg('sequre').__icon.d-none.d-sm-block
                 +e.__desc
@@ -69,7 +69,7 @@ else
             +e.FOOTER.__footer
               block section-about__footer
                 p.
-                  Уникальность предложения «CRYPTO Pi» заключается
+                  Уникальность предложения CRYPTO Pi заключается
                   в соединении современной технологии блокчейн и классических
                   финансовых институтов.
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInRight
@@ -153,6 +153,11 @@ else
               +e.NO-FORMATTED-HTML.__lines.wow(data-wow-duration='2.5s')
                 block chart__lines
                   include ../../dist/img/content/График доходности black_lines.svg
+        .formatted-content.mt-2
+          if lang === 'ru'
+            p ...
+          else
+            p Performance of the Crypto Pi Index from 1st January 2018 (expressed in € and BTC).
       .container-fluid.max-w-md.max-w-lg.mb-3.mb-md-4
         .row.mb-3-inv.mb-md-4-inv
           .col-12.mb-3.col-md-6.mb-md-4.wow.fadeInLeft
@@ -164,7 +169,7 @@ else
               +e.__content
                 block section-sm__content
                   p.
-                    В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает «CRYPTO Pi Fund» весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
+                    В управляющей команде Фонда состоят специалисты с многолетним опытом работы на фондовых и валютных биржах, что обеспечивает CRYPTO Pi Fund весомое преимущество перед другими организациями на этом сложном и крайне волатильном рынке.
                   p.
                     Фонд проводит сбалансированную политику риск-менеджмента с приоритетным фокусом на сохранении вложенных инвесторами средств.
               +e.FOOTER.__footer
@@ -175,7 +180,7 @@ else
             +b.ARTICLE.invest-go.h-100
               +e.H3.__title
                 block invest-go__title-0
-                  | Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.
+                  | Стоимость пая CRYPTO Pi Fund составляет 100 Евро.
               +b.A.btn-primary(href='').__btn= lang === 'ru' ? 'Инвестировать сейчас' : 'Invest now'
               +e.__content
                 block invest-go__content-0
@@ -238,10 +243,16 @@ else
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-0 0
                     +e.SPAN.__value-text-1 %
+        .container-fluid.max-w-md.max-w-lg.mt-3.mt-md-4
+          .formatted-content
+            if lang === 'ru'
+              p ...
+            else
+              p Crypto PI reserves the right to change the ratio of trading strategies.
     +b.SECTION.section
       +e.HEADER.__header
         .container-fluid.max-w-md.max-w-lg
-          +e.H2.__title.px-md-3= lang === 'ru' ? 'Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi' : 'Crypto-сurrency Market overview, Investment Portfolio CRYPTO Pi'
+          +e.H2.__title.px-md-3= lang === 'ru' ? 'Краткий обзор рынка криптовалют, инвестиционный портфель CRYPTO Pi' : 'Сryptocurrency market overview and investvent portfolio CRYPTO Pi'
       +b.SECTION.section-chart.mb-3.mb-md-4
         .container-fluid.max-w-md.max-w-lg
           .row
@@ -634,7 +645,7 @@ else
         .row.justify-content-center.mt-3.mt-md-4
           .col-12.col-md-6
             +b.ARTICLE.invest-go
-              +e.H3.__title= lang === 'ru' ? 'Стоимость пая «CRYPTO Pi Fund» составляет 100 Евро.' : 'The cost of a token in the Crypto Pi Platform is initially 100 Euro.'
+              +e.H3.__title= lang === 'ru' ? 'Стоимость пая CRYPTO Pi Fund составляет 100 Евро.' : 'Start investing in the Crypto Pi platform by buying our token – PiCoin. The cost of PiCoin is initially 100 Euro.'
               +b.A.btn-primary(href='').__btn= lang === 'ru' ? 'Инвестировать сейчас' : 'Invest now'
               +e.__content
                 if lang === 'ru'
@@ -683,7 +694,7 @@ else
               if lang === 'ru'
                 p В прошедшем году <span class="color-primary-dark">криптовалюты в целом и биткоин в частности показали себя как наиболее эффективный класс вложений</span>: за 2017 год курсы биткоина и основных криптовалют выросли более чем на 1000% и продолжают расти.
                 p Наш профессиональный опыт позволяет нам говорить о том, что <span class="color-primary-dark">инвестиции в этот класс будут оставаться высокодоходными, но при условии правильной оценки ситуации на рынке</span>.
-                p Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно «CRYPTO Pi»?
+                p Что возвращает нас к необходимости экспертных знаний и исходному вопросу: Почему именно CRYPTO Pi?
               else
                 p In recent years, <span class="color-primary-dark">cryptocurrencies in general and bitcoin in particular proved to be the most effective investment class</span>: in 2017, bitcoin and major cryptocurrencies grew by more than 1000% and continue to grow, albeit with more volatility in 2018.  However, the graph on Page 5 demonstrates that Crypto Pi traders achieved a return of 160% on investments in Bitcoin for the first six months of 2018, easily beating most other investments and those without the same level of experience.
                 p Our professional experience allows us to say that <span class="color-primary-dark">investments in this class will remain highly profitable, but on condition of a correct assessment of the situation on the market</span>.
@@ -798,9 +809,9 @@ else
               +icon-svg('bonus-1').__icon
               +e.FIGCAPTION.__content
                 if lang === 'ru'
-                  p КриптоФонд CryptoPi совместно с европейским банком-партнером предлагает своим клиентам сервис покупки токенов фонда с дебетовых карт с последующим обратным выкупом этих токенов Фондом с оплатой на любой банковский, электронный, или криптовалютный счет, принадлежащий клиенту!
+                  p КриптоФонд CryptoPi совместно с европейским банком-партнером предлагает своим клиентам сервис покупки токенов фонда с дебетовых карт с последующим обратным выкупом этих токенов Фондом с оплатой на любой банковский, электронный, или криптовалютный счет, принадлежащий клиенту.
                 else
-                  p CryptoPi together with a European partner bank offers its customers the service of purchasing the tokens from debit cards with the subsequent repurchase of these tokens with payment to any bank, electronic, or cryptocurrency account owned by the client!
+                  p CryptoPi together with a European partner bank offers its customers the service of purchasing the tokens from debit cards with the subsequent repurchase of these tokens with payment to any bank, electronic, or cryptocurrency account owned by the client.
           .col-12.mb-2.col-md-7
             +b.FIGURE.bonus-write.wow.slideInRight
               +icon-svg('bonus-2').__icon
@@ -916,9 +927,10 @@ else
                       dd
                         a(href='mailto:info@cryptopi.fund') info@cryptopi.fund
                         br
-                      dt Phone:
-                        dd
-                          a(href='tel:+79295773655') +7 (929) 577-36-55
+                      //
+                        dt Phone:
+                          dd
+                            a(href='tel:+79295773655') +7 (929) 577-36-55
             +e.__col--1.position-relative.z-index-1.mb-md-10-inv
               +b.FORM.form-feedback(action='')
                 +e.HEADER.__header
